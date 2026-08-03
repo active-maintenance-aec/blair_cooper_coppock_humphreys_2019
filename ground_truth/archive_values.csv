@@ -1,0 +1,251 @@
+claim_id,value_script
+a1|rmse,0.5075820799559744
+a1|bias,0.500012376808385
+a1|mean_estimand,1
+a2|BFE|power,0.6084
+a2|BFE|bias,-0.022494979521725716
+a2|BFE|rmse,0.17425175600185433
+a2|BFE|coverage,0.9438
+a2|BFE|mean_estimand,0.40882361879773216
+a2|DIM|power,0.5968
+a2|DIM|bias,-0.03724762845946713
+a2|DIM|rmse,0.17470761008423277
+a2|DIM|coverage,0.9358
+a2|DIM|mean_estimand,0.40882361879773216
+a2|IPW-BFE|power,0.7228
+a2|IPW-BFE|bias,-0.003124756492822523
+a2|IPW-BFE|rmse,0.17535178867078252
+a2|IPW-BFE|coverage,0.8974
+a2|IPW-BFE|mean_estimand,0.40882361879773216
+a3|bias,-0.011613220653753644
+a4|10|flat priors|mean_est,0.46194
+a4|10|flat priors|mean_sd,0.14170040272084505
+a4|10|flat priors|bias,0.0017166703745464691
+a4|10|flat priors|mean_shift,-0.038060000000000004
+a4|10|flat priors|sd_shift,-0.1469747318739678
+a4|10|informative priors|mean_est,0.48640714285714287
+a4|10|informative priors|mean_sd,0.09220041218118087
+a4|10|informative priors|bias,0.02618381323168932
+a4|10|informative priors|mean_shift,-0.01359285714285715
+a4|10|informative priors|sd_shift,-0.016908532936815313
+a4|100|flat priors|mean_est,0.46292
+a4|100|flat priors|mean_sd,0.14207266835386614
+a4|100|flat priors|bias,0.0026989257571337763
+a4|100|flat priors|mean_shift,-0.03708
+a4|100|flat priors|sd_shift,-0.14660246624094672
+a4|100|informative priors|mean_est,0.48675714285714283
+a4|100|informative priors|mean_sd,0.09222701238026527
+a4|100|informative priors|bias,0.02653606861427663
+a4|100|informative priors|mean_shift,-0.01324285714285715
+a4|100|informative priors|sd_shift,-0.016881932737730906
+a5|Smoking gun|bias,-0.004703896103896064
+a5|Smoking gun|rmse,0.4683684805405235
+a5|Smoking gun|mean_estimand,0.5086
+a5|Smoking gun|mean_posterior,0.503896103896104
+a5|Smoking gun|sd_posterior,0.16775885171365762
+a5|Straw in Wind|bias,-0.0045
+a5|Straw in Wind|rmse,0.4350861983561418
+a5|Straw in Wind|mean_estimand,0.5086
+a5|Straw in Wind|mean_posterior,0.5041
+a5|Straw in Wind|sd_posterior,0.24999137812698174
+a5|Update from both clues|bias,-0.0018306578035947121
+a5|Update from both clues|rmse,0.411652885662982
+a5|Update from both clues|mean_estimand,0.5086
+a5|Update from both clues|mean_posterior,0.5067693421964052
+a5|Update from both clues|sd_posterior,0.2830470861024732
+a6|-0.32|Smoking gun|rmse,0.47024619274781954
+a6|-0.32|Straw in Wind|rmse,0.4339354790749427
+a6|-0.32|Update from both clues|rmse,0.3936703013196507
+a6|0|Smoking gun|rmse,0.47155194582144483
+a6|0|Straw in Wind|rmse,0.4350861983561418
+a6|0|Update from both clues|rmse,0.4132004152909529
+a6|0.32|Smoking gun|rmse,0.471562735571001
+a6|0.32|Straw in Wind|rmse,0.42941821107167777
+a6|0.32|Update from both clues|rmse,0.4188930989684994
+a9|Classic Quine-McCluskey|correct_rate,0.3946
+a9|Classic Quine-McCluskey|failure_rate,0.0736
+a9|Consistency Cubes|correct_rate,0.3946
+a9|Consistency Cubes|failure_rate,0.002
+a10|0|5|Classic Quine-McCluskey|correct_rate,0.3068
+a10|0|5|Classic Quine-McCluskey|failure_rate,0.11
+a10|0|5|Consistency Cubes|correct_rate,0.3068
+a10|0|5|Consistency Cubes|failure_rate,0.0054
+a10|0.05|5|Classic Quine-McCluskey|correct_rate,0.2648
+a10|0.05|5|Classic Quine-McCluskey|failure_rate,0.1422
+a10|0.05|5|Consistency Cubes|correct_rate,0.2648
+a10|0.05|5|Consistency Cubes|failure_rate,0.0094
+a10|0|50|Classic Quine-McCluskey|correct_rate,0.9998
+a10|0|50|Classic Quine-McCluskey|failure_rate,0
+a10|0|50|Consistency Cubes|correct_rate,0.9998
+a10|0|50|Consistency Cubes|failure_rate,0
+a10|0.05|50|Classic Quine-McCluskey|correct_rate,0.957
+a10|0.05|50|Classic Quine-McCluskey|failure_rate,0
+a10|0.05|50|Consistency Cubes|correct_rate,0.957
+a10|0.05|50|Consistency Cubes|failure_rate,0
+a11|0|3|Classic Quine-McCluskey|correct_rate,0.0954
+a11|0|3|Classic Quine-McCluskey|failure_rate,0.3238
+a11|0|3|Consistency Cubes|correct_rate,0.0954
+a11|0|3|Consistency Cubes|failure_rate,0.0468
+a11|0|3|Least Squares|correct_rate,0
+a11|0|3|Least Squares|failure_rate,1
+a11|0.2|3|Classic Quine-McCluskey|correct_rate,0.0496
+a11|0.2|3|Classic Quine-McCluskey|failure_rate,0.4476
+a11|0.2|3|Consistency Cubes|correct_rate,0.0496
+a11|0.2|3|Consistency Cubes|failure_rate,0.0988
+a11|0.2|3|Least Squares|correct_rate,0
+a11|0.2|3|Least Squares|failure_rate,1
+a11|0|50|Classic Quine-McCluskey|correct_rate,0.9994
+a11|0|50|Classic Quine-McCluskey|failure_rate,0
+a11|0|50|Consistency Cubes|correct_rate,0.9994
+a11|0|50|Consistency Cubes|failure_rate,0
+a11|0|50|Least Squares|correct_rate,0
+a11|0|50|Least Squares|failure_rate,1
+a11|0.2|50|Classic Quine-McCluskey|correct_rate,0.7202
+a11|0.2|50|Classic Quine-McCluskey|failure_rate,4e-4
+a11|0.2|50|Consistency Cubes|correct_rate,0.7202
+a11|0.2|50|Consistency Cubes|failure_rate,2e-4
+a11|0.2|50|Least Squares|correct_rate,0
+a11|0.2|50|Least Squares|failure_rate,1
+a12|0|New Model|bias,3.6133205886797816e-4
+a12|0|New Model|rmse,0.015685614812471296
+a12|0|New Model|mean_estimate,0.24981067126591644
+a12|0|New Model|mean_estimand,0.24944933920704845
+a12|0|No Model|bias,NA
+a12|0|No Model|rmse,NA
+a12|0|No Model|mean_estimate,NA
+a12|0|No Model|mean_estimand,0.24756873822975517
+a12|0|Original Model|bias,-8.38251592129925e-4
+a12|0|Original Model|rmse,0.022094339343895483
+a12|0|Original Model|mean_estimate,0.24962305614632238
+a12|0|Original Model|mean_estimand,0.2504613077384523
+a12|0.5|New Model|bias,9.671063960275548e-4
+a12|0.5|New Model|rmse,0.017603465186870653
+a12|0.5|New Model|mean_estimate,0.2502517334888738
+a12|0.5|New Model|mean_estimand,0.24928462709284627
+a12|0.5|No Model|bias,NA
+a12|0.5|No Model|rmse,NA
+a12|0.5|No Model|mean_estimate,NA
+a12|0.5|No Model|mean_estimand,0.2485940170940171
+a12|0.5|Original Model|bias,0.1503701786437566
+a12|0.5|Original Model|rmse,0.1518914082024756
+a12|0.5|Original Model|mean_estimate,0.4007073100110488
+a12|0.5|Original Model|mean_estimand,0.25033713136729224
+a15|design_1|aate|mean_estimand,0.3660254037844386
+a15|design_1|aate|bias,0.0029628470235507653
+a15|design_1|aate|rmse,0.3900771815924575
+a15|design_1|aate|power,0.1556
+a15|design_1|aate|coverage,0.9294
+a15|design_1|beta|mean_estimand,0.36602540378443865
+a15|design_1|beta|bias,0.0029628470235507198
+a15|design_1|beta|rmse,0.3900771815924575
+a15|design_1|beta|power,0.1556
+a15|design_1|beta|coverage,0.9294
+a15|design_2|aate|mean_estimand,0.3660254037844386
+a15|design_2|aate|bias,0.0035951256655591037
+a15|design_2|aate|rmse,0.42030191233434994
+a15|design_2|aate|power,0.1488
+a15|design_2|aate|coverage,0.933
+a15|design_2|beta|mean_estimand,0.36602540378443865
+a15|design_2|beta|bias,0.003595125665559057
+a15|design_2|beta|rmse,0.42030191233434994
+a15|design_2|beta|power,0.1488
+a15|design_2|beta|coverage,0.933
+a16|dim|bias,2.394851083759791
+a16|matching|bias,0.5181405695615506
+a17|bias,-0.06437733506946379
+a17|rmse,0.8882862062774918
+a17|power,0.054
+a17|coverage,0.9462
+a18|Main|bias,0.001432410700267567
+a18|Main|RMSE,0.1418242745054905
+a18|Main|frequency,1
+a18|Main|false_pos,NA
+a18|Main|false_neg,0
+a18|Full sample|bias,-0.2492263361934146
+a18|Full sample|RMSE,0.3192246048894302
+a18|Full sample|frequency,0.2876
+a18|Full sample|false_pos,0.05235204855842185
+a18|Full sample|false_neg,1
+a18|Test sample|bias,-0.004860362524883501
+a18|Test sample|RMSE,0.41059342142045785
+a18|Test sample|frequency,0.3218
+a18|Test sample|false_pos,0.050037907505686124
+a18|Test sample|false_neg,0.7827586206896552
+a19|Mortality estimate|mean_estimand,-0.05689202493291482
+a19|Mortality estimate|mean_estimate,-0.056184776928551
+a19|Mortality estimate|bias,7.072480043638242e-4
+a19|Mortality estimate|power,0.2912
+a19|Weight estimate|mean_estimand,0.14
+a19|Weight estimate|mean_estimate,0.05628392953161775
+a19|Weight estimate|bias,-0.08371607046838225
+a19|Weight estimate|power,0.0574
+a20|bjorkman_svensson_design|Mortality estimate|exaggeration_ratio,1.5781165495374507
+a20|bjorkman_svensson_design|Mortality estimate|power,0.2832
+a20|bjorkman_svensson_design|Weight estimate|exaggeration_ratio,3.726176029534154
+a20|bjorkman_svensson_design|Weight estimate|power,0.0546
+a20|RPP_replication|Mortality estimate|exaggeration_ratio,1.0797654525661127
+a20|RPP_replication|Mortality estimate|power,0.7976
+a20|RPP_replication|Weight estimate|exaggeration_ratio,2.017056900053139
+a20|RPP_replication|Weight estimate|power,0.0698
+a21|DM_replication_CBO_ind|Ignore CBO|rmse,0.26749824011991047
+a21|DM_replication_CBO_ind|Ignore CBO|rmse_balanced,0.2684924166761282
+a21|DM_replication_CBO_ind|Ignore CBO|rmse_imbalanced,0.2586004486579005
+a21|DM_replication_CBO_ind|Include CBO|rmse,0.26746318022728954
+a21|DM_replication_CBO_ind|Include CBO|rmse_balanced,0.2684574330776636
+a21|DM_replication_CBO_ind|Include CBO|rmse_imbalanced,0.25856467063304134
+a21|DM_replication_CBO_ind|Include CBO if imbalanced|rmse,0.2674947054535427
+a21|DM_replication_CBO_ind|Include CBO if imbalanced|rmse_balanced,0.2684924166761282
+a21|DM_replication_CBO_ind|Include CBO if imbalanced|rmse_imbalanced,0.25856467063304134
+a21|DM_replication_CBO_ind|Interact CBO|rmse,0.2822720600459391
+a21|DM_replication_CBO_ind|Interact CBO|rmse_balanced,0.2835799740680921
+a21|DM_replication_CBO_ind|Interact CBO|rmse_imbalanced,0.2705107346566126
+a21|DM_replication_CBO_cor|Ignore CBO|rmse,0.26824857171197775
+a21|DM_replication_CBO_cor|Ignore CBO|rmse_balanced,0.2320162573969023
+a21|DM_replication_CBO_cor|Ignore CBO|rmse_imbalanced,0.4871248067911427
+a21|DM_replication_CBO_cor|Include CBO|rmse,0.18751660688667773
+a21|DM_replication_CBO_cor|Include CBO|rmse_balanced,0.16881284577469005
+a21|DM_replication_CBO_cor|Include CBO|rmse_imbalanced,0.30976485330867726
+a21|DM_replication_CBO_cor|Include CBO if imbalanced|rmse,0.24081791564701957
+a21|DM_replication_CBO_cor|Include CBO if imbalanced|rmse_balanced,0.2320162573969023
+a21|DM_replication_CBO_cor|Include CBO if imbalanced|rmse_imbalanced,0.30976485330867726
+a21|DM_replication_CBO_cor|Interact CBO|rmse,0.23619056956223003
+a21|DM_replication_CBO_cor|Interact CBO|rmse_balanced,0.22211726642143728
+a21|DM_replication_CBO_cor|Interact CBO|rmse_imbalanced,0.3385535709497748
+a13|1|1|prop_sims,0.278
+a13|1|5|prop_sims,0.2858
+a13|5|1|prop_sims,0.2782
+a13|5|5|prop_sims,0.2752
+a14|0.1|0.1|0.05|prop_sims,0.6244
+a14|0.1|0.1|0.3|prop_sims,0.6242
+a14|0.1|0.8|0.05|prop_sims,0.6424
+a14|0.1|0.8|0.3|prop_sims,0.627
+a14|0.8|0.1|0.05|prop_sims,0.274
+a14|0.8|0.1|0.3|prop_sims,0.284
+a14|0.8|0.8|0.05|prop_sims,0.2738
+a14|0.8|0.8|0.3|prop_sims,0.2748
+figure_1|ate_Y_2_1|bias,-0.0019474526444636054
+figure_1|ate_Y_2_1|rmse,0.10905826576228934
+figure_1|ate_Y_2_1|power,0.4278
+figure_1|ate_A|bias,-1.2084772911569094e-4
+figure_1|ate_A|rmse,0.08941141172298306
+figure_1|ate_A|power,0.5964
+figure_1|interaction|bias,-0.004243994574537219
+figure_1|interaction|rmse,0.17921880876438162
+figure_1|interaction|power,0.0508
+table_2|M: Heterogeneous block sizes|n_tools_able,1
+table_2|M: effect sizes correlated with block sizes|n_tools_able,0
+table_2|M: Non-constant variance control vs. treatment|n_tools_able,7
+table_2|I: Estimand|n_tools_able,0
+table_2|R: Sampling strategy|n_tools_able,0
+table_2|R: Exact randomization procedure|n_tools_able,0
+table_2|R: assign m within blocks|n_tools_able,1
+table_2|A: Inverse-probability weights|n_tools_able,0
+table_2|A: Block fixed-effects|n_tools_able,0
+table_2|A: Covariate adjustment|n_tools_able,14
+table_2|D: Power of DIM|n_tools_able,NA
+table_2|D: Power of BFE|n_tools_able,NA
+table_2|D: Power of IPW-BFE|n_tools_able,0
+table_2|D: Bias|n_tools_able,0
+table_2|D: Coverage|n_tools_able,0
+table_2|Estimated vs. actual DIM power|n_tools_able,NA
+table_2|Estimated vs. actual BFE power|n_tools_able,NA

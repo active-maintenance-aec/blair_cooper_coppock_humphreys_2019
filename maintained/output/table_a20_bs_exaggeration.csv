@@ -1,0 +1,5 @@
+design,N_catchment_areas,inquiry,estimator,outcome,term,exaggeration_ratio,se(exaggeration_ratio),power,se(power),n_sims
+bjorkman_svensson_design,50,Mortality,Mortality estimate,(1 - infant_alive),Z,1.5880532045142264,0.010564590296064068,0.2956,0.006359927013411654,5000
+bjorkman_svensson_design,50,Weight,Weight estimate,weight_for_age,Z,3.728479275975472,0.0343278400159356,0.0606,0.0034167539392669856,5000
+RPP_replication,187,Mortality,Mortality estimate,(1 - infant_alive),Z,1.0825182570123337,0.004422815784087119,0.7934,0.00574469152398467,5000
+RPP_replication,187,Weight,Weight estimate,weight_for_age,Z,1.993910647989941,0.014560533499396207,0.0822,0.00388030083180533,5000

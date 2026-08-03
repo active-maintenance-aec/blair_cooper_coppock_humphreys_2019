@@ -1,0 +1,13 @@
+design,error_rate,N,inquiry,estimator,correct_rate,se(correct_rate),failure_rate,se(failure_rate),n_sims
+design_1,0,3,true_configuration,Classic Quine-McCluskey,0.093,0.00410461984149672,0.3012,0.006561219289104131,5000
+design_1,0,3,true_configuration,Consistency Cubes,0.093,0.00410461984149672,0.3012,0.006561219289104131,5000
+design_1,0,3,true_configuration,Least Squares,0,0,1,0,5000
+design_2,0.2,3,true_configuration,Classic Quine-McCluskey,0.0484,0.003038332480564397,0.443,0.0069081742576685935,5000
+design_2,0.2,3,true_configuration,Consistency Cubes,0.0484,0.003038332480564397,0.443,0.0069081742576685935,5000
+design_2,0.2,3,true_configuration,Least Squares,0,0,1,0,5000
+design_3,0,50,true_configuration,Classic Quine-McCluskey,0.9998,1.9794954509793245e-4,0,0,5000
+design_3,0,50,true_configuration,Consistency Cubes,0.9998,1.9794954509793245e-4,0,0,5000
+design_3,0,50,true_configuration,Least Squares,0,0,1,0,5000
+design_4,0.2,50,true_configuration,Classic Quine-McCluskey,0.7222,0.006265222550645883,6e-4,3.460729884036842e-4,5000
+design_4,0.2,50,true_configuration,Consistency Cubes,0.7222,0.006265222550645883,6e-4,3.460729884036842e-4,5000
+design_4,0.2,50,true_configuration,Least Squares,0,0,1,0,5000

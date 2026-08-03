@@ -1,0 +1,31 @@
+Tool,URL,M: Heterogeneous block sizes,M: effect sizes correlated with block sizes,M: Non-constant variance control vs. treatment,I: Estimand,R: Sampling strategy,R: Exact randomization procedure,R: assign m within blocks,A: Inverse-probability weights,A: Block fixed-effects,A: Covariate adjustment,D: Power of DIM,D: Power of BFE,D: Power of IPW-BFE,D: Bias,D: Coverage,Estimated vs. actual DIM power,Estimated vs. actual BFE power
+3ie,http://www.3ieimpact.org/media/filer_public/2016/03/22/3ie-sample-size-minimum-detectable-effect-calculator.xlsx,0,0,0,0,0,0,0,0,0,1,0.67600000000000005,0.67,NA,NA,NA,9.7200000000000064E-2,7.3200000000000043E-2
+AI-Therapy,https://www.ai-therapy.com/psychology-statistics/power-calculator,0,0,1,0,0,0,0,0,0,0,0.68600000000000005,NA,NA,NA,NA,0.10720000000000007,NA
+ClinCalc,http://clincalc.com/stats/samplesize.aspx,0,0,0,0,0,0,0,0,0,0,0.65,NA,NA,NA,NA,7.1200000000000041E-2,NA
+dae,CRAN,0,0,0,0,0,0,0,0,0,1,0.97,7.8E-2,NA,NA,NA,0.39119999999999999,NA
+Design Expert 10.0.6,http://www.statease.com/dx10.html,0,0,0,0,0,0,0,0,0,1,NA,0.99,NA,NA,NA,NA,0.39319999999999999
+DSS,https://www.dssresearch.com/knowledgecenter/toolkitcalculators/statisticalpowercalculators.aspx,0,0,0,0,0,0,0,0,0,0,1,NA,NA,NA,NA,0.42120000000000002,NA
+easypower,CRAN,0,0,0,0,0,0,0,0,0,0,0.68600000000000005,NA,NA,NA,NA,0.10720000000000007,NA
+EDA NC3RS,https://eda.nc3rs.org.uk/,0,0,0,0,0,0,0,0,0,0,0.95,NA,NA,NA,NA,0.37119999999999997,NA
+egap power calculator,https://egap.shinyapps.io/Power_Calculator/,0,0,0,0,0,0,0,0,0,0,0.77600000000000002,NA,NA,NA,NA,0.19720000000000004,NA
+Free Statistics Calculators,http://www.danielsoper.com/statcalc/category.aspx?id=19,0,0,0,0,0,0,0,0,0,1,0.77500000000000002,0.52,NA,NA,NA,0.19620000000000004,-7.6799999999999979E-2
+G*Power,http://www.gpower.hhu.de/,0,0,0,0,0,0,0,0,0,1,0.67500000000000004,0.77600000000000002,NA,NA,NA,9.6200000000000063E-2,0.17920000000000003
+GLIMMPSE,http://glimmpse.samplesizeshop.org/#/,1,0,0,0,0,0,1,0,0,1,0.68400000000000005,NA,NA,NA,NA,0.10520000000000007,NA
+HyLown,http://powerandsamplesize.com/Calculators/,0,0,0,0,0,0,0,0,0,0,0.8,NA,NA,NA,NA,0.22120000000000006,NA
+JMP Design of Experiments,https://www.jmp.com/en_dk/applications/design-of-experiments.html,0,0,0,0,0,0,0,0,0,0,0.71399999999999997,NA,NA,NA,NA,0.13519999999999999,NA
+nquery,https://www.statsols.com/nquery-sample-size-and-power-calculation-for-successful-clinical-trials,0,0,1,0,0,0,0,0,0,1,0.65,0.66,NA,NA,NA,7.1200000000000041E-2,6.3200000000000034E-2
+optimal design,http://hlmsoft.net/od/,0,0,0,0,0,0,0,0,0,1,0.77,0.52,NA,NA,NA,0.19120000000000004,-7.6799999999999979E-2
+PASS (Power Analysis and Sample Size),https://www.ncss.com/software/pass/,0,0,1,0,0,0,0,0,0,1,0.66800000000000004,0.77600000000000002,NA,NA,NA,8.9200000000000057E-2,0.17920000000000003
+piface Java Applet,http://homepage.stat.uiowa.edu/~rlenth/Power/,0,0,0,0,0,0,0,0,0,1,0.66100000000000003,0.98499999999999999,NA,NA,NA,8.2200000000000051E-2,0.38819999999999999
+Power and Precision,http://www.power-analysis.com/,0,0,1,0,0,0,0,0,0,1,0.67,0.66,NA,NA,NA,9.1200000000000059E-2,6.3200000000000034E-2
+powerAnalysis,CRAN,0,0,0,0,0,0,0,0,0,0,0.67500000000000004,NA,NA,NA,NA,9.6200000000000063E-2,NA
+powerreg,Stata package,0,0,0,0,0,0,0,0,0,1,NA,0.74,NA,NA,NA,NA,0.14319999999999999
+PS Power and Sample Size,http://biostat.mc.vanderbilt.edu/wiki/Main/PowerSampleSize,0,0,0,0,0,0,0,0,0,0,0.67100000000000004,NA,NA,NA,NA,9.220000000000006E-2,NA
+pwr,CRAN,0,0,0,0,0,0,0,0,0,0,0.77600000000000002,NA,NA,NA,NA,0.19720000000000004,NA
+SISA,http://www.quantitativeskills.com/sisa/calculations/samsize.htm,0,0,1,0,0,0,0,0,0,0,0.6,NA,NA,NA,NA,2.1199999999999997E-2,NA
+SPSS Sample Power,https://www-01.ibm.com/marketing/iwm/iwmdocs/tnd/data/web/en_US/trialprograms/U741655I36057W80.html,0,0,1,0,0,0,0,0,0,1,0.67,0.66,NA,NA,NA,9.1200000000000059E-2,6.3200000000000034E-2
+Stata 14 PSS,http://www.stata.com/stata14/,0,0,1,0,0,0,0,0,0,0,0.66,NA,NA,NA,NA,8.120000000000005E-2,NA
+Stata 15 PSS,http://www.stata.com/stata15/,0,0,0,0,0,0,0,0,0,1,0.66,0.74,NA,NA,NA,8.120000000000005E-2,0.14319999999999999
+Statistical Solutions,https://www.statisticalsolutions.net/pssZtest_calc.php,0,0,0,0,0,0,0,0,0,0,0.95,NA,NA,NA,NA,0.37119999999999997,NA
+UBC,https://www.stat.ubc.ca/~rollin/stats/ssize/n2.html,0,0,0,0,0,0,0,0,0,0,0.72,NA,NA,NA,NA,0.14119999999999999,NA
+UCSF,http://www.sample-size.net/,0,0,0,0,0,0,0,0,0,0,0.62,NA,NA,NA,NA,4.1200000000000014E-2,NA

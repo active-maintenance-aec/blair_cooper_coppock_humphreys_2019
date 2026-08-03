@@ -1,0 +1,3 @@
+listing,inquiry,estimator,n_sims_run,bias,one_draw_error
+Table 3,ATE,estimator,1000,-0.010142267102131678,0.4368082197194283
+appendix_code.R,ATE,estimator,500,0.002203860848047381,NA

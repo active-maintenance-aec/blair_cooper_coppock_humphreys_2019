@@ -1,0 +1,13 @@
+panel,row_label,column,n_tools_able,n_tools
+(a) Declare design elements,Effect and block size correlated,M: effect sizes correlated with block sizes,0,30
+(a) Declare design elements,Estimand,I: Estimand,0,30
+(a) Declare design elements,Sampling procedure,R: Sampling strategy,0,30
+(a) Declare design elements,Assignment procedure,R: Exact randomization procedure,0,30
+(a) Declare design elements,Block sizes vary,M: Heterogeneous block sizes,1,30
+(a) Declare design elements,Probability weighting,A: Inverse-probability weights,0,30
+(b) Diagnosis capabilities,Power (DIM estimator),D: Power of DIM,28,30
+(b) Diagnosis capabilities,Power (BFE estimator),D: Power of BFE,13,30
+(b) Diagnosis capabilities,Power (IPW-BFE estimator),D: Power of IPW-BFE,0,30
+(b) Diagnosis capabilities,Bias (any estimator),D: Bias,0,30
+(b) Diagnosis capabilities,Coverage (any estimator),D: Coverage,0,30
+(b) Diagnosis capabilities,SD of estimates (any estimator),NA,NA,30

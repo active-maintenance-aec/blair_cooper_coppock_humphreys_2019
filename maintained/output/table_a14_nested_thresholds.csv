@@ -1,0 +1,9 @@
+LNA_threshold,SNA_threshold_1,SNA_threshold_2,estimator,n_sims_reached,prop_sims
+0.1,0.1,0.3,New Model,3193,0.6386
+0.8,0.8,0.05,New Model,3178,0.6356
+0.8,0.8,0.3,New Model,3175,0.635
+0.1,0.1,0.05,New Model,3153,0.6306
+0.1,0.8,0.05,New Model,3146,0.6292
+0.1,0.8,0.3,New Model,3137,0.6274
+0.8,0.1,0.3,New Model,265,0.053
+0.8,0.1,0.05,New Model,254,0.0508

@@ -1,0 +1,2 @@
+design,inquiry,estimator,outcome,term,mean_estimand,se(mean_estimand),mean_estimate,se(mean_estimate),bias,se(bias),sd_estimate,se(sd_estimate),rmse,se(rmse),power,se(power),coverage,se(coverage),n_sims
+rdd,LATE,estimator,Y,Z,0.15,0,0.08562266493053687,0.012624929792913102,-0.06437733506946314,0.012624929792913102,0.8860389133573128,0.008873040203062251,0.8882862062774911,0.008901448207788244,0.054,0.0031873957810057067,0.9462,0.0031719557217307166,5000

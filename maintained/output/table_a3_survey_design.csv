@@ -1,0 +1,2 @@
+design,inquiry,estimator,outcome,term,mean_estimand,se(mean_estimand),mean_estimate,se(mean_estimate),bias,se(bias),sd_estimate,se(sd_estimate),rmse,se(rmse),power,se(power),coverage,se(coverage),n_sims
+survey_design,true_support,estimator,HRC_supporter,(Intercept),0.47565439940792203,3.090120007736238e-4,0.46379797045167453,3.7060105524753774e-4,-0.011856428956247457,3.436404475015292e-4,0.026156649817044218,2.6283425478082316e-4,0.027372178689937427,2.717820830777267e-4,1,0,0.9454,0.0032543512617459035,5000

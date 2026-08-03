@@ -1,0 +1,621 @@
+member,bytes,md5
+__MACOSX/._replication_archive,239,04476a6ff41f3540ce5ffcf6c655e4b5
+__MACOSX/replication_archive/.Rproj.user/._4C166824,239,08f712e2a76c0e3defc71b89d9e8623c
+__MACOSX/replication_archive/.Rproj.user/._52536CD3,299,39c4abe9e3a7070c0c5f307fc7b6d829
+__MACOSX/replication_archive/.Rproj.user/._6BAFBE4C,299,1e6a57e86c1e4c07859c090247584efe
+__MACOSX/replication_archive/.Rproj.user/._7CB138D8,299,41939a55c6eabba3139c2948001191d0
+__MACOSX/replication_archive/.Rproj.user/._shared,239,a4bfff64adb9977c26fd440f41eec3a7
+__MACOSX/replication_archive/.Rproj.user/4C166824/._console06,239,eaf8e7c207da7ed3dee20cdf6774c98a
+__MACOSX/replication_archive/.Rproj.user/4C166824/._ctx,239,c8a1bb7c765122e06e1bf2da6ee94969
+__MACOSX/replication_archive/.Rproj.user/4C166824/._explorer-cache,239,339b946e450036345a5f340ba05d251d
+__MACOSX/replication_archive/.Rproj.user/4C166824/._pcs,239,5017483c97834fea79695d648b61b02a
+__MACOSX/replication_archive/.Rproj.user/4C166824/._persistent-state,239,acd6ba43fcf69580981a89f249c72fd1
+__MACOSX/replication_archive/.Rproj.user/4C166824/._presentation,239,c4bec08c38ac56cd0502b642f5c8f0ba
+__MACOSX/replication_archive/.Rproj.user/4C166824/._profiles-cache,239,1b3bd8827da0cf20652ed287566e24de
+__MACOSX/replication_archive/.Rproj.user/4C166824/._rmd-outputs,239,9a4b1e51c0ae0978b0f2f947156179ed
+__MACOSX/replication_archive/.Rproj.user/4C166824/._saved_source_markers,239,98b21fd55cd0598c5ff184b5a34b5e2a
+__MACOSX/replication_archive/.Rproj.user/4C166824/._sources,239,7d3476a3c6211d67c797076a93a4a73c
+__MACOSX/replication_archive/.Rproj.user/4C166824/._viewer-cache,239,5b4c930e538a40fcf7d1bf4cfbb32504
+__MACOSX/replication_archive/.Rproj.user/4C166824/._viewer_history,239,6737789be89a1eb794908626045720fc
+__MACOSX/replication_archive/.Rproj.user/4C166824/console06/._INDEX001,239,344e87a15ba2cca32688ebfe235c75d9
+__MACOSX/replication_archive/.Rproj.user/4C166824/ctx/._ctx-10551,239,3629e85af3df704d27ee951b2c692ce3
+__MACOSX/replication_archive/.Rproj.user/4C166824/ctx/._ctx-16773,239,d821ed2a59b7d898233fad7ec83cf57f
+__MACOSX/replication_archive/.Rproj.user/4C166824/ctx/._ctx-19324,239,4e45ceee2c1fb0be05243d8003a69a2a
+__MACOSX/replication_archive/.Rproj.user/4C166824/ctx/._ctx-28624,239,0b6450a425a6d6c0b2f76cb99a0c510c
+__MACOSX/replication_archive/.Rproj.user/4C166824/ctx/._ctx-43730,239,b247f6e2a11e8127108f658962c88d04
+__MACOSX/replication_archive/.Rproj.user/4C166824/ctx/._ctx-45862,239,bfc157f23280ee41c80c649afa40d232
+__MACOSX/replication_archive/.Rproj.user/4C166824/ctx/ctx-10551/._console_actions,239,6d36e2806dee9832fbc1bd9d3717c632
+__MACOSX/replication_archive/.Rproj.user/4C166824/ctx/ctx-10551/._history,239,2b0699ad543f04b2cb163a78dc63c765
+__MACOSX/replication_archive/.Rproj.user/4C166824/ctx/ctx-10551/._settings,239,5cda248b256e018eafe709fd4c6a32c4
+__MACOSX/replication_archive/.Rproj.user/4C166824/ctx/ctx-16773/._console_actions,239,e57d330dba9704ca7694edb21f57cbdb
+__MACOSX/replication_archive/.Rproj.user/4C166824/ctx/ctx-16773/._history,239,698ad8bfd6c8a6d34ac160a5fdb2ccff
+__MACOSX/replication_archive/.Rproj.user/4C166824/ctx/ctx-16773/._settings,239,eddecc3eaf8da1cba0b01b7827b6c0a8
+__MACOSX/replication_archive/.Rproj.user/4C166824/ctx/ctx-19324/._console_actions,239,88f28f72c9ff36b63f014cbcf34e463c
+__MACOSX/replication_archive/.Rproj.user/4C166824/ctx/ctx-19324/._history,239,a5b1599fa5f462ff378566c374edd8af
+__MACOSX/replication_archive/.Rproj.user/4C166824/ctx/ctx-19324/._settings,239,e5a87983da6c7a49b876d02cd2b58b67
+__MACOSX/replication_archive/.Rproj.user/4C166824/ctx/ctx-28624/._console_actions,239,ec8b037a49d2d33f380d72ef1032fb68
+__MACOSX/replication_archive/.Rproj.user/4C166824/ctx/ctx-28624/._history,239,63dbb6a7e186e3ae83befe8c52501714
+__MACOSX/replication_archive/.Rproj.user/4C166824/ctx/ctx-28624/._settings,239,8765edf321822275f22f67306e2f1fe9
+__MACOSX/replication_archive/.Rproj.user/4C166824/ctx/ctx-43730/._console_actions,239,28e88cfb7116a75685fa1c0813a812df
+__MACOSX/replication_archive/.Rproj.user/4C166824/ctx/ctx-43730/._history,239,3bed2c2b9f50441d988a50ef3a948bb0
+__MACOSX/replication_archive/.Rproj.user/4C166824/ctx/ctx-43730/._settings,239,980ed2e11b4ba7744dba2f1766a66d9f
+__MACOSX/replication_archive/.Rproj.user/4C166824/ctx/ctx-45862/._console_actions,239,7e7ae1441a5d9b7c1307bac4b8c0617a
+__MACOSX/replication_archive/.Rproj.user/4C166824/ctx/ctx-45862/._history,239,dad1760ca575864da2c60bdaf9bd0759
+__MACOSX/replication_archive/.Rproj.user/4C166824/ctx/ctx-45862/._settings,239,d4eac7e5eb8043b8d437f37756ec6be6
+__MACOSX/replication_archive/.Rproj.user/4C166824/pcs/._debug-breakpoints.pper,239,7e88f865b07f0eaffa821319bc560b52
+__MACOSX/replication_archive/.Rproj.user/4C166824/pcs/._files-pane.pper,239,563df7b254ef6d6a6586de79ad939c6e
+__MACOSX/replication_archive/.Rproj.user/4C166824/pcs/._source-pane.pper,239,9e669ce0c6a516b141a0dd2b6dc4b834
+__MACOSX/replication_archive/.Rproj.user/4C166824/pcs/._windowlayoutstate.pper,239,daa9746b25135adb4b74bb9d13501ec6
+__MACOSX/replication_archive/.Rproj.user/4C166824/pcs/._workbench-pane.pper,239,94c08e0e93492b8e55242fdf8d677a3a
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/._per,239,15edebba5187c392fe45d49fb16ecbdc
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/._prop,239,eda5ef7a676ef36e46a4a37f6e3efbec
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/per/._t,239,7091103262eb52c840f6cf0a69e2af34
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/per/._u,239,b600e62f993200c1f82f12e2d0b0fffe
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/per/t/._2BF266C2,239,96ad779e54fb6d2ac8158f4eed25eca1
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/per/t/._2BF266C2-contents,239,4a31610bfbf8a1616aa5a4d3cfa91484
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/per/t/._6F37500E,239,5c327735892cb769c3253e3c159aded2
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/per/t/._6F37500E-contents,239,cac3ee7f5ebe9a0890aaca3b933aa11f
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/per/t/._70A787,239,de633f520243c90a2d05fa247f1b0fde
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/per/t/._70A787-contents,239,1e1946a61ac93dc9b448a0ba988418fe
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/per/t/._B8CF4379,239,7e7e2472d804467d7a54e7fa3558406b
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/per/t/._B8CF4379-contents,239,04b31853a8559ffd2136fb976dcf67ca
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/per/t/._DB036E3D,239,7bb15ed8185ff4740548a1ea963cf32b
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/per/t/._DB036E3D-contents,239,ef04cc7cfcbf41d37b37a8d0df6de59c
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._1B93B77D,239,ea2328c6f419f6d14714773034c408f4
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._23336BB2,239,e471ee7e91fa57ab68a40a02534f7819
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._36E2D1E,239,094a19cedd3a9c49e7c8afbdb0b3bcfd
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._37B9A696,239,519f4de3263b4e3cc5c0037fa08a9a1b
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._38EA304,239,17f3e67901cc2a2bcd43c4fe28121801
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._4150DDE1,239,f34aa98740a180127941e6542d4e1ae4
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._42E92CDF,239,2723094ff3300c7dc52843b3428057b4
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._473BC272,239,71082c6811265065f87955df8599a42c
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._4A5C3DDB,239,ef2031f0f29b369be0eb4fa7ae4b9da3
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._6308881B,239,4f38e878da076375501bc8b4a5c1e7b4
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._652C6342,239,b669a6b07fdd2e650baa037ddd96d0d3
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._6C728CEA,239,e75985f37a6171f3641691fda852d2a5
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._78CF5C18,239,0236ce42d287c178417b990588db9263
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._7E728B7E,239,4be1ef63a9db5a8e7b32135beed17daf
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._7F072450,239,83ff799ba35f844dad49874032dd92e2
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._8013E706,239,47e34cadc36525f663b0192b56ad0ab6
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._83FE36D6,239,1315ec23feb801b3076f5d4477860fa0
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._8418525F,239,c2d61b02d77af4e190f41a750f238508
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._84267899,239,a4328f29110e3dd6803ffd0a6e4c6aea
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._89CCC1D8,239,664ec817f8c58b976e5599ad64dfac64
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._8A2164E9,239,a353db92dbe0cf9381d549d1d238c875
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._8B0C9572,239,464bd4a51a372362ef1315633425547f
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._9B4956DC,239,070d377e5bdf6460df8043c6eb5e824c
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._9B77C767,239,77499aef64b12b11fb317e871c540eaa
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._9E08FE57,239,9204efb85960d31bd6adc81eaa07e452
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._A0B55FF,239,7c0e7e1c88e6f47ad0f44ade3e2001f0
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._A7157728,239,f2f9c8287978218e484b47eca26ff5e4
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._A875A4A2,239,c4bc8d7f8a411c8f85dd01b725964918
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._AA1010B0,239,aa848198b256666f7ab3d8ebfd806bc2
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._AA27BDB8,239,95b025c6c386fe566dd90e216319381a
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._AAEC31B1,239,c27582bc8b72148071cce553eb37b831
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._B5E75F98,239,32af8318ec78a69084b2ad545ef3d943
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._BA6BED27,239,bc23ff11879968aa4f7d0f4bfb9725fe
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._BA838B2F,239,427292feef4053fd7a19a3e644fc1bae
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._BB9CC6B4,239,29df4d313d282d392960249661eb9f2a
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._BD2C3D24,239,17104ec8605b03f03384dfdcb5a238fc
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._BFF5F9FD,239,b034e0ad8e75e93fb4a042f47b9d244d
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._C4E90499,239,76aeb52aff0062663e879c6f92ea38b3
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._C93E8514,239,57717d0cdba0bdbe8ee92e2b5870da85
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._D78889CA,239,6849ccdf1477d24fd571e253ac180de4
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._DEEAA8B0,239,878a7e1453d015d5bd23804609b539aa
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._EE3B9226,239,49c7f4fde56c65322559572575b4df89
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._EED051D5,239,6238d822f5bfd5dca82ae6da1c62d899
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._EFC63C2,239,ad01a6517fc3a0862e8ded2db2ff696a
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._FB9F69CE,239,1eebdda93ea72e63fbc055f77cd28d87
+__MACOSX/replication_archive/.Rproj.user/4C166824/sources/prop/._INDEX,239,792d50366c545e5c99d4b6192ecf8b18
+__MACOSX/replication_archive/.Rproj.user/52536CD3/._console06,299,51d9ec82c8099ec041a75d7f04f70880
+__MACOSX/replication_archive/.Rproj.user/52536CD3/._ctx,299,8e70807409353b95cc9213a591def282
+__MACOSX/replication_archive/.Rproj.user/52536CD3/._explorer-cache,299,659d16a94421bf50f2d490a90e6c860d
+__MACOSX/replication_archive/.Rproj.user/52536CD3/._pcs,299,1e9456b18b7e0344d3fd71334e160e45
+__MACOSX/replication_archive/.Rproj.user/52536CD3/._persistent-state,299,b34afe9925cecf6a8078b3113593fdc7
+__MACOSX/replication_archive/.Rproj.user/52536CD3/._presentation,299,3664693b44be940b4ca742b454aeac2b
+__MACOSX/replication_archive/.Rproj.user/52536CD3/._profiles-cache,299,8b7bb002de187877960c3511bbe96836
+__MACOSX/replication_archive/.Rproj.user/52536CD3/._rmd-outputs,299,7139904a0cfefa27990a2465349daaa6
+__MACOSX/replication_archive/.Rproj.user/52536CD3/._saved_source_markers,299,ae6261fd2aa8b1b56e35340fb9cd53de
+__MACOSX/replication_archive/.Rproj.user/52536CD3/._sources,299,fab58febba7e6ec4d477178129caa81f
+__MACOSX/replication_archive/.Rproj.user/52536CD3/._viewer-cache,299,ef32700b6cbd8e011e7f63ab141e6814
+__MACOSX/replication_archive/.Rproj.user/52536CD3/._viewer_history,299,e537cb01ed9adb8553dd5981615f702f
+__MACOSX/replication_archive/.Rproj.user/52536CD3/console06/._INDEX001,299,23517339a142ac57505ed813cf17007f
+__MACOSX/replication_archive/.Rproj.user/52536CD3/pcs/._debug-breakpoints.pper,299,ba793fcbda9d3440d09b3489498cfae5
+__MACOSX/replication_archive/.Rproj.user/52536CD3/pcs/._files-pane.pper,299,0b69bbb4106368b8f4e3a4c5b6f643f5
+__MACOSX/replication_archive/.Rproj.user/52536CD3/pcs/._source-pane.pper,299,28bfa3182b42541f9629e5756fd495f6
+__MACOSX/replication_archive/.Rproj.user/52536CD3/pcs/._windowlayoutstate.pper,299,63745afad18f66e595bfd705ef74e825
+__MACOSX/replication_archive/.Rproj.user/52536CD3/pcs/._workbench-pane.pper,299,2f24c69d82f0cfa0f1e443674dc803e9
+__MACOSX/replication_archive/.Rproj.user/52536CD3/sources/._per,299,764e869d460ed6e95853d56612ffa6cf
+__MACOSX/replication_archive/.Rproj.user/52536CD3/sources/._prop,299,45a33e1f0aeca78d28bc20d6c7083cb7
+__MACOSX/replication_archive/.Rproj.user/52536CD3/sources/per/._t,299,6b8f871c6fb71e5c97f93ba70c46f505
+__MACOSX/replication_archive/.Rproj.user/52536CD3/sources/per/._u,299,7e4b114f9a7b9518de6e6cf3b6ad7d10
+__MACOSX/replication_archive/.Rproj.user/52536CD3/sources/per/t/._D9915470,299,bdf73a22a006e26d255355b27a66dc0d
+__MACOSX/replication_archive/.Rproj.user/52536CD3/sources/per/t/._D9915470-contents,299,a1f65fc84c469621267bda35807259e5
+__MACOSX/replication_archive/.Rproj.user/52536CD3/sources/prop/._760ABD81,299,0b24e24646989beb56e8cb1e7fa44741
+__MACOSX/replication_archive/.Rproj.user/52536CD3/sources/prop/._B472E8B6,299,3000f6723e791627aa2be9908f0ce665
+__MACOSX/replication_archive/.Rproj.user/52536CD3/sources/prop/._D98EEDEB,299,1e2e4b16af4caa15a3c3241477650bd0
+__MACOSX/replication_archive/.Rproj.user/52536CD3/sources/prop/._DB59363C,299,57d8cf67fc8894dd9444b8d929dbd8f0
+__MACOSX/replication_archive/.Rproj.user/52536CD3/sources/prop/._F50A8AAA,299,1c9e70ec252ae040fe4a16c6669468d2
+__MACOSX/replication_archive/.Rproj.user/52536CD3/sources/prop/._INDEX,299,99b449c5652db6e5b8fcc392bc57e531
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/._console06,299,e38dd431311243d4ebdc8b77445ab3ce
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/._ctx,299,f47ec12768f08ac98a7865d6abd08c13
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/._explorer-cache,299,8751ef16a5e517e6a5f5b84ff6d5b8fc
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/._pcs,299,1c86ed5819e98e25f77eba771f1181f5
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/._presentation,299,09e537d60a6f6e030a7fdbfa956b8a59
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/._profiles-cache,299,c7a59f4850dfc5df3da9d2166b435156
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/._rmd-outputs,299,24bae8fcedd414a94c25b5eb2589ee82
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/._saved_source_markers,299,29cc1bce66bef1dc02ce4811fe5ab02d
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/._sources,299,00201643fec1979a1d89199281845565
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/._viewer-cache,299,35bfab97a00b915d2145bfff5075ccb0
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/console06/._INDEX001,299,87b44597c9487debb1d638f61f54ed6a
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/pcs/._files-pane.pper,299,fe2d299106b2622e2a0e5228fd327c79
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/pcs/._source-pane.pper,299,f891b1dbcf94a5d9319aa20056983ee5
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/pcs/._windowlayoutstate.pper,299,1f8e69800d2eecad0d83e1406bc3332a
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/pcs/._workbench-pane.pper,299,4a795191a0d9fff3daa52d13cea919ba
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/sources/._per,299,71289fa776046a992db865bf9c7e9160
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/sources/._prop,299,41cb057aa1d2aca4a00a61c093703e12
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/sources/per/._t,299,3b6e84ab2c61c370ee15f59e296ff099
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/sources/per/._u,299,cbedf6d996738b92d4043b40a9c9ca61
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/sources/per/t/._272112F4,299,a7fa7d4d4c04670da871bb6335d01da9
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/sources/per/t/._272112F4-contents,299,64caee41186a091b26fa3637ca0fdf7c
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/sources/per/t/._2BFF1A95,299,33233b369603b25c3888b04fc0b347fe
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/sources/per/t/._2BFF1A95-contents,299,771237ecaf482f860caaff440230dbc2
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/sources/per/t/._69DCC012,299,b6b643839dc5d42c6275d4a26d7e2d3f
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/sources/per/t/._69DCC012-contents,299,213295d0fc284454a1dc4b8fe9b72597
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/sources/per/t/._E0612AB8,299,aa90e17f9cb831e06bb0aa4129f3f879
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/sources/per/t/._E0612AB8-contents,299,b63fec59f089a911a9884f0536c68aa3
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/sources/prop/._44DDA843,299,26fe86b489c68bdcf51638bd22c40c0d
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/sources/prop/._4EBF3EEA,299,4a8c5f621df39ab10035fee1137b050e
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/sources/prop/._527D7FD5,299,e36316a7966c633e3da47fc192e69b37
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/sources/prop/._5C0F8765,299,cdb1518c634b09bfb95c30c09719a4d2
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/sources/prop/._64F5B670,299,29d1bc9dbcdfb66603bfa97815e83452
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/sources/prop/._71E3749,298,5a9a98fb00fe9a06d0504771470dc17d
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/sources/prop/._8482B52F,299,5d7dac33aa544d1a4ec58e4d4ed5c2d6
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/sources/prop/._B8014BE9,299,9934117ca4fc369d7519d9a836f038d7
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/sources/prop/._C989C332,299,6671707650fb748ea026687a3c53ad83
+__MACOSX/replication_archive/.Rproj.user/6BAFBE4C/sources/prop/._INDEX,299,68d6085d2b46471fc335b57fa0880f30
+__MACOSX/replication_archive/.Rproj.user/7CB138D8/._console06,299,8fb3f5557fae010ccb9c154edba7c638
+__MACOSX/replication_archive/.Rproj.user/7CB138D8/._ctx,299,6e57cf4e6ed9e2d1c2e5b86ef167d357
+__MACOSX/replication_archive/.Rproj.user/7CB138D8/._explorer-cache,299,df0ffbc8bf46bbeaf590b0c8dfcca09e
+__MACOSX/replication_archive/.Rproj.user/7CB138D8/._pcs,299,8f437939748417381f663df7ddb2909a
+__MACOSX/replication_archive/.Rproj.user/7CB138D8/._persistent-state,299,0712b54f1f642b76914e61411be81127
+__MACOSX/replication_archive/.Rproj.user/7CB138D8/._presentation,299,3ec8805d9ed7beb5518f42d6b39b5bc8
+__MACOSX/replication_archive/.Rproj.user/7CB138D8/._profiles-cache,299,3afa0d3c53b044fed03871eede7729a9
+__MACOSX/replication_archive/.Rproj.user/7CB138D8/._rmd-outputs,299,e6f0e76f4ce970e739862411770dd01e
+__MACOSX/replication_archive/.Rproj.user/7CB138D8/._saved_source_markers,299,28849950e9e6d9d4b96e1d7858d0c244
+__MACOSX/replication_archive/.Rproj.user/7CB138D8/._sources,299,5a6c4f700d81c607249484eecd866187
+__MACOSX/replication_archive/.Rproj.user/7CB138D8/._viewer-cache,299,7ba4ac6422e4e1c8365f41ace2316f4b
+__MACOSX/replication_archive/.Rproj.user/7CB138D8/._viewer_history,299,1971d64854b01643f00d13e2868c0fdf
+__MACOSX/replication_archive/.Rproj.user/7CB138D8/console06/._INDEX001,299,1e2035a058e06ea3a86bb3367991d5b2
+__MACOSX/replication_archive/.Rproj.user/7CB138D8/pcs/._files-pane.pper,299,161655af2f7453ba5e81628adb6424c9
+__MACOSX/replication_archive/.Rproj.user/7CB138D8/pcs/._source-pane.pper,299,161680a433568f86e5312583877f3376
+__MACOSX/replication_archive/.Rproj.user/7CB138D8/pcs/._windowlayoutstate.pper,299,d085804ac5a6e849b32522490089e13b
+__MACOSX/replication_archive/.Rproj.user/7CB138D8/pcs/._workbench-pane.pper,299,3522e6933400f25bab80ca494ec5213a
+__MACOSX/replication_archive/.Rproj.user/7CB138D8/sources/._per,299,ddb9b07e3ba7b685dc0943e09078827f
+__MACOSX/replication_archive/.Rproj.user/7CB138D8/sources/._prop,299,58e9097bd9873730cad22e6ffb6213ff
+__MACOSX/replication_archive/.Rproj.user/7CB138D8/sources/._s-2986824A,298,437711839522b826528ad7565297a327
+__MACOSX/replication_archive/.Rproj.user/7CB138D8/sources/per/._t,299,0d518a4b67986c602fd10bbd35d8304d
+__MACOSX/replication_archive/.Rproj.user/7CB138D8/sources/per/._u,299,2bc141fc07fe61f229ce238c726f55d5
+__MACOSX/replication_archive/.Rproj.user/7CB138D8/sources/prop/._293DCB6,299,dcc91b22a8372ec071cc0a09afb8ebeb
+__MACOSX/replication_archive/.Rproj.user/7CB138D8/sources/prop/._3FC1A612,299,58fa4330c69f93d81a072a67e81f15c8
+__MACOSX/replication_archive/.Rproj.user/7CB138D8/sources/prop/._DBE97D2C,299,c3253552a815c6c23f262a1e4f2b55e9
+__MACOSX/replication_archive/.Rproj.user/7CB138D8/sources/prop/._INDEX,299,53868c35d2cfdf2f22de71f35935af51
+__MACOSX/replication_archive/.Rproj.user/7CB138D8/sources/s-2986824A/._44457E64,299,06051490adb3c3dc332c6b75e6470f8f
+__MACOSX/replication_archive/.Rproj.user/7CB138D8/sources/s-2986824A/._44457E64-contents,299,71c5f968aa577b586cb8b1236be151da
+__MACOSX/replication_archive/.Rproj.user/7CB138D8/sources/s-2986824A/._8C4D0936,299,30bd3979d1f84d2defe8b062a15ac578
+__MACOSX/replication_archive/.Rproj.user/7CB138D8/sources/s-2986824A/._8C4D0936-contents,298,20eb1e96564876b8dae49803ee2ea816
+__MACOSX/replication_archive/.Rproj.user/7CB138D8/sources/s-2986824A/._lock_file,298,244eea903aa1817b209872f55dee909d
+__MACOSX/replication_archive/.Rproj.user/shared/._notebooks,239,59b0c86ad7542b51a9e78e02b41765e5
+__MACOSX/replication_archive/.Rproj.user/shared/notebooks/._patch-chunk-names,239,4d3c477c620999dd25591511dd677051
+__MACOSX/replication_archive/.Rproj.user/shared/notebooks/._paths,298,00d04e84ba453412daf2d46f79298826
+__MACOSX/replication_archive/._.Rproj.user,239,1f10e03e84ed96cdc4779eaee4095189
+__MACOSX/replication_archive/._R,239,99bfb484ccdaf7674f7917b7bd7f3662
+__MACOSX/replication_archive/._README.txt,329,dfa61733178347987a264b208724e83e
+__MACOSX/replication_archive/._figure,239,8b359163c91cba660a0e1e4505620d5b
+__MACOSX/replication_archive/._output,239,62f232dbe41f6cbf9e24d9a7fee321ca
+__MACOSX/replication_archive/._rds_files,299,9c8b6cd3567bd044b2b37fad0cd5dc1a
+__MACOSX/replication_archive/._replication_archive.Rproj,355,754327c1661d074ac614e01d7497d025
+__MACOSX/replication_archive/._run_replication.R,445,9f0317ce13ac671882738c8a12d268f5
+__MACOSX/replication_archive/._tool_census,299,d7ed59cfd5cdc124142d4939979acd9f
+__MACOSX/replication_archive/R/._1_simple_design.R,299,39b57b81df279a9cda6b60822f365942
+__MACOSX/replication_archive/R/._2_design_census.R,299,5c0947f72a9af16c6d443b85c8c1da12
+__MACOSX/replication_archive/R/._3_10_discovery.R,299,79257772fc9ac95af6b8191326eb2bbc
+__MACOSX/replication_archive/R/._3_1_survey_designs.R,299,dcf954180890066ee893da760198e6b1
+__MACOSX/replication_archive/R/._3_2_Bayesian_descriptive_inference.R,299,aa5a0865cd69e9a21c335222d7895836
+__MACOSX/replication_archive/R/._3_3_process_tracing.R,299,978da95dab403ba9f5ae5ade55c8cb0c
+__MACOSX/replication_archive/R/._3_4_QCA.R,299,793b03a698fbabfa280076ace985dea1
+__MACOSX/replication_archive/R/._3_5_nested.R,299,5ef8ffa32a2da0e157173f70fae9bd62
+__MACOSX/replication_archive/R/._3_6_model_based_estimands.R,299,37401238dbb6012e286891d1cd37be2f
+__MACOSX/replication_archive/R/._3_7_matching.R,299,35ce4ddc7a0cc3b8bb5c837383f4b36f
+__MACOSX/replication_archive/R/._3_8_regression_discontinuity.R,299,a0c01a03859545f828936955da1d202a
+__MACOSX/replication_archive/R/._3_9_experimental.R,299,351a38132dae26ac1f3a8fd7f4dc08a3
+__MACOSX/replication_archive/R/._4_B_and_S_replication.R,299,5aa4952e8da616fbe628b8771868d908
+__MACOSX/replication_archive/R/._appendix_code.R,329,93327ffb6880f67099b75c37ca5937df
+__MACOSX/replication_archive/R/._knitr_setup.R,329,82e89492c30ca7e7d58ac898ab0c5268
+__MACOSX/replication_archive/R/._table_3_declaration.R,329,c2661b108eedc40e523af0691042a3e9
+__MACOSX/replication_archive/figure/._.DS_Store,120,b9a94cc8f4aac450fb21641eaf065c6d
+__MACOSX/replication_archive/figure/._figure_1.pdf,352,a873795e089fde90a39d6425004d8254
+__MACOSX/replication_archive/figure/._figure_2.pdf,352,b9883b97c0bf082959d8bf00f03b93a3
+__MACOSX/replication_archive/output/._.DS_Store,120,b9a94cc8f4aac450fb21641eaf065c6d
+__MACOSX/replication_archive/output/._1_simple_design.txt,239,545aaf0afc954cb3db1373f080ea4b73
+__MACOSX/replication_archive/output/._2_design_census.txt,299,87e0a005277c4beb63907e5282707b04
+__MACOSX/replication_archive/output/._3_10_discovery.txt,239,169a9b7a5391a088b026b12f60a2d65a
+__MACOSX/replication_archive/output/._3_1_survey_designs.txt,239,f6c34d862e83ecd8abcad173250a52ac
+__MACOSX/replication_archive/output/._3_2_Bayesian_descriptive_inference.txt,239,2333a1c04e51c5ab506ff1d783cc2d2f
+__MACOSX/replication_archive/output/._3_3_process_tracing.txt,239,125941942feb5aa744116555f882bd7e
+__MACOSX/replication_archive/output/._3_4_QCA.txt,239,4ad79ed331c96962d43b843ba4c0230e
+__MACOSX/replication_archive/output/._3_5_nested.txt,239,80f60e09e953bda3d8e7c8648d6169a8
+__MACOSX/replication_archive/output/._3_6_model_based_estimands.txt,239,7a817952529d9c8ea956fe691956a75e
+__MACOSX/replication_archive/output/._3_7_matching.txt,239,a50fc8d69c7af5eec4c00bad62643583
+__MACOSX/replication_archive/output/._3_8_regression_discontinuity.txt,239,c50d12f39ea6658c049e2576bf3ef1ae
+__MACOSX/replication_archive/output/._3_9_experimental.txt,239,d48bc3491f084db39c21c38c9dbb54f3
+__MACOSX/replication_archive/output/._4_B_and_S_replication.txt,239,91e6c32ce1a39bcfdc56582b6f910e0c
+__MACOSX/replication_archive/rds_files/._1_simple_design_5000_sims.rds,239,61f677f9f381acde6dcdcff748506205
+__MACOSX/replication_archive/rds_files/._2_design_census_5000_sims.rds,299,e62baa3dca4f1deadeac6ed7e89c0b9e
+__MACOSX/replication_archive/rds_files/._3_10_discovery_5000_sims.rds,239,fbbb881d89dfcea6fb0c538261ebaa3c
+__MACOSX/replication_archive/rds_files/._3_1_survey_designs_5000_sims.rds,239,df3baf4ee0fe58abb135e45c98a89ffc
+__MACOSX/replication_archive/rds_files/._3_2_Bayesian_descriptive_inference_5000_sims.rds,239,b1d7be1fb813943ad7ab44f11412c713
+__MACOSX/replication_archive/rds_files/._3_3_process_tracing1_5000_sims.rds,239,07f5918b2a72fd3701e1df2bc019ad8f
+__MACOSX/replication_archive/rds_files/._3_3_process_tracing2_5000_sims.rds,239,a041531e45f11f7b79038618cf57942a
+__MACOSX/replication_archive/rds_files/._3_4_QCA1_5000_sims.rds,239,f61c7bc781fe0bbbf705f18a36989cd3
+__MACOSX/replication_archive/rds_files/._3_4_QCA2_5000_sims.rds,239,b82d0ed1856fec14a31275818a4c1429
+__MACOSX/replication_archive/rds_files/._3_4_QCA3_5000_sims.rds,239,9e09c1c403bb6a83bc08c07ad4a8e632
+__MACOSX/replication_archive/rds_files/._3_5_nested1_5000_sims.rds,239,03a700c0c91e6e994cf4839abf120062
+__MACOSX/replication_archive/rds_files/._3_5_nested2_5000_sims.rds,239,6d559d5a04cab7b2ba4d48cbfc79d422
+__MACOSX/replication_archive/rds_files/._3_5_nested3_5000_sims.rds,239,a123e06c9f253f2074be79c873012793
+__MACOSX/replication_archive/rds_files/._3_6_model_based_estimands_5000_sims.rds,239,117b28e9a65233b02989d8c737b554c2
+__MACOSX/replication_archive/rds_files/._3_7_matching_5000_sims.rds,239,359d1dfccaca2f052c3d20abcc1b6ca5
+__MACOSX/replication_archive/rds_files/._3_8_regression_discontinuity_5000_sims.rds,239,9a188793ee3657d66cf96d5377ab5071
+__MACOSX/replication_archive/rds_files/._3_9_experimental_2x2_5000_sims.rds,239,4db1dbdbe25e69a10f56746d7f9858c2
+__MACOSX/replication_archive/rds_files/._3_9_experimental_3x1_5000_sims.rds,239,6471db32a8bbd32470e1850a915014db
+__MACOSX/replication_archive/rds_files/._4_B_and_S_replication1_5000_sims.rds,239,a4f8fffe17d3aa2710e71443b2da1d55
+__MACOSX/replication_archive/rds_files/._4_B_and_S_replication2_5000_sims.rds,239,b6318efc510eec9f7500286c5958be37
+__MACOSX/replication_archive/rds_files/._4_B_and_S_replication3_5000_sims.rds,239,9fed4de1497404df8392dd9d60b2affa
+__MACOSX/replication_archive/tool_census/._Documentation,299,f0f4f52e77c9941a4051826297d46b8b
+__MACOSX/replication_archive/tool_census/._tool_census.xlsx,513,d97ccfb0f73cd7f75b080ea82f851ee3
+__MACOSX/replication_archive/tool_census/Documentation/._3ie,299,6dbd88277657f4f4dc61c18ec20a2b7d
+__MACOSX/replication_archive/tool_census/Documentation/._AI-Therapy,298,fdbb74b311543478d67b4d990993a5c3
+__MACOSX/replication_archive/tool_census/Documentation/._AlgDesign,298,d6a0ec90a489dae84e1d17438ba793e8
+__MACOSX/replication_archive/tool_census/Documentation/._ClinCalc,298,b7c22912e1ce4c5d3af34d142f50df05
+__MACOSX/replication_archive/tool_census/Documentation/._DSS,299,e4398c52d949e2c838d3a5f5ce169256
+__MACOSX/replication_archive/tool_census/Documentation/._Design Expert,298,dd25e117de40b803370d48234f9bb082
+__MACOSX/replication_archive/tool_census/Documentation/._Design Expert 10.0.6,298,1c0056b8a1d4294bad9df24ab0fbbf1b
+__MACOSX/replication_archive/tool_census/Documentation/._EDA NC3RS,299,8211aa4bbe966374c76ac45995d26f60
+__MACOSX/replication_archive/tool_census/Documentation/._EDGAR,299,a6a2c0d66b691373fc39a61a7172a69e
+__MACOSX/replication_archive/tool_census/Documentation/._Free Statistics Calculators,239,4aa445b0ba189ec709a5fd717302ebcb
+__MACOSX/replication_archive/tool_census/Documentation/._GLIMMPSE,299,bb1f1af1860958d865f6891f166ce6c9
+__MACOSX/replication_archive/tool_census/Documentation/._GPower,299,bcb7df57e21fb2e6d3ecbe16629c252f
+__MACOSX/replication_archive/tool_census/Documentation/._HyLown,299,35e894d495f976e48fb16bc900833932
+__MACOSX/replication_archive/tool_census/Documentation/._JMP Design of Experiments,239,c0ca13a4e172c29c9cc17cec1e20321e
+__MACOSX/replication_archive/tool_census/Documentation/._PASS (Power Analysis and Sample Size),239,a80fc4ac7ee2fb9c04b85f3e3f6c1467
+__MACOSX/replication_archive/tool_census/Documentation/._PS Power and Sample Size,239,fc844a337d0bef0afa6002b49f5e2094
+__MACOSX/replication_archive/tool_census/Documentation/._Power and Precision,299,fef196693fd6e2a9a550cf5604909138
+__MACOSX/replication_archive/tool_census/Documentation/._SISA,299,c30bcb2f4dba92add479fc11ce0e58de
+__MACOSX/replication_archive/tool_census/Documentation/._SPSS SamplePower,299,f18207d68e8ef096d60c4ad917475001
+__MACOSX/replication_archive/tool_census/Documentation/._Stata 14,299,901b718919a8c3d55c2fd3b00163b6e8
+__MACOSX/replication_archive/tool_census/Documentation/._Stata 15,299,743e68674904714e272d717d57089806
+__MACOSX/replication_archive/tool_census/Documentation/._Statistical Solutions,299,66d08865a2ee9ca520d870adc1f74d4f
+__MACOSX/replication_archive/tool_census/Documentation/._UBC,299,2645d7a332c42e081c0e41a0710dec02
+__MACOSX/replication_archive/tool_census/Documentation/._UCSF,299,54a923f503ec003b6298d6244390f94c
+__MACOSX/replication_archive/tool_census/Documentation/._agricolae,298,5b3bec22ab36db96e5d427e1aa57b3e3
+__MACOSX/replication_archive/tool_census/Documentation/._dae,298,57b8540d7d678b26feeb26fdb3f47f0a
+__MACOSX/replication_archive/tool_census/Documentation/._easypower,299,9a279400afc2d4d645c2d0dede2dcbda
+__MACOSX/replication_archive/tool_census/Documentation/._egap power calculator,299,2e9ff1f8cbef28f7c4d443506a60fbe0
+__MACOSX/replication_archive/tool_census/Documentation/._nQuery,299,53dd9835b31ed05f11b647e4ea6b4ff8
+__MACOSX/replication_archive/tool_census/Documentation/._optimal design,299,3163087ba1fffdb5f0e01f1d569763f0
+__MACOSX/replication_archive/tool_census/Documentation/._piface Java Applet,299,eaa4b3db8595947d9e9e05881111b7c9
+__MACOSX/replication_archive/tool_census/Documentation/._powerAnalysis,299,00954ada1e2a03b6d378f87e793b3eef
+__MACOSX/replication_archive/tool_census/Documentation/._powerreg,299,5a1c71d590d0952dd537cd0b6bbae4f7
+__MACOSX/replication_archive/tool_census/Documentation/._pwr,299,151e7d3ee19d92021f8c78cea7a2291b
+__MACOSX/replication_archive/tool_census/Documentation/3ie/._3ie.xlsx,299,57320b4f475d027dd86087ecb458657e
+__MACOSX/replication_archive/tool_census/Documentation/3ie/._Screen Shot 2017-07-14 at 3.47.44 PM.png,239,f0cbd2dc537b2d7dfb9b85d085213385
+__MACOSX/replication_archive/tool_census/Documentation/3ie/._Screen Shot 2017-07-14 at 3.49.38 PM.png,239,dad4443160d1e02b3de1346c0123257d
+__MACOSX/replication_archive/tool_census/Documentation/AI-Therapy/._Screen Shot 2017-07-14 at 4.03.12 PM.png,239,7608d2f84faa4c45b55a61c9a4ed3a78
+__MACOSX/replication_archive/tool_census/Documentation/AI-Therapy/._Screen Shot 2017-07-14 at 4.03.47 PM.png,239,78342bfd6e26df506e191f78903545d2
+__MACOSX/replication_archive/tool_census/Documentation/AlgDesign/._AlgDesign.R,388,1bebb955094cf2d2083cfcc548eaa79b
+__MACOSX/replication_archive/tool_census/Documentation/ClinCalc/._Screen Shot 2017-07-14 at 4.15.44 PM.png,239,3a109daea4dc35ab44d734c94ec03255
+__MACOSX/replication_archive/tool_census/Documentation/DSS/._Screen Shot 2017-07-14 at 5.33.34 PM.png,352,6a1cbf6b9d389dacd7e7dc5f18d0bed0
+__MACOSX/replication_archive/tool_census/Documentation/Design Expert/._Screenshot (26).png,239,2a178ce70f9479d118b46ec09512dd7b
+__MACOSX/replication_archive/tool_census/Documentation/Design Expert/._Screenshot (27).png,239,4ca6af6db87e5b94c637dfd81f4692cc
+__MACOSX/replication_archive/tool_census/Documentation/EDA NC3RS/._Screen Shot 2017-07-18 at 3.55.16 PM.png,239,1c40bc9ab834fe031390c940a5c2d9ce
+__MACOSX/replication_archive/tool_census/Documentation/Free Statistics Calculators/._Screen Shot 2017-07-14 at 6.07.09 PM.png,239,892e89ec508b3e59945458ea25229e5d
+__MACOSX/replication_archive/tool_census/Documentation/Free Statistics Calculators/._Screen Shot 2017-07-18 at 10.45.35 AM.png,239,c087c36f0f2fb89896471b3e6da5eead
+__MACOSX/replication_archive/tool_census/Documentation/GLIMMPSE/._BFE.json,299,f1a779ca404b1c7a5af8a1bdea03bb20
+__MACOSX/replication_archive/tool_census/Documentation/GLIMMPSE/._DIM.json,299,864b895a75ebb4b6974eb93753dec31f
+__MACOSX/replication_archive/tool_census/Documentation/GLIMMPSE/._Screen Shot 2017-07-18 at 3.15.40 PM.png,239,61140db25d1a43bcc0b28a3e4036dd4f
+__MACOSX/replication_archive/tool_census/Documentation/GPower/._Screen Shot 2017-07-17 at 1.31.32 PM.png,239,0d1fa5de768eeed70fb519a59c1159d7
+__MACOSX/replication_archive/tool_census/Documentation/GPower/._Screen Shot 2017-07-17 at 1.37.11 PM.png,239,8b61a3adfa468f44e11d509835a3d109
+__MACOSX/replication_archive/tool_census/Documentation/HyLown/._Screen Shot 2017-07-14 at 6.12.02 PM.png,239,2c35f29811f745fcc8d5b9cea2fdfafb
+__MACOSX/replication_archive/tool_census/Documentation/JMP Design of Experiments/._Screen Shot 2017-07-18 at 4.02.18 PM.png,239,c2cd7860c832d0b30308fc54250d1c69
+__MACOSX/replication_archive/tool_census/Documentation/PASS (Power Analysis and Sample Size)/._Screenshot (13).png,239,f16026f4f77d723c74138beb001fd37b
+__MACOSX/replication_archive/tool_census/Documentation/PASS (Power Analysis and Sample Size)/._Screenshot (15).png,239,41fb423604beeb36b1b6ccb7dd22709b
+__MACOSX/replication_archive/tool_census/Documentation/PASS (Power Analysis and Sample Size)/._Screenshot (16).png,239,a189e2346714375984a5d8856c905c91
+__MACOSX/replication_archive/tool_census/Documentation/PASS (Power Analysis and Sample Size)/._Screenshot (17).png,239,982c6b238055a837e11f09d222e6d155
+__MACOSX/replication_archive/tool_census/Documentation/PS Power and Sample Size/._Screenshot (2).png,239,a402a2269695c3be7fa326b252aee7e5
+__MACOSX/replication_archive/tool_census/Documentation/Power and Precision/._Screenshot (3).png,239,86764bbe7d3e7f983dbece3a1479600a
+__MACOSX/replication_archive/tool_census/Documentation/Power and Precision/._Screenshot (4).png,239,0c983961a0de9f09a09a698ba03fb77e
+__MACOSX/replication_archive/tool_census/Documentation/Power and Precision/._Screenshot (5).png,239,286880f7df7e54e857b5f70c73fb628d
+__MACOSX/replication_archive/tool_census/Documentation/Power and Precision/._Screenshot (6).png,239,946f8ff96ce39c0fbac6bbe08619eab3
+__MACOSX/replication_archive/tool_census/Documentation/SISA/._Screen Shot 2017-07-18 at 3.46.29 PM.png,239,e936a38f668212eded374d35e12724e9
+__MACOSX/replication_archive/tool_census/Documentation/SPSS SamplePower/._Screenshot (18).png,239,29cd35e01e05d8880d6c8ab87610ee94
+__MACOSX/replication_archive/tool_census/Documentation/SPSS SamplePower/._Screenshot (19).png,239,c8fe9b84e960f955a216a18546ec9643
+__MACOSX/replication_archive/tool_census/Documentation/SPSS SamplePower/._Screenshot (20).png,239,840f3ba1c0fa95b109d5cf97b92721e3
+__MACOSX/replication_archive/tool_census/Documentation/SPSS SamplePower/._Screenshot (21).png,239,44d3369a690ad9096a2cf803114c9e12
+__MACOSX/replication_archive/tool_census/Documentation/Stata 14/._Screen Shot 2017-07-18 at 1.50.57 PM.png,239,24d0b12b9ac88c7248f8e69dfe3b7413
+__MACOSX/replication_archive/tool_census/Documentation/Stata 15/._Screen Shot 2017-07-18 at 4.19.11 PM.png,239,0b12e3786966674661490ce884d15a44
+__MACOSX/replication_archive/tool_census/Documentation/Stata 15/._Screen Shot 2017-07-18 at 4.21.49 PM.png,239,8ad73292ed20c0ec274aa31a705f1fff
+__MACOSX/replication_archive/tool_census/Documentation/Statistical Solutions/._Screen Shot 2017-07-18 at 4.05.56 PM.png,239,1ab131f751353374b5812c890213fe9c
+__MACOSX/replication_archive/tool_census/Documentation/UBC/._Screen Shot 2017-07-18 at 4.07.11 PM.png,239,dcdf4daf62e60bf66ceb9d43c29dc3dd
+__MACOSX/replication_archive/tool_census/Documentation/UCSF/._Screen Shot 2017-07-18 at 4.44.23 PM.png,239,57fb09cf3da7242d45944a51c72ec842
+__MACOSX/replication_archive/tool_census/Documentation/agricolae/._agricolae.R,388,32b61ad7612589d8963b9652bf931692
+__MACOSX/replication_archive/tool_census/Documentation/dae/._dae.R,388,f7cba988ea740669400cb04269f4149d
+__MACOSX/replication_archive/tool_census/Documentation/dae/._dae_vignette.pdf,388,28e674ed4041f8e8eacacffc504ee906
+__MACOSX/replication_archive/tool_census/Documentation/easypower/._easypower.R,389,706156ca33554d50f36c6970f1e42852
+__MACOSX/replication_archive/tool_census/Documentation/egap power calculator/._Screen Shot 2017-07-14 at 5.01.50 PM.png,352,d1ad0c64ffaabde9d4cc95a82c96be5d
+__MACOSX/replication_archive/tool_census/Documentation/nQuery/._Screenshot (22).png,239,bb0a1d48f89c7b42f7d292531af414cc
+__MACOSX/replication_archive/tool_census/Documentation/nQuery/._Screenshot (24).png,239,78965e1908585c576d447eed06030191
+__MACOSX/replication_archive/tool_census/Documentation/optimal design/._Screen Shot 2017-07-17 at 3.30.17 PM.png,239,7a8c5c7c9a4c8216def7a016bb035851
+__MACOSX/replication_archive/tool_census/Documentation/optimal design/._Screen Shot 2017-07-17 at 3.42.16 PM.png,239,b2bbe2bdb8306c3ce8cac0ebf96f9e79
+__MACOSX/replication_archive/tool_census/Documentation/optimal design/._optimal_design_manual.pdf,329,a8b18418f02945a700667f4449e1749e
+__MACOSX/replication_archive/tool_census/Documentation/piface Java Applet/._Screen Shot 2017-07-18 at 3.39.32 PM.png,239,961708020bd0dc9c3590726a1c650207
+__MACOSX/replication_archive/tool_census/Documentation/piface Java Applet/._Screen Shot 2017-07-18 at 3.42.43 PM.png,239,d3137c860fdd497d3ebbbbd57dbf6bd3
+__MACOSX/replication_archive/tool_census/Documentation/powerAnalysis/._powerAnalysis.R,329,7502a72adbd3b4e70b6347075c772f98
+__MACOSX/replication_archive/tool_census/Documentation/powerreg/._Screen Shot 2017-07-18 at 2.03.06 PM.png,239,910cf65e131c5033eee014e99f203d38
+__MACOSX/replication_archive/tool_census/Documentation/pwr/._pwr.R,389,8a1121c0461572511a4ad8ae6fe8d6d7
+replication_archive/.Rproj.user/4C166824/console06/INDEX001,2,d751713988987e9331980363e24189ce
+replication_archive/.Rproj.user/4C166824/ctx/ctx-10551/console_actions,51867,dc02368923eea6bc9fa960e72ab62d17
+replication_archive/.Rproj.user/4C166824/ctx/ctx-10551/history,6246,b6793af1a189d817c4095883eefef335
+replication_archive/.Rproj.user/4C166824/ctx/ctx-10551/settings,403,21f77ea4616a58cdc11a13e281789eaf
+replication_archive/.Rproj.user/4C166824/ctx/ctx-16773/console_actions,1875,6b1e575a38911549ad5bf92031ee752e
+replication_archive/.Rproj.user/4C166824/ctx/ctx-16773/history,44,78ac5006cb1abc06571155b24859343d
+replication_archive/.Rproj.user/4C166824/ctx/ctx-16773/settings,401,26df9551ecdd186081cb7134edbcfbfc
+replication_archive/.Rproj.user/4C166824/ctx/ctx-19324/console_actions,2260,00794078edc76f94111a3fd02d3f7e40
+replication_archive/.Rproj.user/4C166824/ctx/ctx-19324/history,362,4168ce98411698f1b44a42c73b00e84f
+replication_archive/.Rproj.user/4C166824/ctx/ctx-19324/settings,403,21f77ea4616a58cdc11a13e281789eaf
+replication_archive/.Rproj.user/4C166824/ctx/ctx-28624/console_actions,7517,26456b4d79446050b8ca9e87865c300a
+replication_archive/.Rproj.user/4C166824/ctx/ctx-28624/history,720,83102e2796ab833e4df84d8aa76131a6
+replication_archive/.Rproj.user/4C166824/ctx/ctx-28624/settings,403,21f77ea4616a58cdc11a13e281789eaf
+replication_archive/.Rproj.user/4C166824/ctx/ctx-43730/console_actions,43798,922e78b8c90beea4168862babac106c5
+replication_archive/.Rproj.user/4C166824/ctx/ctx-43730/history,995,0cd5f68405aa738e3551f94f2ecf4be2
+replication_archive/.Rproj.user/4C166824/ctx/ctx-43730/settings,403,21f77ea4616a58cdc11a13e281789eaf
+replication_archive/.Rproj.user/4C166824/ctx/ctx-45862/console_actions,3561,025d813ee0448103de7a19f26c6e1ed3
+replication_archive/.Rproj.user/4C166824/ctx/ctx-45862/history,263,e6f710a1f7f82734bf0a9f97042ef2bb
+replication_archive/.Rproj.user/4C166824/ctx/ctx-45862/settings,403,21f77ea4616a58cdc11a13e281789eaf
+replication_archive/.Rproj.user/4C166824/pcs/debug-breakpoints.pper,77,e99560ec311066efc93dff308fd68488
+replication_archive/.Rproj.user/4C166824/pcs/files-pane.pper,220,887ab17a590facc01cd3274148d4522f
+replication_archive/.Rproj.user/4C166824/pcs/source-pane.pper,23,9dc944d590c2e161c3318440afa9887f
+replication_archive/.Rproj.user/4C166824/pcs/windowlayoutstate.pper,295,a935f631630323b772b903c4ba94f7ce
+replication_archive/.Rproj.user/4C166824/pcs/workbench-pane.pper,65,c03a9e948d1c492630dda9672ccfb7aa
+replication_archive/.Rproj.user/4C166824/persistent-state,514,87936f2842e876c3a1fd62e84be07baa
+replication_archive/.Rproj.user/4C166824/rmd-outputs,5,cc9067c2ee470dc248b14b194209a34e
+replication_archive/.Rproj.user/4C166824/saved_source_markers,27,03848550b5519652cec02c7edb2ca8a4
+replication_archive/.Rproj.user/4C166824/sources/per/t/2BF266C2,730,1d3caf86bda7874e87a53ff0a97bbf1c
+replication_archive/.Rproj.user/4C166824/sources/per/t/2BF266C2-contents,1565,a908c42069385f7e84efeaffee7fe3a7
+replication_archive/.Rproj.user/4C166824/sources/per/t/6F37500E,710,059760c76e5379d91e2cbb1da2c1cc95
+replication_archive/.Rproj.user/4C166824/sources/per/t/6F37500E-contents,414,2696b2f75e097f0f459ee3bb9a7b4970
+replication_archive/.Rproj.user/4C166824/sources/per/t/70A787,703,a0dd7f33a1203399f6f1b6574106c9ab
+replication_archive/.Rproj.user/4C166824/sources/per/t/70A787-contents,523,a6ffabfa0fd8c3b3cc7d0c2138772ef9
+replication_archive/.Rproj.user/4C166824/sources/per/t/B8CF4379,724,e156cb93a7dca336faecd9b8dc84dee6
+replication_archive/.Rproj.user/4C166824/sources/per/t/B8CF4379-contents,587,c7fc41bea50b521735b3afc81b728776
+replication_archive/.Rproj.user/4C166824/sources/per/t/DB036E3D,747,8604dd3f5a7a2a167abbbad38fd7378c
+replication_archive/.Rproj.user/4C166824/sources/per/t/DB036E3D-contents,735,04b93bcac730676395a8caa5ebe0c1ba
+replication_archive/.Rproj.user/4C166824/sources/prop/1B93B77D,89,9d1643bf39001112961a9e1a2e4f251a
+replication_archive/.Rproj.user/4C166824/sources/prop/23336BB2,3,3d29a75fcf0ed7dfff86d3db8f92fc69
+replication_archive/.Rproj.user/4C166824/sources/prop/36E2D1E,3,3d29a75fcf0ed7dfff86d3db8f92fc69
+replication_archive/.Rproj.user/4C166824/sources/prop/37B9A696,58,e3178906169dd70b17242df3f5b0ea4a
+replication_archive/.Rproj.user/4C166824/sources/prop/38EA304,3,3d29a75fcf0ed7dfff86d3db8f92fc69
+replication_archive/.Rproj.user/4C166824/sources/prop/4150DDE1,3,3d29a75fcf0ed7dfff86d3db8f92fc69
+replication_archive/.Rproj.user/4C166824/sources/prop/42E92CDF,3,3d29a75fcf0ed7dfff86d3db8f92fc69
+replication_archive/.Rproj.user/4C166824/sources/prop/473BC272,3,3d29a75fcf0ed7dfff86d3db8f92fc69
+replication_archive/.Rproj.user/4C166824/sources/prop/4A5C3DDB,60,8159b13baba9de7b95d38e2cc38e44bc
+replication_archive/.Rproj.user/4C166824/sources/prop/6308881B,59,f2bf76927acc94344652c3b60dcf7ccd
+replication_archive/.Rproj.user/4C166824/sources/prop/652C6342,3,3d29a75fcf0ed7dfff86d3db8f92fc69
+replication_archive/.Rproj.user/4C166824/sources/prop/6C728CEA,3,3d29a75fcf0ed7dfff86d3db8f92fc69
+replication_archive/.Rproj.user/4C166824/sources/prop/78CF5C18,58,ce2df559770c89d6677653ed89862fab
+replication_archive/.Rproj.user/4C166824/sources/prop/7E728B7E,3,3d29a75fcf0ed7dfff86d3db8f92fc69
+replication_archive/.Rproj.user/4C166824/sources/prop/7F072450,3,3d29a75fcf0ed7dfff86d3db8f92fc69
+replication_archive/.Rproj.user/4C166824/sources/prop/8013E706,58,9722d9e10ad8df8a853313ca877554fc
+replication_archive/.Rproj.user/4C166824/sources/prop/83FE36D6,3,3d29a75fcf0ed7dfff86d3db8f92fc69
+replication_archive/.Rproj.user/4C166824/sources/prop/8418525F,57,9b383893c4af1bbf806a20afe915dfc6
+replication_archive/.Rproj.user/4C166824/sources/prop/84267899,58,e1204b5a5debc9f4a025026dd3cceca8
+replication_archive/.Rproj.user/4C166824/sources/prop/89CCC1D8,57,8179df3789e47a1a19dbda908d7d50c8
+replication_archive/.Rproj.user/4C166824/sources/prop/8A2164E9,88,ed4bc011988972e99f0df9af30e1f0f8
+replication_archive/.Rproj.user/4C166824/sources/prop/8B0C9572,56,52cbf24326893689bc98450966c414b9
+replication_archive/.Rproj.user/4C166824/sources/prop/9B4956DC,58,47b65a6116c1962cb1efa58cdf1689cf
+replication_archive/.Rproj.user/4C166824/sources/prop/9B77C767,3,3d29a75fcf0ed7dfff86d3db8f92fc69
+replication_archive/.Rproj.user/4C166824/sources/prop/9E08FE57,3,3d29a75fcf0ed7dfff86d3db8f92fc69
+replication_archive/.Rproj.user/4C166824/sources/prop/A0B55FF,58,23097aecf34e1982e98a00cd0fb32a59
+replication_archive/.Rproj.user/4C166824/sources/prop/A7157728,58,d8ef603f070d917a500f9ffd0b65f84d
+replication_archive/.Rproj.user/4C166824/sources/prop/A875A4A2,3,3d29a75fcf0ed7dfff86d3db8f92fc69
+replication_archive/.Rproj.user/4C166824/sources/prop/AA1010B0,3,3d29a75fcf0ed7dfff86d3db8f92fc69
+replication_archive/.Rproj.user/4C166824/sources/prop/AA27BDB8,56,897f6afc81bf51ed6d18aeee748f1477
+replication_archive/.Rproj.user/4C166824/sources/prop/AAEC31B1,3,3d29a75fcf0ed7dfff86d3db8f92fc69
+replication_archive/.Rproj.user/4C166824/sources/prop/B5E75F98,56,3e50738651f065d6b636db0fa9e36fe1
+replication_archive/.Rproj.user/4C166824/sources/prop/BA6BED27,3,3d29a75fcf0ed7dfff86d3db8f92fc69
+replication_archive/.Rproj.user/4C166824/sources/prop/BA838B2F,3,3d29a75fcf0ed7dfff86d3db8f92fc69
+replication_archive/.Rproj.user/4C166824/sources/prop/BB9CC6B4,60,06d6aead92655e1069b86ba41ce738de
+replication_archive/.Rproj.user/4C166824/sources/prop/BD2C3D24,3,3d29a75fcf0ed7dfff86d3db8f92fc69
+replication_archive/.Rproj.user/4C166824/sources/prop/BFF5F9FD,57,6ff896138cbc3c509b86a324e4d58ad3
+replication_archive/.Rproj.user/4C166824/sources/prop/C4E90499,87,3266e98cb8159ba225c680c8136b2662
+replication_archive/.Rproj.user/4C166824/sources/prop/C93E8514,57,84b7e35cb2da5a4b003ff062781b4f05
+replication_archive/.Rproj.user/4C166824/sources/prop/D78889CA,3,3d29a75fcf0ed7dfff86d3db8f92fc69
+replication_archive/.Rproj.user/4C166824/sources/prop/DEEAA8B0,3,3d29a75fcf0ed7dfff86d3db8f92fc69
+replication_archive/.Rproj.user/4C166824/sources/prop/EE3B9226,58,d97c96c64cdb06434af78754a98b4818
+replication_archive/.Rproj.user/4C166824/sources/prop/EED051D5,3,3d29a75fcf0ed7dfff86d3db8f92fc69
+replication_archive/.Rproj.user/4C166824/sources/prop/EFC63C2,3,3d29a75fcf0ed7dfff86d3db8f92fc69
+replication_archive/.Rproj.user/4C166824/sources/prop/FB9F69CE,60,929e85d4901c7dacebb0a18a04160ae7
+replication_archive/.Rproj.user/4C166824/sources/prop/INDEX,6228,b0b5b4029a2c6eec2362c8ac42d183b6
+replication_archive/.Rproj.user/52536CD3/console06/INDEX001,2,d751713988987e9331980363e24189ce
+replication_archive/.Rproj.user/52536CD3/pcs/debug-breakpoints.pper,77,e99560ec311066efc93dff308fd68488
+replication_archive/.Rproj.user/52536CD3/pcs/files-pane.pper,230,a5a6a580acd1438bc81dbb540d75c3b2
+replication_archive/.Rproj.user/52536CD3/pcs/source-pane.pper,23,ddf495437f5a811c1c29fcda2485d554
+replication_archive/.Rproj.user/52536CD3/pcs/windowlayoutstate.pper,297,e3093006d28310542bffddd4b77397c4
+replication_archive/.Rproj.user/52536CD3/pcs/workbench-pane.pper,65,c03a9e948d1c492630dda9672ccfb7aa
+replication_archive/.Rproj.user/52536CD3/persistent-state,442,4a4b1b4be157d07f91d9c4fd2f11d45c
+replication_archive/.Rproj.user/52536CD3/rmd-outputs,5,cc9067c2ee470dc248b14b194209a34e
+replication_archive/.Rproj.user/52536CD3/saved_source_markers,27,03848550b5519652cec02c7edb2ca8a4
+replication_archive/.Rproj.user/52536CD3/sources/per/t/D9915470,708,2a0b9f6d49cf79b5e2a8370568d12bee
+replication_archive/.Rproj.user/52536CD3/sources/per/t/D9915470-contents,306,9038990b6cbb1a1212b028e9056b2bde
+replication_archive/.Rproj.user/52536CD3/sources/prop/760ABD81,58,6bc9e737dd1a9b9642d318b2590def6c
+replication_archive/.Rproj.user/52536CD3/sources/prop/B472E8B6,57,221baf70fb15ed73729d0c315de539a9
+replication_archive/.Rproj.user/52536CD3/sources/prop/D98EEDEB,3,3d29a75fcf0ed7dfff86d3db8f92fc69
+replication_archive/.Rproj.user/52536CD3/sources/prop/DB59363C,3,3d29a75fcf0ed7dfff86d3db8f92fc69
+replication_archive/.Rproj.user/52536CD3/sources/prop/F50A8AAA,57,482c60c0af3aedba625281078eb6ef6e
+replication_archive/.Rproj.user/52536CD3/sources/prop/INDEX,687,246a8373a5e81bee33782dfcc6f0d8a0
+replication_archive/.Rproj.user/6BAFBE4C/console06/INDEX001,2,d751713988987e9331980363e24189ce
+replication_archive/.Rproj.user/6BAFBE4C/pcs/files-pane.pper,234,b7c2715f315873e3c8412b4edc3dc62a
+replication_archive/.Rproj.user/6BAFBE4C/pcs/source-pane.pper,23,ddf495437f5a811c1c29fcda2485d554
+replication_archive/.Rproj.user/6BAFBE4C/pcs/windowlayoutstate.pper,295,d0895ee25455e45e4e1e6a8fe3359d81
+replication_archive/.Rproj.user/6BAFBE4C/pcs/workbench-pane.pper,65,c03a9e948d1c492630dda9672ccfb7aa
+replication_archive/.Rproj.user/6BAFBE4C/rmd-outputs,5,cc9067c2ee470dc248b14b194209a34e
+replication_archive/.Rproj.user/6BAFBE4C/saved_source_markers,27,03848550b5519652cec02c7edb2ca8a4
+replication_archive/.Rproj.user/6BAFBE4C/sources/per/t/272112F4,689,838c552abe38d27e6b431b9aaf304c23
+replication_archive/.Rproj.user/6BAFBE4C/sources/per/t/272112F4-contents,54494,a33f3e6fe52e1a08f8af14c2b9a10e3e
+replication_archive/.Rproj.user/6BAFBE4C/sources/per/t/2BFF1A95,573,0fe6b06ae4b0b24188d0a8bf4c34c6c6
+replication_archive/.Rproj.user/6BAFBE4C/sources/per/t/2BFF1A95-contents,3145,7240d1d7057a56b8a99bf0697aa94ffb
+replication_archive/.Rproj.user/6BAFBE4C/sources/per/t/69DCC012,660,85a65b4cc1d768e5494082e5062a309a
+replication_archive/.Rproj.user/6BAFBE4C/sources/per/t/69DCC012-contents,306,9038990b6cbb1a1212b028e9056b2bde
+replication_archive/.Rproj.user/6BAFBE4C/sources/per/t/E0612AB8,662,9e3dd2c4afaaa240b89a67352055dd2f
+replication_archive/.Rproj.user/6BAFBE4C/sources/per/t/E0612AB8-contents,1512,e102015d536ea4c93a1ea92479cbb80e
+replication_archive/.Rproj.user/6BAFBE4C/sources/prop/44DDA843,3,3d29a75fcf0ed7dfff86d3db8f92fc69
+replication_archive/.Rproj.user/6BAFBE4C/sources/prop/4EBF3EEA,58,584505fa27cd676f5ca7457230a70eec
+replication_archive/.Rproj.user/6BAFBE4C/sources/prop/527D7FD5,3,3d29a75fcf0ed7dfff86d3db8f92fc69
+replication_archive/.Rproj.user/6BAFBE4C/sources/prop/5C0F8765,3,3d29a75fcf0ed7dfff86d3db8f92fc69
+replication_archive/.Rproj.user/6BAFBE4C/sources/prop/64F5B670,58,4823e66aabc719cab42f7723621b15b2
+replication_archive/.Rproj.user/6BAFBE4C/sources/prop/71E3749,3,3d29a75fcf0ed7dfff86d3db8f92fc69
+replication_archive/.Rproj.user/6BAFBE4C/sources/prop/8482B52F,56,e9f17300d5c7433bb5440ce72d79989f
+replication_archive/.Rproj.user/6BAFBE4C/sources/prop/B8014BE9,57,482c60c0af3aedba625281078eb6ef6e
+replication_archive/.Rproj.user/6BAFBE4C/sources/prop/C989C332,63,2ccf6f6f1c44943ab07ceec4f61efbdc
+replication_archive/.Rproj.user/6BAFBE4C/sources/prop/INDEX,1407,c5e652fe4c422259c99f77cf2e5bac85
+replication_archive/.Rproj.user/7CB138D8/console06/INDEX001,2,d751713988987e9331980363e24189ce
+replication_archive/.Rproj.user/7CB138D8/pcs/files-pane.pper,200,cb6459f1b6e27a0422e3d8d7bbaa49fd
+replication_archive/.Rproj.user/7CB138D8/pcs/source-pane.pper,24,95f8c64ad3843e1c0a922b65dfaf3b26
+replication_archive/.Rproj.user/7CB138D8/pcs/windowlayoutstate.pper,293,af6d387cd98f586c66c3c47d953578f3
+replication_archive/.Rproj.user/7CB138D8/pcs/workbench-pane.pper,65,c03a9e948d1c492630dda9672ccfb7aa
+replication_archive/.Rproj.user/7CB138D8/persistent-state,442,4a4b1b4be157d07f91d9c4fd2f11d45c
+replication_archive/.Rproj.user/7CB138D8/rmd-outputs,5,cc9067c2ee470dc248b14b194209a34e
+replication_archive/.Rproj.user/7CB138D8/saved_source_markers,27,03848550b5519652cec02c7edb2ca8a4
+replication_archive/.Rproj.user/7CB138D8/sources/prop/293DCB6,58,1b3604e48b14b3e1c533d63570b14fe9
+replication_archive/.Rproj.user/7CB138D8/sources/prop/3FC1A612,57,02afe20d53e16ac44e328cdc68b2fbb9
+replication_archive/.Rproj.user/7CB138D8/sources/prop/DBE97D2C,57,4070eb2f667873b3f5483138484935f3
+replication_archive/.Rproj.user/7CB138D8/sources/prop/INDEX,395,225f710aa9334866ecb34654ab15b21f
+replication_archive/.Rproj.user/7CB138D8/sources/s-2986824A/44457E64,650,e0ac34e47af6a213267173113cc7b29a
+replication_archive/.Rproj.user/7CB138D8/sources/s-2986824A/44457E64-contents,1872,99438f16ad9da28cec8221c03f65fedb
+replication_archive/.Rproj.user/7CB138D8/sources/s-2986824A/8C4D0936,635,8b15757e5b1b59055391ee176ad14abe
+replication_archive/.Rproj.user/7CB138D8/sources/s-2986824A/8C4D0936-contents,414,2696b2f75e097f0f459ee3bb9a7b4970
+replication_archive/.Rproj.user/7CB138D8/sources/s-2986824A/lock_file,0,d41d8cd98f00b204e9800998ecf8427e
+replication_archive/.Rproj.user/shared/notebooks/patch-chunk-names,0,d41d8cd98f00b204e9800998ecf8427e
+replication_archive/.Rproj.user/shared/notebooks/paths,2663,ba558e4055ef8f6d685ba8c4e3e0f8da
+replication_archive/R/1_simple_design.R,2274,ae7b97ee79760fac84f4a52c1737354e
+replication_archive/R/2_design_census.R,2495,375e3e3b3344aba6c06405a7e399de11
+replication_archive/R/3_10_discovery.R,4087,76928de1dc9db3c0b5b4a66fb0a0e0b4
+replication_archive/R/3_1_survey_designs.R,2413,b9f1e8cc0a81d0f99f8ffc5e8f8cecc1
+replication_archive/R/3_2_Bayesian_descriptive_inference.R,3575,d6b2eab48fc8a2238702f69739d97859
+replication_archive/R/3_3_process_tracing.R,6767,26ca7d2d654d556f4769b0cf165a49ce
+replication_archive/R/3_4_QCA.R,7383,2c34cfc85fca6d0be078f630f300e944
+replication_archive/R/3_5_nested.R,9230,f81795028261a42711c1765977df160f
+replication_archive/R/3_6_model_based_estimands.R,2282,eb19c33748d9586ddfe69f1c92caef39
+replication_archive/R/3_7_matching.R,2676,3518e191f631240fba4bb39297818fe9
+replication_archive/R/3_8_regression_discontinuity.R,2323,0b7845e7f8104c115b5e005918bb8ee3
+replication_archive/R/3_9_experimental.R,3828,33f89912360c1c9b070185c27b71c015
+replication_archive/R/4_B_and_S_replication.R,10276,0de673f1d05fd49ea6ae3eff9a81f2b2
+replication_archive/R/appendix_code.R,735,04b93bcac730676395a8caa5ebe0c1ba
+replication_archive/R/knitr_setup.R,523,a6ffabfa0fd8c3b3cc7d0c2138772ef9
+replication_archive/R/table_3_declaration.R,587,c7fc41bea50b521735b3afc81b728776
+replication_archive/README.txt,1565,a908c42069385f7e84efeaffee7fe3a7
+replication_archive/figure/.DS_Store,6148,194577a7e20bdcc7afbb718f502c134c
+replication_archive/figure/figure_1.pdf,11287,c88b2ab53644592ccc38932ce09f340a
+replication_archive/figure/figure_2.pdf,7193,c925b905f75edf1339d9c826d68c2fbc
+replication_archive/output/.DS_Store,6148,194577a7e20bdcc7afbb718f502c134c
+replication_archive/output/1_simple_design.txt,2336,8938ec71969d36794722784931ed5f40
+replication_archive/output/2_design_census.txt,1872,99438f16ad9da28cec8221c03f65fedb
+replication_archive/output/3_10_discovery.txt,3610,3f5c47f4ff0e5143b6b0395001c2296c
+replication_archive/output/3_1_survey_designs.txt,1274,619092ffb49cb92fb2fd0a9f0c6fdd5e
+replication_archive/output/3_2_Bayesian_descriptive_inference.txt,2729,6c497cd539b3245546db39087edf1b37
+replication_archive/output/3_3_process_tracing.txt,3954,9f8db483ff36d6e4be7255c6d0e46bc4
+replication_archive/output/3_4_QCA.txt,16067,321a3d0fec309d4f71629943e88db17c
+replication_archive/output/3_5_nested.txt,7803,738934edaa1ffcd989bd29ea4bd8c65b
+replication_archive/output/3_6_model_based_estimands.txt,2650,b9015189685816af15757b80ce9f182c
+replication_archive/output/3_7_matching.txt,2590,0994ae874d1befbee949e2fe4708a95f
+replication_archive/output/3_8_regression_discontinuity.txt,1658,dc10baf6c2f9d6694a7739575d1ad8cd
+replication_archive/output/3_9_experimental.txt,2400,c50e115d099f7968b63570e636ba08b1
+replication_archive/output/4_B_and_S_replication.txt,10066,64e7fe4b1fe1203d1f14512b6581c9f1
+replication_archive/rds_files/1_simple_design_5000_sims.rds,1066974,c65d4cc0ca0d10cd582179692294d296
+replication_archive/rds_files/2_design_census_5000_sims.rds,3688011,aea17d92e1aad471499011f562504a31
+replication_archive/rds_files/3_10_discovery_5000_sims.rds,3657461,99b41e08a385c09eae9172c14541d6b7
+replication_archive/rds_files/3_1_survey_designs_5000_sims.rds,1276791,63bc17d8537f249e92cc19166ace2e01
+replication_archive/rds_files/3_2_Bayesian_descriptive_inference_5000_sims.rds,2271956,75e4fe4d968c1e2e19117e7c0a6505be
+replication_archive/rds_files/3_3_process_tracing1_5000_sims.rds,3308880,478fcca0216d871a3b7a07fe0404b3e5
+replication_archive/rds_files/3_3_process_tracing2_5000_sims.rds,9383382,7ab4e7004020e1982a66367bf05874b8
+replication_archive/rds_files/3_4_QCA1_5000_sims.rds,1896179,22d2fc3e72771dc8ec8b8d1e38abc3db
+replication_archive/rds_files/3_4_QCA2_5000_sims.rds,8397478,2b882c0c83925e1a239de1f56adac5f2
+replication_archive/rds_files/3_4_QCA3_5000_sims.rds,12516728,80e304ed253bf1662c1a889bf26c63a0
+replication_archive/rds_files/3_5_nested1_5000_sims.rds,4483256,a6f375ea8865d79ed48caf5fc2640084
+replication_archive/rds_files/3_5_nested2_5000_sims.rds,8956547,e03ebe9a20d627c162175fe4334c455e
+replication_archive/rds_files/3_5_nested3_5000_sims.rds,17991184,aef83a378dbdffcfa5d9d0efb88a2066
+replication_archive/rds_files/3_6_model_based_estimands_5000_sims.rds,5863549,967064ca854cc2d73fefc033b6a9e6f5
+replication_archive/rds_files/3_7_matching_5000_sims.rds,1876811,10bec10358c01f2069a5d74508604622
+replication_archive/rds_files/3_8_regression_discontinuity_5000_sims.rds,1257639,fd237f42374b939ff28c53a89b87384a
+replication_archive/rds_files/3_9_experimental_2x2_5000_sims.rds,43674661,36b8f39a1ec61363b4c3be004524dbca
+replication_archive/rds_files/3_9_experimental_3x1_5000_sims.rds,4503205,ef8eb6c3f6fac544afb25dc8c97d9970
+replication_archive/rds_files/4_B_and_S_replication1_5000_sims.rds,3302914,16dcadbd74a57356a1b9060e605d7fe3
+replication_archive/rds_files/4_B_and_S_replication2_5000_sims.rds,5462502,dc77021a21ebf276dc1da5d9fd255f80
+replication_archive/rds_files/4_B_and_S_replication3_5000_sims.rds,11883179,17649f68357882c06c1a1426b6f36910
+replication_archive/replication_archive.Rproj,204,085991e449e6a3fbe59203fdb32eeca6
+replication_archive/run_replication.R,414,2696b2f75e097f0f459ee3bb9a7b4970
+replication_archive/tool_census/Documentation/3ie/3ie.xlsx,110803,6b0002b99d1e07d817e0b8464a9438eb
+replication_archive/tool_census/Documentation/3ie/Screen Shot 2017-07-14 at 3.47.44 PM.png,167873,fae31bffafae06acd533445b7556b017
+replication_archive/tool_census/Documentation/3ie/Screen Shot 2017-07-14 at 3.49.38 PM.png,166912,72dfb6d6468935b854c3551e4a58973e
+replication_archive/tool_census/Documentation/AI-Therapy/Screen Shot 2017-07-14 at 4.03.12 PM.png,80536,26510d4b04d7dc5d35d2dc455a71081c
+replication_archive/tool_census/Documentation/AI-Therapy/Screen Shot 2017-07-14 at 4.03.47 PM.png,61753,c181bdab58117351dea98994b4208b3a
+replication_archive/tool_census/Documentation/AlgDesign/AlgDesign.R,203,3463e2eabb11fcd767500d9c50452f1c
+replication_archive/tool_census/Documentation/ClinCalc/Screen Shot 2017-07-14 at 4.15.44 PM.png,88046,652043a8c06c562523b61d2050deb062
+replication_archive/tool_census/Documentation/DSS/Screen Shot 2017-07-14 at 5.33.34 PM.png,94476,0134891a8ffabac93399a5e55490ec23
+replication_archive/tool_census/Documentation/Design Expert/Screenshot (26).png,78919,6f7f6fd92684618c30d140cf62282424
+replication_archive/tool_census/Documentation/Design Expert/Screenshot (27).png,59269,9857c13f22ccbf2fb05af14422fccb60
+replication_archive/tool_census/Documentation/EDA NC3RS/Screen Shot 2017-07-18 at 3.55.16 PM.png,430267,b09a3f4a69eaa7f9f7ed9025bc5e531f
+replication_archive/tool_census/Documentation/Free Statistics Calculators/Screen Shot 2017-07-14 at 6.07.09 PM.png,188637,e907127b751d72c34119ac93aa37dcb0
+replication_archive/tool_census/Documentation/Free Statistics Calculators/Screen Shot 2017-07-18 at 10.45.35 AM.png,189178,e187a3241ed9f2bf21361b9e88a4e43f
+replication_archive/tool_census/Documentation/GLIMMPSE/BFE.json,1624,e3aa02a493a50551ccb466b7ef8fb313
+replication_archive/tool_census/Documentation/GLIMMPSE/DIM.json,1232,a053eb41c19476a96582eedc2db274a1
+replication_archive/tool_census/Documentation/GLIMMPSE/Screen Shot 2017-07-18 at 3.15.40 PM.png,120300,0cb3c586519f27237af2861cd8a26900
+replication_archive/tool_census/Documentation/GPower/Screen Shot 2017-07-17 at 1.31.32 PM.png,90506,26aea54801b73cddb1e1cf83936140a4
+replication_archive/tool_census/Documentation/GPower/Screen Shot 2017-07-17 at 1.37.11 PM.png,89895,a0270fba5e22b8858dda4a02578fcac2
+replication_archive/tool_census/Documentation/HyLown/Screen Shot 2017-07-14 at 6.12.02 PM.png,118717,921d9456cbd6c2c3a33f771085b6b417
+replication_archive/tool_census/Documentation/JMP Design of Experiments/Screen Shot 2017-07-18 at 4.02.18 PM.png,127399,0bdc0fafbd33135b601825c57b9baacf
+replication_archive/tool_census/Documentation/PASS (Power Analysis and Sample Size)/Screenshot (13).png,88467,7ef05e38c45bde7beddff56c4c94f883
+replication_archive/tool_census/Documentation/PASS (Power Analysis and Sample Size)/Screenshot (15).png,110461,3ea9c28d532d4cb276d0fd33daaa0f96
+replication_archive/tool_census/Documentation/PASS (Power Analysis and Sample Size)/Screenshot (16).png,101308,08ec6d61555bc5190ba4174363cd7025
+replication_archive/tool_census/Documentation/PASS (Power Analysis and Sample Size)/Screenshot (17).png,115186,7a01e1408e9fc2f40744c73d15475d33
+replication_archive/tool_census/Documentation/PS Power and Sample Size/Screenshot (2).png,50534,f85752d83e5213307451eced9be3b46b
+replication_archive/tool_census/Documentation/Power and Precision/Screenshot (3).png,29379,c45a01fe08546799791618d4e2175ad7
+replication_archive/tool_census/Documentation/Power and Precision/Screenshot (4).png,47310,04c6207e2e27e38730bba2f94530927d
+replication_archive/tool_census/Documentation/Power and Precision/Screenshot (5).png,26893,dc12e21b1c62571f068906fcef16dbe4
+replication_archive/tool_census/Documentation/Power and Precision/Screenshot (6).png,57478,b816eda78ef5ca25c7c431be8cb057c1
+replication_archive/tool_census/Documentation/SISA/Screen Shot 2017-07-18 at 3.46.29 PM.png,136967,2387e6c46ca6e6276477f5d4f8a6cef3
+replication_archive/tool_census/Documentation/SPSS SamplePower/Screenshot (18).png,39166,df26c7558726a29a7bc9ecbe14cfc262
+replication_archive/tool_census/Documentation/SPSS SamplePower/Screenshot (19).png,49223,2d971488a70cd7e2bd49568c62e86dd5
+replication_archive/tool_census/Documentation/SPSS SamplePower/Screenshot (20).png,36748,3a2e8347b1ecef99a26811f9a87b64c9
+replication_archive/tool_census/Documentation/SPSS SamplePower/Screenshot (21).png,59669,7a8141ecff4af72fabc68520cc16a668
+replication_archive/tool_census/Documentation/Stata 14/Screen Shot 2017-07-18 at 1.50.57 PM.png,202564,bd68bbcec68352467e59a07de5fb99e2
+replication_archive/tool_census/Documentation/Stata 15/Screen Shot 2017-07-18 at 4.19.11 PM.png,502681,ef3fe73d944fb8fa6738b0cb569362e9
+replication_archive/tool_census/Documentation/Stata 15/Screen Shot 2017-07-18 at 4.21.49 PM.png,439315,e77e1a87d270f10474e9dcbf7892e216
+replication_archive/tool_census/Documentation/Statistical Solutions/Screen Shot 2017-07-18 at 4.05.56 PM.png,428387,bf20731bd5f75ec7aff5d493179cf652
+replication_archive/tool_census/Documentation/UBC/Screen Shot 2017-07-18 at 4.07.11 PM.png,283684,ac5b89f38dd29d141122bda3818ef820
+replication_archive/tool_census/Documentation/UCSF/Screen Shot 2017-07-18 at 4.44.23 PM.png,208989,423af9527319d1cd2eabf0012a91fbf7
+replication_archive/tool_census/Documentation/agricolae/agricolae.R,132,185bef6eb95fe177e5763435443efa39
+replication_archive/tool_census/Documentation/dae/dae.R,723,f4f9d3906ea70c1a80fb384b0e1409cd
+replication_archive/tool_census/Documentation/dae/dae_vignette.pdf,379611,ea4de0c6d514ad032bc8923f89bc1759
+replication_archive/tool_census/Documentation/easypower/easypower.R,104,0e6e11af32cb3ff1f4dcb1447b2f0b7a
+replication_archive/tool_census/Documentation/egap power calculator/Screen Shot 2017-07-14 at 5.01.50 PM.png,116367,278fdefa9efb915d75c67aff036256a6
+replication_archive/tool_census/Documentation/nQuery/Screenshot (22).png,50597,c8a4e4b4a3ec02e102bb4eb1ec271da8
+replication_archive/tool_census/Documentation/nQuery/Screenshot (24).png,50603,88e371ae7252cbad0cd0d5e2a58d24f0
+replication_archive/tool_census/Documentation/optimal design/Screen Shot 2017-07-17 at 3.30.17 PM.png,27259,0bfca521c16c455344ad22b53440d862
+replication_archive/tool_census/Documentation/optimal design/Screen Shot 2017-07-17 at 3.42.16 PM.png,25713,9d2c5dce6dcd9c6d861c99daa2f50b01
+replication_archive/tool_census/Documentation/optimal design/optimal_design_manual.pdf,2699848,447add46ce90b704f6a1408c03f546dd
+replication_archive/tool_census/Documentation/piface Java Applet/Screen Shot 2017-07-18 at 3.39.32 PM.png,52605,dfbe673c1f9d117e3f0486a2c5d6515a
+replication_archive/tool_census/Documentation/piface Java Applet/Screen Shot 2017-07-18 at 3.42.43 PM.png,98809,72c504e5e530007476a7953eb761cf46
+replication_archive/tool_census/Documentation/powerAnalysis/powerAnalysis.R,114,ee568314a7deec0dda163e3702666ac3
+replication_archive/tool_census/Documentation/powerreg/Screen Shot 2017-07-18 at 2.03.06 PM.png,226965,b7989c7ba39e1c72a18d9ea0ebe29cba
+replication_archive/tool_census/Documentation/pwr/pwr.R,76,2ce4893c9f6391c1311b0d803af8500f
+replication_archive/tool_census/tool_census.xlsx,39692,d5e984163e402c0bc8f55190ca17639b

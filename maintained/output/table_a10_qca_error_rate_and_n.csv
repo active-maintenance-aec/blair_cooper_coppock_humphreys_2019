@@ -1,0 +1,9 @@
+design,error_rate,N,inquiry,estimator,correct_rate,se(correct_rate),failure_rate,se(failure_rate),n_sims
+design_1,0,5,true_configuration,Classic Quine-McCluskey,0.3038,0.006527927574206294,0.1196,0.004604815429376921,5000
+design_1,0,5,true_configuration,Consistency Cubes,0.3038,0.006527927574206294,0.1196,0.004604815429376921,5000
+design_2,0.05,5,true_configuration,Classic Quine-McCluskey,0.2684,0.0063321003960364695,0.1538,0.005083157949281867,5000
+design_2,0.05,5,true_configuration,Consistency Cubes,0.2684,0.0063321003960364695,0.1538,0.005083157949281867,5000
+design_3,0,50,true_configuration,Classic Quine-McCluskey,1,0,0,0,5000
+design_3,0,50,true_configuration,Consistency Cubes,1,0,0,0,5000
+design_4,0.05,50,true_configuration,Classic Quine-McCluskey,0.9488,0.003116559087601124,0,0,5000
+design_4,0.05,50,true_configuration,Consistency Cubes,0.9488,0.003116559087601124,0,0,5000

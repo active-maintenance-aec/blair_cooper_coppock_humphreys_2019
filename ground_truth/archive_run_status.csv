@@ -1,0 +1,31 @@
+pass,script,completed,stopped_at,deposited_files_overwritten
+as_shipped,1_simple_design.R,0,Error: You appear to have used legacy declare_sampling() syntax. Consider:,
+as_shipped,2_design_census.R,0,Error: You appear to have used legacy declare_sampling() syntax. Consider:,
+as_shipped,3_1_survey_designs.R,0,Error: You appear to have used legacy declare_sampling() syntax. Consider:,
+as_shipped,3_10_discovery.R,0,Error: You appear to have used legacy declare_assignment() syntax. Consider:,
+as_shipped,3_2_Bayesian_descriptive_inference.R,0,Error: You appear to have used legacy declare_sampling() syntax. Consider:,
+as_shipped,3_3_process_tracing.R,0,Error: You appear to have used legacy declare_sampling() syntax. Consider:,
+as_shipped,3_4_QCA.R,0,"Error in file(file, ...) : argument ""file"" is missing, with no default",
+as_shipped,3_5_nested.R,0,"Error in knitr::include_graphics(""figure/Nested_analysis.pdf"") : ",
+as_shipped,3_6_model_based_estimands.R,0,Error: You appear to have used legacy declare_assignment() syntax. Consider:,
+as_shipped,3_7_matching.R,0,Error: object 'bias' not found,
+as_shipped,3_8_regression_discontinuity.R,0,"Error in file(file, ...) : argument ""file"" is missing, with no default",
+as_shipped,3_9_experimental.R,0,Did not finish within 600 seconds.,
+as_shipped,4_B_and_S_replication.R,0,Error: You appear to have used legacy declare_sampling() syntax. Consider:,
+as_shipped,appendix_code.R,0,Error: You appear to have used legacy declare_sampling() syntax. Consider:,
+as_shipped,table_3_declaration.R,0,Error: You appear to have used legacy declare_sampling() syntax. Consider:,
+stripped,1_simple_design.R,0,Error: You appear to have used legacy declare_sampling() syntax. Consider:,NA
+stripped,2_design_census.R,0,Error: You appear to have used legacy declare_sampling() syntax. Consider:,NA
+stripped,3_1_survey_designs.R,0,Error: You appear to have used legacy declare_sampling() syntax. Consider:,NA
+stripped,3_10_discovery.R,0,Error: You appear to have used legacy declare_assignment() syntax. Consider:,NA
+stripped,3_2_Bayesian_descriptive_inference.R,0,Error: You appear to have used legacy declare_sampling() syntax. Consider:,NA
+stripped,3_3_process_tracing.R,0,Error: You appear to have used legacy declare_sampling() syntax. Consider:,NA
+stripped,3_4_QCA.R,0,"Error in file(file, ...) : argument ""file"" is missing, with no default",NA
+stripped,3_5_nested.R,0,"Error in knitr::include_graphics(""figure/Nested_analysis.pdf"") : ",NA
+stripped,3_6_model_based_estimands.R,0,Error: You appear to have used legacy declare_assignment() syntax. Consider:,NA
+stripped,3_7_matching.R,0,Error: object 'bias' not found,NA
+stripped,3_8_regression_discontinuity.R,0,"Error in file(file, ...) : argument ""file"" is missing, with no default",NA
+stripped,3_9_experimental.R,0,Did not finish within 600 seconds.,NA
+stripped,4_B_and_S_replication.R,0,Error: You appear to have used legacy declare_sampling() syntax. Consider:,NA
+stripped,appendix_code.R,0,Error: You appear to have used legacy declare_sampling() syntax. Consider:,NA
+stripped,table_3_declaration.R,0,Error: You appear to have used legacy declare_sampling() syntax. Consider:,NA
