@@ -356,7 +356,7 @@ show_table(
 )
 ```
 
-Every diagnosis runs at the published 5000 simulations and 5000 bootstrap replicates, set once in `helpers.R` and read from `knitr_setup.R` in the deposit. `diagnose_design()` spreads its simulations over the `future` package; the numbers are identical under a sequential plan and under forking at any worker count, which was checked rather than assumed.
+Every diagnosis runs at the published 5000 simulations and 5000 bootstrap replicates, set once in `helpers.R` and read from `knitr_setup.R` in the deposit. `diagnose_design()` spreads its simulations over the `future` package, and it draws the same simulations however that work is divided, which is checked under the verification heading below.
 
 The rewrite uses the current DeclareDesign interface throughout: `declare_inquiry()` for `declare_estimand()`, `declare_sampling(S = ..., filter = S == 1)` for `declare_sampling(n = ...)`, `declare_assignment(Z = block_ra(...))` for the old block and cluster arguments, `.method =` for `model =`, and `declare_measurement(Y = reveal_outcomes(...))` for `declare_reveal()`. Where the old interface supplied something automatically, the rewrite computes it explicitly: the working example's assignment probabilities come from `obtain_condition_probabilities()` over the same block sizes that generate the assignment, so the inverse probability weighted estimator the deposit could no longer form is available again.
 
@@ -366,7 +366,7 @@ The rewrite uses the current DeclareDesign interface throughout: `declare_inquir
 
 Neither figure prints a number, so each is verified against the estimates it is drawn from, and those estimates are written to a CSV beside the image.
 
-```{r figure-1, fig.cap="Figure 1: diagnoses of factorial and three-arm designs", out.width="100%"}
+```{r figure-1, fig.cap="Article Figure 1: diagnoses of the factorial and three-arm designs", out.width="100%"}
 knitr::include_graphics(
   if (latex_out) "maintained/output/figure_1_experimental_designs.pdf"
   else "maintained/output/figure_1_experimental_designs.png"
@@ -375,7 +375,7 @@ knitr::include_graphics(
 
 The article says of Figure 1 that neither design is biased when the true interaction is zero, and that the factorial design's bias grows as the interaction grows. The first is a number: the largest absolute main effect bias at an interaction of zero is `r gt_value("figure_1|zero_interaction_bias", "value_rewrite")`. The second is a shape, and the factorial main effect bias rises across all nine interaction sizes.
 
-```{r figure-2, fig.cap="Figure 2: sampling distributions of the two Bjorkman and Svensson estimators", out.width="100%"}
+```{r figure-2, fig.cap="Article Figure 2: sampling distributions of the two Bjorkman and Svensson estimators", out.width="100%"}
 knitr::include_graphics(
   if (latex_out) "maintained/output/figure_2_bs_sampling_distributions.pdf"
   else "maintained/output/figure_2_bs_sampling_distributions.png"
@@ -388,7 +388,7 @@ Figure 2 plots the same simulations that appendix section 4.5 summarises, so the
 
 ## Maintained Rewrite Verification
 
-Every script sets the deposit's seed before it declares anything, and every diagnosis is seeded, so a second run reproduces the first exactly. `run_all.R` was run twice from a clean session and the CSV output came back byte-identical; only the figure PDFs differ, because a PDF records the time it was written.
+Every script sets the deposit's seed before it declares anything, and every diagnosis is seeded, so a second run reproduces the first exactly. `run_all.R` was run end to end three times from clean sessions. Every CSV, TeX and PNG file came back byte-identical each time, as did the ground truth and the record of running the deposited code; only the two figure PDFs differ, because a PDF records the time it was written. The diagnoses also return the same numbers under a sequential plan and under forking at two and four workers, bootstrap standard errors included, which was measured rather than assumed.
 
 `maintained/output/` is committed. A reader who runs `source("run_all.R")` and then `git status --porcelain maintained/output/` should see the two figure PDFs and nothing else.
 

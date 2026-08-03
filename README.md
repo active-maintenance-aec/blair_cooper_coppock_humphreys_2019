@@ -668,9 +668,9 @@ Scripts in maintained/
 Every diagnosis runs at the published 5000 simulations and 5000
 bootstrap replicates, set once in `helpers.R` and read from
 `knitr_setup.R` in the deposit. `diagnose_design()` spreads its
-simulations over the `future` package; the numbers are identical under a
-sequential plan and under forking at any worker count, which was checked
-rather than assumed.
+simulations over the `future` package, and it draws the same simulations
+however that work is divided, which is checked under the verification
+heading below.
 
 The rewrite uses the current DeclareDesign interface throughout:
 `declare_inquiry()` for `declare_estimand()`,
@@ -694,7 +694,7 @@ beside the image.
 
 <img src="maintained/output/figure_1_experimental_designs.png"
 style="width:100.0%"
-alt="Figure 1: diagnoses of factorial and three-arm designs" />
+alt="Article Figure 1: diagnoses of the factorial and three-arm designs" />
 
 The article says of Figure 1 that neither design is biased when the true
 interaction is zero, and that the factorial design’s bias grows as the
@@ -705,7 +705,7 @@ sizes.
 
 <img src="maintained/output/figure_2_bs_sampling_distributions.png"
 style="width:100.0%"
-alt="Figure 2: sampling distributions of the two Bjorkman and Svensson estimators" />
+alt="Article Figure 2: sampling distributions of the two Bjorkman and Svensson estimators" />
 
 Figure 2 plots the same simulations that appendix section 4.5
 summarises, so the figure and that table cannot disagree:
@@ -721,9 +721,13 @@ table prints.
 
 Every script sets the deposit’s seed before it declares anything, and
 every diagnosis is seeded, so a second run reproduces the first exactly.
-`run_all.R` was run twice from a clean session and the CSV output came
-back byte-identical; only the figure PDFs differ, because a PDF records
-the time it was written.
+`run_all.R` was run end to end three times from clean sessions. Every
+CSV, TeX and PNG file came back byte-identical each time, as did the
+ground truth and the record of running the deposited code; only the two
+figure PDFs differ, because a PDF records the time it was written. The
+diagnoses also return the same numbers under a sequential plan and under
+forking at two and four workers, bootstrap standard errors included,
+which was measured rather than assumed.
 
 `maintained/output/` is committed. A reader who runs
 `source("run_all.R")` and then
