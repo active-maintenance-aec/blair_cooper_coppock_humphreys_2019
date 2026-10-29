@@ -57,8 +57,10 @@ script per published table or figure, writing to `output/`, which is
 committed so a reader can compare a fresh run against it without
 downloading anything. `ground_truth/` ties every published number to the
 code that produces it, and also runs the deposited code and records what
-happens. This README is the reproducibility report, also available as a
-PDF in `report/`.
+happens. `errata.qmd` corrects the published article, rendering to
+`blair_cooper_coppock_humphreys_2019_errata.pdf` at the root. This
+README is the reproducibility report, also available as a PDF in
+`report/`.
 
 **License.** CC0 1.0 Universal, matching the terms of the deposit this
 repository maintains, so nothing in the chain is more restrictive than
@@ -356,6 +358,16 @@ same shape and is treated differently below, because there the
 declaration needs no change and the current package reaches the
 parameter on its own.
 
+Those two corrections are to the deposited code. The article itself
+carries two errors, set out in
+`blair_cooper_coppock_humphreys_2019_errata.pdf` at the root of this
+repository: two entries of the reference list print a page range wrong.
+Green and Lin (2016) ends at 499 where the article runs to 500, and
+Nosek et al. (2015) prints its first page alone. Both were found by an
+audit that sends every printed reference entry whole to Crossref and
+checks the authoritative record back into it. Neither touches the text
+or a number.
+
 ------------------------------------------------------------------------
 
 ## What Moved Underneath the Code
@@ -644,7 +656,7 @@ be wrong.
 | bs_design.R | The Bjorkman and Svensson declaration, sourced by three scripts | 109 |
 | figure_1_experimental_designs.R | Article figure | 124 |
 | figure_2_bs_sampling_distributions.R | Article figure | 46 |
-| helpers.R | Packages, paths and the shared diagnosand writer | 60 |
+| helpers.R | Packages, paths and the shared diagnosand writer | 75 |
 | in_text_claims.R | Prints every published claim beside its computed counterpart | 1238 |
 | table_2_tool_census.R | Article table | 88 |
 | table_3_declaration.R | Article table | 68 |
@@ -750,21 +762,21 @@ every run, so none is quoted.
 
 ## R Environment
 
-| Package       | Version |
-|:--------------|:--------|
-| DeclareDesign | 1.1.1   |
-| DesignLibrary | 0.1.10  |
-| estimatr      | 1.0.6   |
-| QCA           | 3.25    |
-| Matching      | 4.10.15 |
-| tidyverse     | 2.0.0   |
-| future        | 1.70.0  |
-| readxl        | 1.5.0   |
-| broom         | 1.0.13  |
-| knitr         | 1.51    |
-| kableExtra    | 1.4.0   |
-| here          | 1.0.2   |
+| Package       | Version    |
+|:--------------|:-----------|
+| DeclareDesign | 2.0.0      |
+| DesignLibrary | 2.0.0      |
+| estimatr      | 2.0.1.9000 |
+| QCA           | 3.25       |
+| Matching      | 4.10.15    |
+| tidyverse     | 2.0.0      |
+| future        | 1.70.0     |
+| readxl        | 1.5.0      |
+| broom         | 1.0.13     |
+| knitr         | 1.51       |
+| kableExtra    | 1.4.0      |
+| here          | 1.0.2      |
 
 Key package versions
 
-R version: R version 4.6.0 (2026-04-24)
+R version: R version 4.6.1 (2026-06-24)

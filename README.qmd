@@ -73,7 +73,7 @@ This repository holds the actively maintained replication code for Blair, Cooper
 
 The deposit is a single zip file, so a check that `original/` contains nothing the manifest does not list is a check on one file and says nothing about what is inside it. The repository therefore carries two manifests. `original_manifest.csv` records the archive file itself: its Dataverse file identifier, its byte size, and two checksums, the MD5 of the bytes Dataverse serves for `?format=original` and the MD5 Dataverse publishes. `original_members_manifest.csv` records the size and MD5 of every one of the `r nrow(members)` members inside it. The zip is unpacked into `original_extracted/`, which `download_original.R` rebuilds from scratch on every run and nothing else writes to. Both directories are absent from version control and both are verified by size and checksum, so the exact bytes are pinned even though the bytes themselves are not.
 
-**Repository layout.** `maintained/` is the maintained rewrite: one script per published table or figure, writing to `output/`, which is committed so a reader can compare a fresh run against it without downloading anything. `ground_truth/` ties every published number to the code that produces it, and also runs the deposited code and records what happens. This README is the reproducibility report, also available as a PDF in `report/`.
+**Repository layout.** `maintained/` is the maintained rewrite: one script per published table or figure, writing to `output/`, which is committed so a reader can compare a fresh run against it without downloading anything. `ground_truth/` ties every published number to the code that produces it, and also runs the deposited code and records what happens. `errata.qmd` corrects the published article, rendering to `blair_cooper_coppock_humphreys_2019_errata.pdf` at the root. This README is the reproducibility report, also available as a PDF in `report/`.
 
 **License.** CC0 1.0 Universal, matching the terms of the deposit this repository maintains, so nothing in the chain is more restrictive than the archive itself. See `LICENSE`.
 
@@ -238,6 +238,14 @@ The rewrite corrects two errors in the deposited code. Neither is an analytical 
 **The QCA truth table reads a column that does not exist.** `3_4_QCA.R` passes `outcome = "Y_Obs"` to `truthTable()`, while the column the design creates is `Y_obs`. Under the current QCA package that spelling sends every call into the deposit's own `tryCatch` and returns `NO SOLUTION` for all of them, which would make both algorithms' failure rate 1.00. The appendix prints failure rates of 0.07 and 0.00, and prints a single draw of the estimates in which both algorithms return `B`, so the deposited spelling cannot be what produced the published table. The rewrite uses the column's own name.
 
 **The Bayesian design's sample size is not reachable by `redesign()`.** `3_2_Bayesian_descriptive_inference.R` writes the sample size as a literal inside `declare_sampling()` and then calls `redesign(bayesian_design, n = c(10, 100))`. The redesigned n = 100 design therefore samples ten units, exactly as the n = 10 design does. The published table shows this directly: its n = 10 and n = 100 rows are identical to two decimal places in all five columns. The rewrite names the sample size so that `redesign()` reaches it, which is what the published column headings say the table varies. A second table has the same shape and is treated differently below, because there the declaration needs no change and the current package reaches the parameter on its own.
+
+```{r errata_spine, include=FALSE}
+# The errata are defined once, in errata.qmd, which writes errata_entries.csv when it
+# is rendered. This section reads that file rather than keeping a second count.
+spine <- readr::read_csv(here::here("errata_entries.csv"), show_col_types = FALSE)
+```
+
+Those two corrections are to the deposited code. The article itself carries `r c("one", "two", "three", "four", "five")[nrow(spine)]` errors, set out in `blair_cooper_coppock_humphreys_2019_errata.pdf` at the root of this repository: two entries of the reference list print a page range wrong. Green and Lin (2016) ends at 499 where the article runs to 500, and Nosek et al. (2015) prints its first page alone. Both were found by an audit that sends every printed reference entry whole to Crossref and checks the authoritative record back into it. Neither touches the text or a number.
 
 ---
 

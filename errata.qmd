@@ -1,0 +1,93 @@
+---
+title: "Errata"
+subtitle: "On Blair, Cooper, Coppock and Humphreys (2019), *American Political Science Review* 113(3)"
+format:
+  pdf:
+    output-file: blair_cooper_coppock_humphreys_2019_errata.pdf
+    geometry: margin=1.25in
+    fontsize: 11pt
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(here)
+library(tidyverse)
+here::i_am("errata.qmd")
+```
+
+```{r entries}
+# THE ERRATA SPINE. Every entry is defined once, here, and rendered from here: into this
+# document, and into whatever else needs it, which reads the errata_entries.csv written at
+# the bottom of this file rather than keeping a second hand-typed copy.
+#
+# [[...]] marks the span that changes. Each renderer supplies its own markup for it: bold
+# here, \was{} in an edition. Nothing else in a field is markup, so the same string can be
+# set by either.
+#
+# Numbering is APPEND-ONLY once this note is published: an entry can already have been
+# cited, so a later finding is added at the end and never interleaved.
+#
+# claim_ids names the ground-truth rows an entry corrects, semicolon-separated. Both
+# entries here are empty: they come from the reference audit, and a reference list is not
+# an extraction claim.
+#
+# The corrected ranges keep the reference list's own style, which drops the leading
+# digits a range's last page shares with its first ("823--30", "122--6").
+entries <- tribble(
+  ~entry, ~class, ~source, ~form, ~title, ~location, ~published, ~corrected, ~note, ~claim_ids,
+
+  1, "bibliographic", "reference_audit", "brief",
+  "The Green and Lin reference ends its page range one page early",
+  "published p. 857",
+  "PS: Political Science and Politics 49 (3): [[495--9]].",
+  "PS: Political Science and Politics 49 (3): 495--500.",
+  paste("Crossref, doi 10.1017/S1049096516000810, gives the article's pages as 495 to",
+        "500."),
+  "",
+
+  2, "bibliographic", "reference_audit", "brief",
+  "The Nosek et al. reference prints a first page in place of a page range",
+  "published p. 857",
+  "Science 348 (6242): [[1422]].",
+  "Science 348 (6242): 1422--5.",
+  paste("Crossref, doi 10.1126/science.aab2374, gives the article's pages as 1422 to",
+        "1425. The entries around it on the page print full ranges."),
+  ""
+) |>
+  mutate(across(c(title, published, corrected, note, claim_ids), as.character))
+
+stopifnot(nrow(entries) == max(entries$entry), !anyDuplicated(entries$entry))
+
+spell <- function(n) {
+  words <- c("one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten")
+  stopifnot(n >= 1, n <= length(words))
+  words[n]
+}
+
+# The spine's markup, resolved for this document. Another renderer resolves it differently.
+bold <- function(x) str_replace_all(x, "\\[\\[(.*?)\\]\\]", "**\\1**")
+```
+
+This note lists `r spell(nrow(entries))` corrections to "Declaring and Diagnosing Research Designs," published in *American Political Science Review* 113(3):838--859, doi [10.1017/S0003055419000194](https://doi.org/10.1017/S0003055419000194). **Neither changes any conclusion of the paper**, and neither touches the text, a table, or a figure: both are page ranges in the reference list.
+
+Both were found by an audit that sends every printed reference entry whole to Crossref and checks the authoritative record back into it, and each is verified against the record named in its note and on the published page. The code supporting the maintained analysis is at [github.com/active-maintenance-aec/blair_cooper_coppock_humphreys_2019](https://github.com/active-maintenance-aec/blair_cooper_coppock_humphreys_2019).
+
+# The reference list
+
+```{r reference-entries, results="asis"}
+# A heading is only a heading when a blank line precedes it, which is why every emitted
+# entry opens with one.
+walk(entries$entry[entries$source == "reference_audit"], function(n) {
+  e <- entries |> filter(entry == n)
+  cat("\n\n## ", e$entry, ". ", e$title, "\n\nPublished, ",
+      str_remove(e$location, "^published "), ":\n\n> ", bold(e$published),
+      "\n\nCorrected:\n\n> ", e$corrected, "\n\n", e$note, "\n", sep = "")
+})
+```
+
+```{r emit-spine}
+# The machine-readable spine, written wherever this document is rendered. Anything else
+# that needs these entries reads it rather than keeping its own copy, so the two cannot
+# drift.
+write_csv(entries, here("errata_entries.csv"))
+```
