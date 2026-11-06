@@ -20,8 +20,11 @@ model_estimand_function <- function(Y_Z_1, Y_Z_2, Y_Z_3) {
 prob_each <- c(1, 1, 1) / 3
 
 model_estimand <-
-  declare_model(N = 10, u = rnorm(N)) +
-  declare_potential_outcomes(Y ~ f_Y(Z, u), conditions = 1:3) +
+  declare_model(
+    N = 10,
+    u = rnorm(N),
+    potential_outcomes(Y ~ f_Y(Z, u), conditions = list(Z = 1:3))
+  ) +
   declare_inquiry(
     beta = model_estimand_function(Y_Z_1, Y_Z_2, Y_Z_3),
     aate = mean((f_Y(3, u) - f_Y(1, u)) / 2)

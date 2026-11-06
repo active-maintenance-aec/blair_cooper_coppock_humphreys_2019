@@ -1,3 +1,3 @@
-estimate,inquiry,estimator
-B,true_configuration,Classic Quine-McCluskey
-B,true_configuration,Consistency Cubes
+estimate,estimator,inquiry,estimand
+B,Classic Quine-McCluskey,true_configuration,a*B
+B,Consistency Cubes,true_configuration,a*B

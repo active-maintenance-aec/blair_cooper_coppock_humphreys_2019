@@ -1,13 +1,13 @@
-design,error_rate,N,inquiry,estimator,correct_rate,se(correct_rate),failure_rate,se(failure_rate),n_sims
-design_1,0,3,true_configuration,Classic Quine-McCluskey,0.093,0.00410461984149672,0.3012,0.006561219289104131,5000
-design_1,0,3,true_configuration,Consistency Cubes,0.093,0.00410461984149672,0.3012,0.006561219289104131,5000
-design_1,0,3,true_configuration,Least Squares,0,0,1,0,5000
-design_2,0.2,3,true_configuration,Classic Quine-McCluskey,0.0484,0.003038332480564397,0.443,0.0069081742576685935,5000
-design_2,0.2,3,true_configuration,Consistency Cubes,0.0484,0.003038332480564397,0.443,0.0069081742576685935,5000
-design_2,0.2,3,true_configuration,Least Squares,0,0,1,0,5000
-design_3,0,50,true_configuration,Classic Quine-McCluskey,0.9998,1.9794954509793245e-4,0,0,5000
-design_3,0,50,true_configuration,Consistency Cubes,0.9998,1.9794954509793245e-4,0,0,5000
-design_3,0,50,true_configuration,Least Squares,0,0,1,0,5000
-design_4,0.2,50,true_configuration,Classic Quine-McCluskey,0.7222,0.006265222550645883,6e-4,3.460729884036842e-4,5000
-design_4,0.2,50,true_configuration,Consistency Cubes,0.7222,0.006265222550645883,6e-4,3.460729884036842e-4,5000
-design_4,0.2,50,true_configuration,Least Squares,0,0,1,0,5000
+design,error_rate,N,inquiry,estimator,n_sims,correct_rate,failure_rate,se(correct_rate),se(failure_rate)
+"error_rate = 0.0, N = 3",0,3,true_configuration,Classic Quine-McCluskey,5000,0.0972,0.32,0.0041569395144535615,0.006497236643928051
+"error_rate = 0.0, N = 3",0,3,true_configuration,Consistency Cubes,5000,0.0972,0.32,0.0041569395144535615,0.006497236643928051
+"error_rate = 0.0, N = 3",0,3,true_configuration,Least Squares,5000,0,1,0,0
+"error_rate = 0.0, N = 50",0,50,true_configuration,Classic Quine-McCluskey,5000,0.9996,0,2.8514838158389685e-4,0
+"error_rate = 0.0, N = 50",0,50,true_configuration,Consistency Cubes,5000,0.9996,0,2.8514838158389685e-4,0
+"error_rate = 0.0, N = 50",0,50,true_configuration,Least Squares,5000,0,1,0,0
+"error_rate = 0.2, N = 3",0.2,3,true_configuration,Classic Quine-McCluskey,5000,0.0508,0.449,0.003105286415251263,0.007042297226079302
+"error_rate = 0.2, N = 3",0.2,3,true_configuration,Consistency Cubes,5000,0.0508,0.449,0.003105286415251263,0.007042297226079302
+"error_rate = 0.2, N = 3",0.2,3,true_configuration,Least Squares,5000,0,1,0,0
+"error_rate = 0.2, N = 50",0.2,50,true_configuration,Classic Quine-McCluskey,5000,0.727,0.0018,0.006245229777405663,5.941464294228504e-4
+"error_rate = 0.2, N = 50",0.2,50,true_configuration,Consistency Cubes,5000,0.727,0.0018,0.006245229777405663,5.941464294228504e-4
+"error_rate = 0.2, N = 50",0.2,50,true_configuration,Least Squares,5000,0,1,0,0

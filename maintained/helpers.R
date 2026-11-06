@@ -47,6 +47,11 @@ if (future::supportsMulticore()) {
   plan(sequential)
 }
 
+# A redesigned design that carries the fixed population of the Bjorkman and
+# Svensson declaration is 581 MiB under DeclareDesign 2.0.0, past the future
+# package's 500 MiB default for the objects it sends a worker.
+options(future.globals.maxSize = 2 * 1024^3)
+
 out_path <- function(...) here::here("maintained", "output", ...)
 
 # get_diagnosands() returns one row per design-inquiry-estimator with the

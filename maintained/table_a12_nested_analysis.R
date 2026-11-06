@@ -39,21 +39,35 @@ LNA <- declare_step(
   handler = fabricate
 )
 
-select_on_line <- declare_sampling(
-  S = strata_rs(
-    strata = outcome,
-    strata_n = model_testing_effort * c("00" = 2, "01" = 0, "10" = 0, "11" = 2)
-  ),
-  filter = S == 1
-)
+# The two sampling rules are plain functions that read the effort once, when they
+# are defined, rather than declared steps the handler below calls. Two things
+# follow, both on purpose. DeclareDesign 2.0.0 cannot call a declared step from
+# inside a handler once redesign() has rebuilt the design (see notes.md). And the
+# effort values stay out of the design's reach, which is what the deposit's version
+# did and what the effort table (a13) reproduces: redesign() warns that the design
+# does not use model_testing_effort or model_building_effort, and the four rows of
+# that table are four simulations of one design.
+select_on_line <- local({
+  testing_effort <- model_testing_effort
+  function(data) {
+    S <- strata_rs(
+      strata = data$outcome,
+      strata_n = testing_effort * c("00" = 2, "01" = 0, "10" = 0, "11" = 2)
+    )
+    data[S == 1, ]
+  }
+})
 
-select_on_and_off_line <- declare_sampling(
-  S = strata_rs(
-    strata = outcome,
-    strata_n = model_building_effort * c("00" = 1, "01" = 1, "10" = 1, "11" = 1)
-  ),
-  filter = S == 1
-)
+select_on_and_off_line <- local({
+  building_effort <- model_building_effort
+  function(data) {
+    S <- strata_rs(
+      strata = data$outcome,
+      strata_n = building_effort * c("00" = 1, "01" = 1, "10" = 1, "11" = 1)
+    )
+    data[S == 1, ]
+  }
+})
 
 SNA <- declare_step(handler = function(data) {
   LNA_satisfactory <- all(data$LNA_satisfactory)
@@ -81,24 +95,30 @@ SNA <- declare_step(handler = function(data) {
   data
 })
 
-original_LNA <- declare_estimator(
-  Y ~ X, .method = lm_robust, inquiry = true_effect, label = "Original Model"
+final_analysis <- declare_estimator(
+  .method = function(data) {
+    situation <- unique(data$situation)
+    if (situation == "I: Original Model Accepted") {
+      return(
+        tidy(lm_robust(Y ~ X, data = data)) |>
+          mutate(estimator = "Original Model", outcome = "Y")
+      )
+    }
+    if (situation == "II: New Model Accepted") {
+      return(
+        tidy(lm_lin(Y ~ X, covariates = ~W, data = data)) |>
+          mutate(estimator = "New Model", outcome = "Y")
+      )
+    }
+    tibble(
+      estimator = "No Model", term = "X", estimate = NA_real_, std.error = NA_real_,
+      statistic = NA_real_, p.value = NA_real_, conf.low = NA_real_, conf.high = NA_real_,
+      df = NA_real_, outcome = "Y"
+    )
+  },
+  inquiry = "X_on_Y",
+  term = "X"
 )
-
-new_LNA <- declare_estimator(
-  Y ~ X, covariates = ~W, .method = lm_lin, inquiry = true_effect, label = "New Model"
-)
-
-final_analysis <- declare_estimator(handler = function(data) {
-  situation <- unique(data$situation)
-  if (situation == "I: Original Model Accepted") return(original_LNA(data))
-  if (situation == "II: New Model Accepted") return(new_LNA(data))
-  tibble(
-    estimator = "No Model", term = "X", estimate = NA_real_, std.error = NA_real_,
-    statistic = NA_real_, p.value = NA_real_, conf.low = NA_real_, conf.high = NA_real_,
-    df = NA_real_, outcome = "Y", inquiry = "X_on_Y"
-  )
-})
 
 nested_design <- LN_data + true_effect + LNA + SNA + final_analysis
 
@@ -157,14 +177,12 @@ threshold_designs <- redesign(
   SNA_threshold_2 = c(0.05, 0.3)
 )
 
-diagnosis_thresholds <- diagnose_design(
-  threshold_designs,
-  diagnosands = nested_diagnosands,
-  sims = published_sims,
-  bootstrap_sims = published_bootstrap_sims
-)
+# Only the simulations are used, so they are drawn without the diagnosands and
+# their bootstrap, which for eight designs at 5000 replicates exhausts 48 Gb of
+# memory under DeclareDesign 2.0.0.
+simulations_thresholds <- simulate_design(threshold_designs, sims = published_sims)
 
-threshold_shares <- get_simulations(diagnosis_thresholds) |>
+threshold_shares <- simulations_thresholds |>
   as_tibble() |>
   count(LNA_threshold, SNA_threshold_1, SNA_threshold_2, estimator, name = "n_sims_reached") |>
   mutate(prop_sims = n_sims_reached / published_sims) |>

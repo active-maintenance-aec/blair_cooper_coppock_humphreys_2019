@@ -41,8 +41,8 @@ alive_po_function <- function(Z, family_health, area_health, infant) {
   alive
 }
 
-pos_alive <- declare_potential_outcomes(
-  infant_alive ~ alive_po_function(Z, family_health, area_health, infant)
+pos_alive <- declare_model(
+  potential_outcomes(infant_alive ~ alive_po_function(Z, family_health, area_health, infant))
 )
 
 weight_po_function <- function(Z, infant_alive_Z_0, infant_alive_Z_1,
@@ -53,9 +53,11 @@ weight_po_function <- function(Z, infant_alive_Z_0, infant_alive_Z_1,
   weight
 }
 
-pos_weight <- declare_potential_outcomes(
-  weight_for_age ~ weight_po_function(
-    Z, infant_alive_Z_0, infant_alive_Z_1, family_health, area_health
+pos_weight <- declare_model(
+  potential_outcomes(
+    weight_for_age ~ weight_po_function(
+      Z, infant_alive_Z_0, infant_alive_Z_1, family_health, area_health
+    )
   )
 )
 
@@ -94,13 +96,13 @@ aggregate_data <- declare_step(handler = function(data) {
 
 cl_mortality_estimator <- declare_estimator(
   (1 - infant_alive) ~ Z,
-  .method = lm_robust, inquiry = cl_mortality_inquiry, label = "Mortality estimate"
+  .method = lm_robust, inquiry = "Mortality", label = "Mortality estimate"
 )
 
 hh_weight_estimator <- declare_estimator(
   weight_for_age ~ Z,
   .method = lm_robust, clusters = catchment_area,
-  inquiry = hh_weight_inquiry, label = "Weight estimate"
+  inquiry = "Weight", label = "Weight estimate"
 )
 
 bjorkman_svensson_design <-

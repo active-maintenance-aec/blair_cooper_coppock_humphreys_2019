@@ -9,9 +9,13 @@ source(here::here("maintained", "helpers.R"))
 
 set.seed(published_seed)
 
-population <- declare_model(N = 1000, X1 = rnorm(N), X2 = rnorm(N), X3 = rnorm(N))
-
-potential_outcomes <- declare_potential_outcomes(Y ~ X1 + X2 + X3 + Z)
+population <- declare_model(
+  N = 1000,
+  X1 = rnorm(N),
+  X2 = rnorm(N),
+  X3 = rnorm(N),
+  potential_outcomes(Y ~ X1 + X2 + X3 + Z)
+)
 
 assignment <- declare_assignment(handler = function(data) {
   prob <- with(data, pnorm(X1 + X2 + X3))
@@ -36,7 +40,7 @@ estimator_m <- declare_estimator(
   handler = label_estimator(match_est), inquiry = "att", label = "matching"
 )
 
-matching <- population + potential_outcomes + assignment + reveal_Y + inquiry +
+matching <- population + assignment + reveal_Y + inquiry +
   estimator_d_i_m + estimator_m
 
 diagnosis <- diagnose_design(

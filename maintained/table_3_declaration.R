@@ -13,19 +13,17 @@ source(here::here("maintained", "helpers.R"))
 set.seed(published_seed)
 
 # Table 3, top panel: the declaration ----
-p_U <- declare_model(N = 200, u = rnorm(N))
-f_Y <- declare_potential_outcomes(Y ~ Z + u)
+p_U <- declare_model(N = 200, u = rnorm(N), potential_outcomes(Y ~ Z + u))
 Q <- declare_inquiry(ATE = mean(Y_Z_1 - Y_Z_0))
 p_S <- declare_sampling(S = complete_rs(N = N, n = 100), filter = S == 1)
 p_Z <- declare_assignment(Z = complete_ra(N = N, m = 50))
 R <- declare_measurement(Y = reveal_outcomes(Y ~ Z))
 A <- declare_estimator(Y ~ Z, inquiry = "ATE")
 
-design <- p_U + f_Y + Q + p_S + p_Z + R + A
+design <- p_U + Q + p_S + p_Z + R + A
 
 # Table 3, middle panel: one simulated draw ----
-u <- p_U()
-D <- f_Y(u)
+D <- p_U()
 a_M <- Q(D)
 d <- R(p_Z(p_S(D)))
 a_A <- A(d)
@@ -40,15 +38,16 @@ diagnosis <- diagnose_design(design, sims = m, diagnosands = bias)
 
 # The deposit's appendix_code.R repeats the same walkthrough at a larger
 # population and a smaller number of simulations.
-population_appendix <- declare_model(N = 1000, u = rnorm(N))
-potential_outcomes_appendix <- declare_potential_outcomes(Y ~ 0.25 * Z + u)
+population_appendix <- declare_model(
+  N = 1000, u = rnorm(N), potential_outcomes(Y ~ 0.25 * Z + u)
+)
 inquiry_appendix <- declare_inquiry(ATE = mean(Y_Z_1 - Y_Z_0))
 sampling_appendix <- declare_sampling(S = complete_rs(N = N, n = 100), filter = S == 1)
 assignment_appendix <- declare_assignment(Z = complete_ra(N = N, m = 50))
 reveal_appendix <- declare_measurement(Y = reveal_outcomes(Y ~ Z))
 estimator_appendix <- declare_estimator(Y ~ Z, .method = lm_robust, inquiry = "ATE")
 
-design_appendix <- population_appendix + potential_outcomes_appendix + inquiry_appendix +
+design_appendix <- population_appendix + inquiry_appendix +
   sampling_appendix + assignment_appendix + reveal_appendix + estimator_appendix
 
 diagnosis_appendix <- diagnose_design(

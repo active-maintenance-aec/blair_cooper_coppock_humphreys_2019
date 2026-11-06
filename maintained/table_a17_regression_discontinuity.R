@@ -19,9 +19,7 @@ rdd <-
     N = 1000,
     X = runif(N, 0, 1) - cutoff,
     noise = rnorm(N, 0, .1),
-    Z = 1 * (X > 0)
-  ) +
-  declare_potential_outcomes(
+    Z = 1 * (X > 0),
     Y_Z_0 = control(X) + noise,
     Y_Z_1 = treatment(X) + noise
   ) +

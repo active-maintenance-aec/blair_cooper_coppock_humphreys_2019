@@ -15,22 +15,25 @@ population <- declare_model(
   X = draw_binary(prob = rep(0.5, N)),
   heterogenous_effect = sample(c(0, .5), 1, TRUE),
   train = draw_binary(prob = rep(0.5, N)),
-  u = rnorm(N)
+  u = rnorm(N),
+  potential_outcomes(Y ~ Z + heterogenous_effect * Z * X + u)
 )
-
-pos <- declare_potential_outcomes(Y ~ Z + heterogenous_effect * Z * X + u)
 
 inquiry <- declare_inquiry(ATE = mean(Y_Z_1 - Y_Z_0))
 
-assignment <- declare_assignment(Z = simple_ra(N = N, prob = 0.5))
+assignment <- declare_assignment(Z = complete_ra(N = N, prob = 0.5))
 
 reveal <- declare_measurement(Y = reveal_outcomes(Y ~ Z))
 
 main_analysis <- declare_estimator(Y ~ Z, inquiry = "ATE", label = "Main")
 
+# tidy(...)[4, 4] is the t statistic, not the p-value the names suggest, and that
+# is what the published table filters on. The [[1]] unwraps the one-cell tibble:
+# fabricatr 2.0 splices a data frame assigned as a column into its own columns,
+# which would drop train_pval and all_pval.
 explore <- declare_step(
-  train_pval = tidy(lm_robust(Y ~ Z * X, subset = train == 1))[4, 4],
-  all_pval = tidy(lm_robust(Y ~ Z * X))[4, 4],
+  train_pval = tidy(lm_robust(Y ~ Z * X, subset = train == 1))[4, 4][[1]],
+  all_pval = tidy(lm_robust(Y ~ Z * X))[4, 4][[1]],
   handler = fabricate
 )
 
@@ -47,7 +50,7 @@ test_sample_estimator <- function(data) {
 }
 
 test_sample_analysis <- declare_estimator(
-  handler = label_estimator(test_sample_estimator),
+  .method = test_sample_estimator,
   inquiry = "diff_in_CATEs",
   label = "Test sample"
 )
@@ -61,12 +64,12 @@ full_sample_estimator <- function(data) {
 }
 
 full_sample_analysis <- declare_estimator(
-  handler = label_estimator(full_sample_estimator),
+  .method = full_sample_estimator,
   inquiry = "diff_in_CATEs",
   label = "Full sample"
 )
 
-discovery <- population + pos + inquiry + assignment + reveal +
+discovery <- population + inquiry + assignment + reveal +
   main_analysis + explore + discovery_inquiry + test_sample_analysis +
   full_sample_analysis
 

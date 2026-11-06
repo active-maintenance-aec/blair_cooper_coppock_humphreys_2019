@@ -27,12 +27,8 @@ interactions <- seq(-0.2, 0.2, length.out = 9)
 
 means <- map(interactions, \(x) c(0, 0.2, 0.2, 0.4 + x))
 
-two_by_two_designs <- expand_design(
-  designer = two_by_two_designer,
-  prefix = "factorial",
-  N = 500,
-  weight_A = 0,
-  weight_B = 0,
+two_by_two_designs <- redesign(
+  two_by_two_designer(N = 500, weight_A = 0, weight_B = 0),
   outcome_means = means
 )
 
@@ -42,15 +38,28 @@ diagnosis_three_arm <- diagnose_design(
   bootstrap_sims = published_bootstrap_sims
 )
 
-diagnosis_two_by_two <- diagnose_design(
+# The nine factorial designs are diagnosed one at a time. DeclareDesign 2.0.0
+# bootstraps the diagnosands of a multi-design diagnosis in one join, and at 5000
+# simulations and 5000 bootstrap replicates over nine designs that join exhausts
+# 48 Gb of memory. Each design alone peaks near 23 Gb and returns the same quantities.
+diagnosands_two_by_two <- imap(
   two_by_two_designs,
-  sims = published_sims,
-  bootstrap_sims = published_bootstrap_sims
-)
+  \(design, design_name) {
+    diagnose_design(
+      design,
+      sims = published_sims,
+      bootstrap_sims = published_bootstrap_sims
+    ) |>
+      get_diagnosands() |>
+      as_tibble() |>
+      mutate(design = design_name)
+  }
+) |>
+  list_rbind()
 
 diagnosands_all <- bind_rows(
   get_diagnosands(diagnosis_three_arm) |> as_tibble() |> mutate(design = "three_arm"),
-  get_diagnosands(diagnosis_two_by_two) |> as_tibble()
+  diagnosands_two_by_two
 )
 
 write_csv(diagnosands_all, out_path("figure_1_experimental_designs_diagnosands.csv"))
@@ -63,11 +72,10 @@ three_arm_results <- get_diagnosands(diagnosis_three_arm) |>
   slice(rep(1, length(interactions))) |>
   mutate(interaction = interactions)
 
-two_by_two_results <- get_diagnosands(diagnosis_two_by_two) |>
-  as_tibble() |>
+two_by_two_results <- diagnosands_two_by_two |>
   filter(inquiry %in% c("interaction", "ate_A")) |>
   left_join(
-    tibble(design = paste0("factorial_", seq_along(interactions)), interaction = interactions),
+    tibble(design = names(two_by_two_designs), interaction = interactions),
     by = "design"
   )
 

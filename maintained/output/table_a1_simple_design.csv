@@ -1,2 +1,2 @@
-design,inquiry,estimator,outcome,term,mean_estimand,se(mean_estimand),mean_estimate,se(mean_estimate),bias,se(bias),sd_estimate,se(sd_estimate),rmse,se(rmse),power,se(power),coverage,se(coverage),n_sims
-design,effect,estimator,Y,X,1,0,1.4982450604861257,0.0012581830973008887,0.4982450604861256,0.001258183097300888,0.08886679401005629,8.78130135500289e-4,0.5061065776247461,0.0012531117161481188,1,0,2e-4,1.9917813129356337e-4,5000
+design,inquiry,estimator,outcome,term,n_sims,mean_estimand,mean_estimate,bias,sd_estimate,rmse,power,coverage,se(mean_estimand),se(mean_estimate),se(bias),se(sd_estimate),se(rmse),se(power),se(coverage)
+design,effect,estimator,Y,X,5000,1,1.5000396017908753,0.5000396017908753,0.08754310597194007,0.507643443770636,1,0,0,0.0012295797453436286,0.001229579745343629,8.431515142724629e-4,0.0012174864760435525,0,0

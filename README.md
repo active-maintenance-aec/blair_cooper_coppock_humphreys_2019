@@ -145,6 +145,18 @@ fourteen of them the cause is the same: the deposit is written against
 the version of DeclareDesign that existed when the paper was published,
 and the package’s interface changed at version 1.0.
 
+The causes quoted in this section were recorded under DeclareDesign
+1.1.1. Under 2.0.0, the version the table above now reports, the deposit
+stops somewhere else: `declare_potential_outcomes()` and
+`declare_reveal()` are defunct and are the first error in nine scripts,
+the readr rename of `write_rds()`’s `file` argument is the first error
+in two, and four others stop at a missing figure file (`3_5_nested.R`),
+at `redesign()`’s check that the parameter is declared
+(`3_2_Bayesian_descriptive_inference.R`), and at an error inside a
+simulation (`3_3_process_tracing.R` and `3_9_experimental.R`). The count
+that completes is still none, and the prose below describes the 1.1.1
+failures.
+
 The failures are not a matter of a deprecated name still working with a
 warning. `declare_estimand()`, `declare_population()` and
 `declare_reveal()` all still exist, and a script that used only those
@@ -205,11 +217,11 @@ everything has finished.
 
 Yes at the level of the analysis, and the arithmetic of the answer needs
 a word of explanation. Of 306 published claims drawn from the article
-and its appendix, 268 can be compared against the rewrite and 170 of
+and its appendix, 268 can be compared against the rewrite and 178 of
 them agree at the precision the article prints.
 
-The 98 that do not have one main cause: 61 of them differ by a single
-unit in the last digit the article prints, and in 91 cases the deposit’s
+The 90 that do not have one main cause: 47 of them differ by a single
+unit in the last digit the article prints, and in 83 cases the deposit’s
 own saved diagnosis reproduces the published value exactly. Every
 diagnosis in this paper is a Monte Carlo simulation of 5000 draws, so a
 proportion carries a simulation standard error of roughly 0.007 and a
@@ -219,14 +231,14 @@ own seed and the current DeclareDesign draws a different sample from it.
 Those rows carry `environment` below, and they are not a failure of
 either analysis.
 
-The other 39 rows that carry a recorded fault are where the interest is,
+The other 45 rows that carry a recorded fault are where the interest is,
 and they are listed individually further down. They include the claims
 the rewrite is not expected to answer at all, which are counted here
 rather than left in the unverifiable bucket without a reason.
 
 | Claim type   | Claims | Comparable | Agree | Differ |
 |:-------------|-------:|-----------:|------:|-------:|
-| pipeline     |    255 |        253 |   158 |     95 |
+| pipeline     |    255 |        253 |   166 |     87 |
 | definitional |     26 |          0 |     0 |      0 |
 | descriptive  |     15 |         15 |    12 |      3 |
 | structural   |      5 |          0 |     0 |      0 |
@@ -244,7 +256,7 @@ claims are design parameters and conventions the article states,
 
 | Where the fault lies | Claims |
 |:---------------------|-------:|
-| environment          |     80 |
+| environment          |     72 |
 | archive              |     14 |
 | paper_internal       |      5 |
 | unresolved           |      1 |
@@ -265,11 +277,11 @@ do not is a sentence rather than a table cell.
 | Float or section | Claim | Published | Deposit | Rewrite | Fault |
 |:---|:---|:---|:---|:---|:---|
 | Appendix S3.1.2 | Percentage reduction in posterior standar… | 40% | 35% | 35% | paper_internal |
-| Appendix S3.1.2 | Percentage increase in bias under informa… | 33% | 1425% | 1439% | paper_internal |
-| Appendix S2.1 | Population average treatment effect of th… | 0.406 | 0.409 | 0.410 | unresolved |
+| Appendix S3.1.2 | Percentage increase in bias under informa… | 33% | 1425% | 1162% | paper_internal |
+| Appendix S2.1 | Population average treatment effect of th… | 0.406 | 0.409 | 0.409 | unresolved |
 | Appendix S4.7 | Interact CBO has the highest RMSE of the … | TRUE | FALSE | FALSE | paper_internal |
 | Appendix S4.5 | Mean mortality estimand as stated in prose | 0.006 | -0.057 | -0.057 | paper_internal |
-| Appendix S4.5 | Share of simulations returning a signific… | 0.001 | 0.291 | 0.296 | paper_internal |
+| Appendix S4.5 | Share of simulations returning a signific… | 0.001 | 0.291 | 0.298 | paper_internal |
 
 Every published value the deposit’s own saved results do not reproduce
 
@@ -279,36 +291,36 @@ Every published value the deposit’s own saved results do not reproduce
 
 | Script | Pass | Completed | Stopped at |
 |:---|:---|:---|:---|
-| 1_simple_design.R | As shipped | no | Error: You appear to have used legacy declare_sampling() syntax. Co… |
-| 1_simple_design.R | Stripped | no | Error: You appear to have used legacy declare_sampling() syntax. Co… |
-| 2_design_census.R | As shipped | no | Error: You appear to have used legacy declare_sampling() syntax. Co… |
-| 2_design_census.R | Stripped | no | Error: You appear to have used legacy declare_sampling() syntax. Co… |
-| 3_10_discovery.R | As shipped | no | Error: You appear to have used legacy declare_assignment() syntax. … |
-| 3_10_discovery.R | Stripped | no | Error: You appear to have used legacy declare_assignment() syntax. … |
-| 3_1_survey_designs.R | As shipped | no | Error: You appear to have used legacy declare_sampling() syntax. Co… |
-| 3_1_survey_designs.R | Stripped | no | Error: You appear to have used legacy declare_sampling() syntax. Co… |
-| 3_2_Bayesian_descriptive_inference.R | As shipped | no | Error: You appear to have used legacy declare_sampling() syntax. Co… |
-| 3_2_Bayesian_descriptive_inference.R | Stripped | no | Error: You appear to have used legacy declare_sampling() syntax. Co… |
-| 3_3_process_tracing.R | As shipped | no | Error: You appear to have used legacy declare_sampling() syntax. Co… |
-| 3_3_process_tracing.R | Stripped | no | Error: You appear to have used legacy declare_sampling() syntax. Co… |
-| 3_4_QCA.R | As shipped | no | Error in file(file, …) : argument “file” is missing, with no default |
-| 3_4_QCA.R | Stripped | no | Error in file(file, …) : argument “file” is missing, with no default |
+| 1_simple_design.R | As shipped | no | Error in file(file, …) : argument “file” is missing, with no default |
+| 1_simple_design.R | Stripped | no | Error in file(file, …) : argument “file” is missing, with no default |
+| 2_design_census.R | As shipped | no | Error in `declare_potential_outcomes()`: |
+| 2_design_census.R | Stripped | no | Error in `declare_potential_outcomes()`: |
+| 3_10_discovery.R | As shipped | no | Error in `declare_potential_outcomes()`: |
+| 3_10_discovery.R | Stripped | no | Error in `declare_potential_outcomes()`: |
+| 3_1_survey_designs.R | As shipped | no | Error in file(file, …) : argument “file” is missing, with no default |
+| 3_1_survey_designs.R | Stripped | no | Error in file(file, …) : argument “file” is missing, with no default |
+| 3_2_Bayesian_descriptive_inference.R | As shipped | no | Error in `check_params_are_declared()`: |
+| 3_2_Bayesian_descriptive_inference.R | Stripped | no | Error in `check_params_are_declared()`: |
+| 3_3_process_tracing.R | As shipped | no | Error in `map2()`: |
+| 3_3_process_tracing.R | Stripped | no | Error in `map2()`: |
+| 3_4_QCA.R | As shipped | no | Error in `declare_potential_outcomes()`: |
+| 3_4_QCA.R | Stripped | no | Error in `declare_potential_outcomes()`: |
 | 3_5_nested.R | As shipped | no | Error in knitr::include_graphics(“figure/Nested_analysis.pdf”) : |
 | 3_5_nested.R | Stripped | no | Error in knitr::include_graphics(“figure/Nested_analysis.pdf”) : |
-| 3_6_model_based_estimands.R | As shipped | no | Error: You appear to have used legacy declare_assignment() syntax. … |
-| 3_6_model_based_estimands.R | Stripped | no | Error: You appear to have used legacy declare_assignment() syntax. … |
-| 3_7_matching.R | As shipped | no | Error: object ‘bias’ not found |
-| 3_7_matching.R | Stripped | no | Error: object ‘bias’ not found |
-| 3_8_regression_discontinuity.R | As shipped | no | Error in file(file, …) : argument “file” is missing, with no default |
-| 3_8_regression_discontinuity.R | Stripped | no | Error in file(file, …) : argument “file” is missing, with no default |
-| 3_9_experimental.R | As shipped | no | Did not finish within 600 seconds. |
-| 3_9_experimental.R | Stripped | no | Did not finish within 600 seconds. |
-| 4_B_and_S_replication.R | As shipped | no | Error: You appear to have used legacy declare_sampling() syntax. Co… |
-| 4_B_and_S_replication.R | Stripped | no | Error: You appear to have used legacy declare_sampling() syntax. Co… |
-| appendix_code.R | As shipped | no | Error: You appear to have used legacy declare_sampling() syntax. Co… |
-| appendix_code.R | Stripped | no | Error: You appear to have used legacy declare_sampling() syntax. Co… |
-| table_3_declaration.R | As shipped | no | Error: You appear to have used legacy declare_sampling() syntax. Co… |
-| table_3_declaration.R | Stripped | no | Error: You appear to have used legacy declare_sampling() syntax. Co… |
+| 3_6_model_based_estimands.R | As shipped | no | Error in `declare_potential_outcomes()`: |
+| 3_6_model_based_estimands.R | Stripped | no | Error in `declare_potential_outcomes()`: |
+| 3_7_matching.R | As shipped | no | Error in `declare_potential_outcomes()`: |
+| 3_7_matching.R | Stripped | no | Error in `declare_potential_outcomes()`: |
+| 3_8_regression_discontinuity.R | As shipped | no | Error in `declare_potential_outcomes()`: |
+| 3_8_regression_discontinuity.R | Stripped | no | Error in `declare_potential_outcomes()`: |
+| 3_9_experimental.R | As shipped | no | Error in `purrr::map()`: |
+| 3_9_experimental.R | Stripped | no | Error in `purrr::map()`: |
+| 4_B_and_S_replication.R | As shipped | no | Error in `declare_potential_outcomes()`: |
+| 4_B_and_S_replication.R | Stripped | no | Error in `declare_potential_outcomes()`: |
+| appendix_code.R | As shipped | no | Error in `declare_potential_outcomes()`: |
+| appendix_code.R | Stripped | no | Error in `declare_potential_outcomes()`: |
+| table_3_declaration.R | As shipped | no | Error in `declare_potential_outcomes()`: |
+| table_3_declaration.R | Stripped | no | Error in `declare_potential_outcomes()`: |
 
 Every deposited script, run both ways
 
@@ -376,6 +388,30 @@ Five changes in packages, none of them errors in the deposit, account
 for most of what the rewrite does differently. Each was found by running
 the code, not by reading a changelog.
 
+**DeclareDesign 2.0 and the rewrite.** The scripts were written in
+August 2026 against DeclareDesign 1.x and ported to 2.0.0 (with estimatr
+2.0.1.9000, fabricatr 2.0.0, DesignLibrary 2.0.0) on 2026-11-05. Seven
+changes touched the code, and each is recorded in `notes.md`. Potential
+outcomes moved into `declare_model()`. An estimator’s inquiry is a
+string, and a function passed as a handler is passed as `.method =`.
+`fabricatr` now splices a data frame assigned as a column into its own
+columns, which would have dropped the two screening columns of the
+discovery design (the `tidy(...)[4, 4]` filter is kept and its cell is
+unwrapped with `[[1]]`). `fabricatr` returns tibbles, so `data[, test]`
+in the process tracing estimators is a one-column tibble and became
+`data[[test]]`. A declared step cannot be called from inside a handler
+once `redesign()` has rebuilt the design, so the nested design’s two
+sampling rules became plain functions that read the effort once when
+they are defined, which keeps them out of the design’s reach exactly as
+in the deposit. `expand_design()` is replaced by `redesign()` of the
+designer. Diagnosing several designs at 5000 simulations and 5000
+bootstrap replicates in one call exhausts 48 Gb of memory under 2.0, so
+Figure 1 and the covariate adjustment table diagnose their designs one
+at a time and the nested thresholds table draws simulations without the
+diagnosands it never used. The random-number streams moved, so every
+simulated value moved by simulation error; the comparison with the
+published tables is in `notes.md`.
+
 **The QCA package’s notation for absence changed, and the diagnosand is
 a string comparison.** The design’s inquiry is the configuration `a*B`,
 written in the notation the article uses, where a lower case letter
@@ -416,7 +452,7 @@ so this belongs to the package rather than to the deposit.
 **A neighbouring table redesigns on parameters that are in no version of
 the design.** The same declaration is also diagnosed across the effort
 spent on model testing and model building, and those two parameters are
-used by sampling steps that the handler calls rather than by steps of
+used by sampling rules that the handler calls rather than by steps of
 the design itself. `redesign()` cannot reach them, and the current
 DeclareDesign says so in a warning as the rewrite runs. The four rows of
 that table are four simulations of one design, in the deposit as much as
@@ -536,28 +572,28 @@ neither the deposit nor the rewrite reproduces it.
 | Table 4          |      1 |          0 |     0 |
 | Table 2          |     16 |         13 |    13 |
 | Figure 1         |      5 |          2 |     2 |
-| Appendix S3.2.1a |     22 |         18 |    11 |
-| Appendix S3.2.2e |     25 |         24 |    18 |
-| Appendix S4.5    |     18 |         11 |     7 |
-| Appendix S4.6    |     14 |         11 |     5 |
-| Appendix S4.7    |     26 |         25 |    16 |
+| Appendix S3.2.1a |     22 |         18 |    10 |
+| Appendix S3.2.2e |     25 |         24 |    20 |
+| Appendix S4.5    |     18 |         11 |     6 |
+| Appendix S4.6    |     14 |         11 |     7 |
+| Appendix S4.7    |     26 |         25 |    10 |
 | Appendix S3.1.2  |     27 |         27 |    16 |
-| Appendix S3.2.2d |     17 |         17 |     7 |
+| Appendix S3.2.2d |     17 |         17 |    12 |
 | Figure 2         |      2 |          2 |     2 |
-| Appendix S2.1    |     19 |         15 |     5 |
-| Appendix S3.2.1b |      3 |          3 |     2 |
-| Appendix S3.2.2c |      6 |          6 |     1 |
+| Appendix S2.1    |     19 |         15 |     9 |
+| Appendix S3.2.1b |      3 |          3 |     3 |
+| Appendix S3.2.2c |      6 |          6 |     4 |
 | Appendix S3.2.3a |     25 |         25 |    25 |
 | Appendix S3.2.3b |      5 |          5 |     0 |
 | Appendix S3.2.5  |      3 |          3 |     3 |
-| Appendix S3.3    |     17 |         17 |    11 |
+| Appendix S3.3    |     17 |         17 |     9 |
 | Appendix S1      |      3 |          3 |     3 |
 | Appendix S3.1.1  |      1 |          1 |     1 |
 | Appendix S3.2.2a |      6 |          6 |     6 |
 | Appendix S3.2.2b |      2 |          2 |     2 |
 | Appendix S3.2.3c |      8 |          8 |     0 |
-| Appendix S3.2.4  |     20 |         20 |    10 |
-| Appendix S3.2.6  |      4 |          4 |     4 |
+| Appendix S3.2.4  |     20 |         20 |    12 |
+| Appendix S3.2.6  |      4 |          4 |     3 |
 
 Coverage of every published float
 
@@ -577,13 +613,12 @@ seventy units in the last place.
 |:---|:---|:---|:---|:---|:---|
 | Table 2 | Table 2 reports 0 of the 30 admitted tool… | 0 | \- | \- | archive |
 | Appendix S3.1.2 | Percentage reduction in posterior standar… | 40% | 35% | 35% | paper_internal |
-| Appendix S3.1.2 | Percentage increase in bias under informa… | 33% | 1425% | 1439% | paper_internal |
-| Appendix S2.1 | Population average treatment effect of th… | 0.406 | 0.409 | 0.410 | unresolved |
+| Appendix S3.1.2 | Percentage increase in bias under informa… | 33% | 1425% | 1162% | paper_internal |
+| Appendix S2.1 | Population average treatment effect of th… | 0.406 | 0.409 | 0.409 | unresolved |
 | Appendix S2.1 | Standard deviation of the working example… | 1.01 | \- | \- | archive |
 | Appendix S3.2.2c | Consistency Cubes has a lower failure rat… | TRUE | TRUE | FALSE | environment |
 | Appendix S3.2.3b | More effort on theory building and less o… | TRUE | TRUE | FALSE | archive |
 | Appendix S4.7 | Interact CBO has the highest RMSE of the … | TRUE | FALSE | FALSE | paper_internal |
-| Appendix S2.1 | Appendix S2.1, IPW-BFE: power | 0.72 | 0.72 | 0.74 | environment |
 | Appendix S3.1.2 | Appendix S3.1.2, 100\|flat priors: mean_sd | 0.14 | 0.14 | 0.05 | archive |
 | Appendix S3.1.2 | Appendix S3.1.2, 100\|flat priors: sd_shift | -0.15 | -0.15 | -0.24 | archive |
 | Appendix S3.1.2 | Appendix S3.1.2, 100\|informative priors: … | 0.49 | 0.49 | 0.47 | archive |
@@ -591,29 +626,36 @@ seventy units in the last place.
 | Appendix S3.1.2 | Appendix S3.1.2, 100\|informative priors: … | 0.03 | 0.03 | 0.01 | archive |
 | Appendix S3.1.2 | Appendix S3.1.2, 100\|informative priors: … | -0.01 | -0.01 | -0.03 | archive |
 | Appendix S3.1.2 | Appendix S3.1.2, 100\|informative priors: … | -0.02 | -0.02 | -0.06 | archive |
+| Appendix S3.2.1a | Appendix S3.2.1a, Smoking gun: mean_estimand | 0.51 | 0.51 | 0.49 | environment |
+| Appendix S3.2.1a | Appendix S3.2.1a, Straw in Wind: mean_est… | 0.51 | 0.51 | 0.49 | environment |
 | Appendix S3.2.1a | Appendix S3.2.1a, Update from both clues:… | 0.51 | 0.51 | 0.49 | environment |
 | Appendix S3.2.2c | Appendix S3.2.2c, Consistency Cubes: fail… | 0.00 | 0.00 | 0.07 | environment |
-| Appendix S3.2.2d | Appendix S3.2.2d, 0\|5\|Consistency Cubes: … | 0.01 | 0.01 | 0.12 | environment |
-| Appendix S3.2.2d | Appendix S3.2.2d, 0.05\|5\|Consistency Cube… | 0.01 | 0.01 | 0.15 | environment |
-| Appendix S3.2.2e | Appendix S3.2.2e, 0\|3\|Classic Quine-McClu… | 0.32 | 0.32 | 0.30 | environment |
-| Appendix S3.2.2e | Appendix S3.2.2e, 0\|3\|Consistency Cubes: … | 0.05 | 0.05 | 0.30 | environment |
-| Appendix S3.2.2e | Appendix S3.2.2e, 0.2\|3\|Consistency Cubes… | 0.10 | 0.10 | 0.44 | environment |
-| Appendix S3.2.3b | Share of simulations reaching the New Mod… | 0.2780 | 0.2780 | 0.2698 | archive |
-| Appendix S3.2.3b | Share of simulations reaching the New Mod… | 0.2858 | 0.2858 | 0.2736 | archive |
-| Appendix S3.2.3b | Share of simulations reaching the New Mod… | 0.2782 | 0.2782 | 0.2870 | archive |
-| Appendix S3.2.3b | Share of simulations reaching the New Mod… | 0.2752 | 0.2752 | 0.2748 | archive |
-| Appendix S3.2.3c | Share of simulations reaching the New Mod… | 0.6424 | 0.6424 | 0.6292 | environment |
-| Appendix S3.2.3c | Share of simulations reaching the New Mod… | 0.6270 | 0.6270 | 0.6274 | environment |
-| Appendix S3.2.3c | Share of simulations reaching the New Mod… | 0.6244 | 0.6244 | 0.6306 | environment |
-| Appendix S3.2.3c | Share of simulations reaching the New Mod… | 0.6242 | 0.6242 | 0.6386 | environment |
-| Appendix S3.2.3c | Share of simulations reaching the New Mod… | 0.2840 | 0.2840 | 0.0530 | environment |
-| Appendix S3.2.3c | Share of simulations reaching the New Mod… | 0.2748 | 0.2748 | 0.6350 | environment |
-| Appendix S3.2.3c | Share of simulations reaching the New Mod… | 0.2740 | 0.2740 | 0.0508 | environment |
-| Appendix S3.2.3c | Share of simulations reaching the New Mod… | 0.2738 | 0.2738 | 0.6356 | environment |
+| Appendix S3.2.2d | Appendix S3.2.2d, 0\|5\|Consistency Cubes: … | 0.01 | 0.01 | 0.11 | environment |
+| Appendix S3.2.2d | Appendix S3.2.2d, 0.05\|5\|Classic Quine-Mc… | 0.14 | 0.14 | 0.16 | environment |
+| Appendix S3.2.2d | Appendix S3.2.2d, 0.05\|5\|Consistency Cube… | 0.01 | 0.01 | 0.16 | environment |
+| Appendix S3.2.2e | Appendix S3.2.2e, 0\|3\|Consistency Cubes: … | 0.05 | 0.05 | 0.32 | environment |
+| Appendix S3.2.2e | Appendix S3.2.2e, 0.2\|3\|Consistency Cubes… | 0.10 | 0.10 | 0.45 | environment |
+| Appendix S3.2.3b | Share of simulations reaching the New Mod… | 0.2780 | 0.2780 | 0.2636 | archive |
+| Appendix S3.2.3b | Share of simulations reaching the New Mod… | 0.2858 | 0.2858 | 0.2720 | archive |
+| Appendix S3.2.3b | Share of simulations reaching the New Mod… | 0.2782 | 0.2782 | 0.2792 | archive |
+| Appendix S3.2.3b | Share of simulations reaching the New Mod… | 0.2752 | 0.2752 | 0.2772 | archive |
+| Appendix S3.2.3c | Share of simulations reaching the New Mod… | 0.6424 | 0.6424 | 0.6340 | environment |
+| Appendix S3.2.3c | Share of simulations reaching the New Mod… | 0.6270 | 0.6270 | 0.6316 | environment |
+| Appendix S3.2.3c | Share of simulations reaching the New Mod… | 0.6244 | 0.6244 | 0.6418 | environment |
+| Appendix S3.2.3c | Share of simulations reaching the New Mod… | 0.6242 | 0.6242 | 0.6192 | environment |
+| Appendix S3.2.3c | Share of simulations reaching the New Mod… | 0.2840 | 0.2840 | 0.0510 | environment |
+| Appendix S3.2.3c | Share of simulations reaching the New Mod… | 0.2748 | 0.2748 | 0.6292 | environment |
+| Appendix S3.2.3c | Share of simulations reaching the New Mod… | 0.2740 | 0.2740 | 0.0522 | environment |
+| Appendix S3.2.3c | Share of simulations reaching the New Mod… | 0.2738 | 0.2738 | 0.6194 | environment |
+| Appendix S3.3 | Appendix S3.3, Test sample: RMSE | 0.41 | 0.41 | 0.39 | environment |
+| Appendix S3.3 | Appendix S3.3, Test sample: false_neg | 0.78 | 0.78 | 0.70 | environment |
 | Appendix S4.5 | Mean mortality estimand as stated in prose | 0.006 | -0.057 | -0.057 | paper_internal |
-| Appendix S4.5 | Share of simulations returning a signific… | 0.001 | 0.291 | 0.296 | paper_internal |
+| Appendix S4.5 | Mortality coverage as stated in prose | 0.95 | \- | 0.97 | environment |
+| Appendix S4.5 | Share of simulations returning a signific… | 0.001 | 0.291 | 0.298 | paper_internal |
 | Appendix S4.6 | Appendix S4.6, bjorkman_svensson_design\|M… | 0.28 | 0.28 | 0.30 | environment |
-| Appendix S4.6 | Appendix S4.6, RPP_replication\|Weight est… | 2.02 | 2.02 | 1.99 | environment |
+| Appendix S4.6 | Appendix S4.6, RPP_replication\|Weight est… | 2.02 | 2.02 | 1.98 | environment |
+| Appendix S4.7 | Appendix S4.7, DM_replication_CBO_ind\|Int… | 0.27 | 0.27 | 0.29 | environment |
+| Appendix S4.7 | Appendix S4.7, DM_replication_CBO_cor\|Int… | 0.34 | 0.34 | 0.38 | environment |
 
 Every disagreement of more than one unit in the last printed place
 
@@ -622,18 +664,17 @@ are counted by the float they belong to.
 
 | Float or section | Claims |
 |:-----------------|-------:|
-| Appendix S2.1    |      8 |
+| Appendix S2.1    |      5 |
 | Appendix S3.1.2  |      2 |
-| Appendix S3.2.1a |      6 |
-| Appendix S3.2.1b |      1 |
-| Appendix S3.2.2c |      3 |
-| Appendix S3.2.2d |      8 |
-| Appendix S3.2.2e |      3 |
-| Appendix S3.2.4  |     10 |
+| Appendix S3.2.1a |      5 |
+| Appendix S3.2.2d |      2 |
+| Appendix S3.2.2e |      2 |
+| Appendix S3.2.4  |      8 |
+| Appendix S3.2.6  |      1 |
 | Appendix S3.3    |      6 |
 | Appendix S4.5    |      2 |
-| Appendix S4.6    |      4 |
-| Appendix S4.7    |      8 |
+| Appendix S4.6    |      2 |
+| Appendix S4.7    |     12 |
 
 Claims differing only in the last printed digit
 
@@ -653,27 +694,28 @@ be wrong.
 
 | Script | Role | Lines |
 |:---|:---|---:|
-| bs_design.R | The Bjorkman and Svensson declaration, sourced by three scripts | 109 |
-| figure_1_experimental_designs.R | Article figure | 124 |
+| bs_design.R | The Bjorkman and Svensson declaration, sourced by three scripts | 111 |
+| figure_1_experimental_designs.R | Article figure | 132 |
 | figure_2_bs_sampling_distributions.R | Article figure | 46 |
-| helpers.R | Packages, paths and the shared diagnosand writer | 75 |
+| helpers.R | Packages, paths and the shared diagnosand writer | 80 |
 | in_text_claims.R | Prints every published claim beside its computed counterpart | 1238 |
 | table_2_tool_census.R | Article table | 88 |
-| table_3_declaration.R | Article table | 68 |
+| table_3_declaration.R | Article table | 67 |
 | table_a1_simple_design.R | Appendix table | 45 |
-| table_a12_nested_analysis.R | Appendix table | 175 |
-| table_a15_model_based_estimands.R | Appendix table | 43 |
-| table_a16_matching.R | Appendix table | 50 |
-| table_a17_regression_discontinuity.R | Appendix table | 42 |
-| table_a18_discovery.R | Appendix table | 90 |
+| table_a12_nested_analysis.R | Appendix table | 193 |
+| table_a15_model_based_estimands.R | Appendix table | 46 |
+| table_a16_matching.R | Appendix table | 54 |
+| table_a17_regression_discontinuity.R | Appendix table | 40 |
+| table_a18_discovery_intended.R | Appendix table | 107 |
+| table_a18_discovery.R | Appendix table | 93 |
 | table_a19_bs_diagnosis.R | Appendix table | 34 |
 | table_a2_working_example_census.R | Appendix table | 63 |
 | table_a20_bs_exaggeration.R | Appendix table | 37 |
-| table_a21_bs_covariate_adjustment.R | Appendix table | 94 |
+| table_a21_bs_covariate_adjustment.R | Appendix table | 109 |
 | table_a3_survey_design.R | Appendix table | 40 |
 | table_a4_bayesian_descriptive.R | Appendix table | 85 |
-| table_a5_process_tracing.R | Appendix table | 137 |
-| table_a7_qca.R | Appendix table | 148 |
+| table_a5_process_tracing.R | Appendix table | 142 |
+| table_a7_qca.R | Appendix table | 151 |
 
 Scripts in maintained/
 
@@ -690,11 +732,14 @@ The rewrite uses the current DeclareDesign interface throughout:
 `declare_sampling(n = ...)`, `declare_assignment(Z = block_ra(...))` for
 the old block and cluster arguments, `.method =` for `model =`, and
 `declare_measurement(Y = reveal_outcomes(...))` for `declare_reveal()`.
-Where the old interface supplied something automatically, the rewrite
-computes it explicitly: the working example’s assignment probabilities
-come from `obtain_condition_probabilities()` over the same block sizes
-that generate the assignment, so the inverse probability weighted
-estimator the deposit could no longer form is available again.
+Under DeclareDesign 2.0 the potential outcomes are written into the
+model, `declare_model(..., potential_outcomes(Y ~ Z + u))`, since
+`declare_potential_outcomes()` is defunct. Where the old interface
+supplied something automatically, the rewrite computes it explicitly:
+the working example’s assignment probabilities come from
+`obtain_condition_probabilities()` over the same block sizes that
+generate the assignment, so the inverse probability weighted estimator
+the deposit could no longer form is available again.
 
 ------------------------------------------------------------------------
 

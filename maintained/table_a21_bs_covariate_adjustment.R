@@ -31,23 +31,23 @@ conditional_estimator <- function(data, strategy, alpha = 0.1) {
 }
 
 ignore_CBO <- declare_estimator(
-  handler = label_estimator(conditional_estimator), strategy = "ignore",
-  inquiry = hh_weight_inquiry, label = "Ignore CBO"
+  .method = conditional_estimator, strategy = "ignore",
+  inquiry = "Weight", label = "Ignore CBO"
 )
 
 include_CBO <- declare_estimator(
-  handler = label_estimator(conditional_estimator), strategy = "include",
-  inquiry = hh_weight_inquiry, label = "Include CBO"
+  .method = conditional_estimator, strategy = "include",
+  inquiry = "Weight", label = "Include CBO"
 )
 
 interact_CBO <- declare_estimator(
-  handler = label_estimator(conditional_estimator), strategy = "interact",
-  inquiry = hh_weight_inquiry, label = "Interact CBO"
+  .method = conditional_estimator, strategy = "interact",
+  inquiry = "Weight", label = "Interact CBO"
 )
 
 include_CBO_if_imbalanced <- declare_estimator(
-  handler = label_estimator(conditional_estimator), strategy = "include if imbalanced",
-  inquiry = hh_weight_inquiry, label = "Include CBO if imbalanced"
+  .method = conditional_estimator, strategy = "include if imbalanced",
+  inquiry = "Weight", label = "Include CBO if imbalanced"
 )
 
 CBO_correlation <- 0
@@ -73,20 +73,35 @@ DM_replication_CBO_ind <-
 
 DM_replication_CBO_cor <- redesign(DM_replication_CBO_ind, CBO_correlation = .8)
 
-diagnosis <- diagnose_design(
-  DM_replication_CBO_ind,
-  DM_replication_CBO_cor,
-  diagnosands = declare_diagnosands(
-    rmse_balanced = sqrt(mean((estimate[!imbalanced] - estimand[!imbalanced])^2)),
-    rmse_imbalanced = sqrt(mean((estimate[imbalanced] - estimand[imbalanced])^2)),
-    rmse = sqrt(mean((estimate - estimand)^2))
-  ),
-  sims = published_sims,
-  bootstrap_sims = published_bootstrap_sims
+# The two designs are diagnosed one at a time. DeclareDesign 2.0.0 bootstraps the
+# diagnosands of a multi-design diagnosis in one join, and for these four estimators
+# at 5000 simulations and 5000 replicates over two designs it exhausts 48 Gb of memory.
+cbo_diagnosands <- declare_diagnosands(
+  rmse_balanced = sqrt(mean((estimate[!imbalanced] - estimand[!imbalanced])^2)),
+  rmse_imbalanced = sqrt(mean((estimate[imbalanced] - estimand[imbalanced])^2)),
+  rmse = sqrt(mean((estimate - estimand)^2))
 )
 
-tab <- get_diagnosands(diagnosis) |>
-  as_tibble() |>
+cbo_designs <- list(
+  DM_replication_CBO_ind = DM_replication_CBO_ind,
+  DM_replication_CBO_cor = DM_replication_CBO_cor
+)
+
+tab <- imap(
+  cbo_designs,
+  \(design, design_name) {
+    diagnose_design(
+      design,
+      diagnosands = cbo_diagnosands,
+      sims = published_sims,
+      bootstrap_sims = published_bootstrap_sims
+    ) |>
+      get_diagnosands() |>
+      as_tibble() |>
+      mutate(design = design_name)
+  }
+) |>
+  list_rbind() |>
   mutate(CBO_correlation = replace_na(CBO_correlation, original_CBO_correlation))
 
 write_csv(tab, out_path("table_a21_bs_covariate_adjustment.csv"))

@@ -41,14 +41,14 @@ beta_binom <- function(data, alpha_0, beta_0) {
 }
 
 estimator_flat_priors <- declare_estimator(
-  handler = label_estimator(beta_binom),
+  .method = beta_binom,
   alpha_0 = 1, beta_0 = 1,
   inquiry = "success_probability",
   label = "flat priors"
 )
 
 estimator_info_priors <- declare_estimator(
-  handler = label_estimator(beta_binom),
+  .method = beta_binom,
   alpha_0 = 10, beta_0 = 10,
   inquiry = "success_probability",
   label = "informative priors"

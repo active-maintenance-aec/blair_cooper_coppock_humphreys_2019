@@ -20,12 +20,11 @@ error_rate <- 0
 cases <- declare_model(
   N = N,
   A = rbinom(N, 1, .2),
-  B = rbinom(N, 1, .8)
-)
-
-counterfactuals <- declare_potential_outcomes(
-  Y ~ 1 * (A == 0 & B == 1),
-  conditions = list(A = 0:1, B = 0:1)
+  B = rbinom(N, 1, .8),
+  potential_outcomes(
+    Y ~ 1 * (A == 0 & B == 1),
+    conditions = list(A = 0:1, B = 0:1)
+  )
 )
 
 inquiry <- declare_inquiry(true_configuration = "a*B")
@@ -54,7 +53,7 @@ in_inquiry_notation <- function(expression) {
   str_replace_all(expression, "~[A-Za-z]", \(match) str_to_lower(str_sub(match, 2)))
 }
 
-minimization_algorithm <- function(data, method, label) {
+minimization_algorithm <- function(data, method) {
   estimate <- tryCatch(
     expr = {
       truth_table <- QCA::truthTable(
@@ -65,18 +64,20 @@ minimization_algorithm <- function(data, method, label) {
     },
     error = function(e) "NO SOLUTION"
   )
-  tibble(estimate = estimate, inquiry = "true_configuration", estimator = label)
+  tibble(estimate = estimate)
 }
 
 QMC_estimator <- declare_estimator(
-  handler = minimization_algorithm, method = "QMC", label = "Classic Quine-McCluskey"
+  .method = minimization_algorithm, method = "QMC",
+  inquiry = "true_configuration", label = "Classic Quine-McCluskey"
 )
 
 CC_estimator <- declare_estimator(
-  handler = minimization_algorithm, method = "CCubes", label = "Consistency Cubes"
+  .method = minimization_algorithm, method = "CCubes",
+  inquiry = "true_configuration", label = "Consistency Cubes"
 )
 
-QCA_design <- cases + counterfactuals + inquiry + true_outcome + code_outcome +
+QCA_design <- cases + inquiry + true_outcome + code_outcome +
   QMC_estimator + CC_estimator
 
 write_csv(as_tibble(draw_data(QCA_design)), out_path("table_a7_qca_simulated_data.csv"))
@@ -111,7 +112,7 @@ tab_error <- write_diagnosands(diagnosis_error, "table_a10_qca_error_rate_and_n.
 print(tab_error |> select(estimator, error_rate, N, correct_rate, failure_rate))
 
 # Adding a least squares answer strategy ----
-linear_minimization <- function(data, label) {
+linear_minimization <- function(data) {
   betas <- coef(lm(Y_obs ~ A * B, data = data))
   betas[is.na(betas)] <- 0
   predictions <- c(
@@ -128,10 +129,12 @@ linear_minimization <- function(data, label) {
     estimate <- if_else(inherits(sum_of_products, "try-error"), "NO SOLUTION",
                         in_inquiry_notation(as.character(sum_of_products)[1]))
   }
-  tibble(estimate = estimate, inquiry = "true_configuration", estimator = label)
+  tibble(estimate = estimate)
 }
 
-linear_estimator <- declare_estimator(handler = linear_minimization, label = "Least Squares")
+linear_estimator <- declare_estimator(
+  .method = linear_minimization, inquiry = "true_configuration", label = "Least Squares"
+)
 
 QCA_design_with_lm <- QCA_design + linear_estimator
 

@@ -17,13 +17,15 @@ pr_SMG_not_H <- .05
 rho_H <- 0
 rho_not_H <- 0
 
+# clue_found is returned as text from both estimators: DeclareDesign 2.0 stacks the
+# three estimators' estimates and will not combine a logical column with a character one.
 calculate_posterior <- function(data, p_H, p_clue_found_H, p_clue_found_not_H, test, label) {
-  clue_found <- data[, test]
+  clue_found <- data[[test]]
   p_E_H <- if_else(clue_found, p_clue_found_H, 1 - p_clue_found_H)
   p_E_not_H <- if_else(clue_found, p_clue_found_not_H, 1 - p_clue_found_not_H)
   tibble(
     posterior_H = p_E_H * p_H / (p_E_H * p_H + p_E_not_H * (1 - p_H)),
-    clue_found = clue_found
+    clue_found = as.character(clue_found)
   )
 }
 
@@ -38,15 +40,18 @@ joint_prob <- function(p1, p2, rho) {
 calculate_posterior_joint <- function(data, p_H, p_clue_1_found_H, p_clue_1_found_not_H,
                                       p_clue_2_found_H, p_clue_2_found_not_H,
                                       rho_H, rho_not_H, test) {
-  clue_found <- data[, test]
+  clue_found <- data[[test]]
   p_E_H <- joint_prob(p1 = p_clue_1_found_H, p2 = p_clue_2_found_H, rho = rho_H)[clue_found]
   p_E_not_H <- joint_prob(p1 = p_clue_1_found_not_H, p2 = p_clue_2_found_not_H, rho = rho_not_H)[clue_found]
   tibble(
     posterior_H = p_E_H * p_H / (p_E_H * p_H + p_E_not_H * (1 - p_H)),
-    clue_found = clue_found
+    clue_found = as.character(clue_found)
   )
 }
 
+# Arguments that name an object (pr_SIW_H, rho_H) are listed before the literal
+# ones in each estimator below. In DeclareDesign 2.0.0 an object-valued argument
+# that follows a literal one is not found when the estimator runs.
 process_tracing_design <-
   declare_model(
     N = 195,
@@ -81,24 +86,24 @@ process_tracing_design <-
     label = "Correlated Clues"
   ) +
   declare_estimator(
-    test = "SIW_observed", p_H = .5,
     p_clue_found_H = pr_SIW_H, p_clue_found_not_H = pr_SIW_not_H,
+    test = "SIW_observed", p_H = .5,
     label = "Straw in Wind", inquiry = "did_X_cause_Y",
-    handler = label_estimator(calculate_posterior)
+    .method = calculate_posterior
   ) +
   declare_estimator(
-    test = "SMG_observed", p_H = .5,
     p_clue_found_H = pr_SMG_H, p_clue_found_not_H = pr_SMG_not_H,
+    test = "SMG_observed", p_H = .5,
     label = "Smoking gun", inquiry = "did_X_cause_Y",
-    handler = label_estimator(calculate_posterior)
+    .method = calculate_posterior
   ) +
   declare_estimator(
-    test = "SIW_SMG", p_H = .5,
     p_clue_1_found_H = pr_SIW_H, p_clue_1_found_not_H = pr_SIW_not_H,
     p_clue_2_found_H = pr_SMG_H, p_clue_2_found_not_H = pr_SMG_not_H,
     rho_H = rho_H, rho_not_H = rho_not_H,
+    test = "SIW_SMG", p_H = .5,
     label = "Update from both clues", inquiry = "did_X_cause_Y",
-    handler = label_estimator(calculate_posterior_joint)
+    .method = calculate_posterior_joint
   )
 
 process_tracing_diagnosands <- declare_diagnosands(

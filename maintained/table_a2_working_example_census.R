@@ -25,10 +25,10 @@ design <-
     ),
     individual = add_level(
       N = block_size,
-      noise = rnorm(N)
+      noise = rnorm(N),
+      potential_outcomes(Y ~ block_effect * Z + noise)
     )
   ) +
-  declare_potential_outcomes(formula = Y ~ block_effect * Z + noise) +
   declare_sampling(S = cluster_rs(clusters = block, n = 5), filter = S == 1) +
   declare_assignment(
     Z = block_ra(blocks = block, block_m = block_m_vector(block)),
