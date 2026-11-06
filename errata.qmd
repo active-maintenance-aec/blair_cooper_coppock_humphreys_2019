@@ -772,10 +772,10 @@ entries <- tribble(
   NA_character_,
   62, "typography", "reading", "brief",
   "Two more formulas in the printed code use a minus sign that R rejects",
-  "published p. 845, Table 3, and p. 859, appendix code",
+  "published p. 845, Table 3, and pp. 858 and 859, appendix code",
   r"--(ATE = mean(Y_Z_1 [[−]] Y_Z_0) ... bias = mean(estimate [[−]] estimand))--",
   r"--(ATE = mean(Y_Z_1 [[-]] Y_Z_0) ... bias = mean(estimate [[-]] estimand))--",
-  r"--(Table 3 prints both formulas, and p. 859 prints the second again. Entry 26 corrects the minus between `a_A` and `a_M` in the same table for the same reason, and its note mentions the second formula on p. 859 without correcting it.)--",
+  r"--(Table 3 prints both formulas, p. 858 prints the first again, across a line break, and p. 859 prints the second again. Entry 26 corrects the minus between `a_A` and `a_M` in the same table for the same reason, and its note mentions the second formula on p. 859 without correcting it.)--",
   ""
 ,
   NA_character_) |>
