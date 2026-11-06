@@ -229,7 +229,7 @@ entries <- tribble(
     r"--(The corrected rows are the maintained replication's: the same simulated draws, screened on the p-value, with )--", fmt(n_disc),
     r"--( draws because the conditional bias moves in the second decimal at the published 5,000. Screening the same draws on the statistic, as printed, gives Full sample )--",
     paste(printed_screen_full, collapse = " "), r"--( and Test sample )--", paste(printed_screen_test, collapse = " "),
-    r"--(, within simulation error of the printed rows, which is why the printed rows are attributed to the screen. Both maintained scripts are in the repository: `maintained/table_a18_discovery.R` reproduces the printed table from the printed code, and `maintained/table_a18_discovery_intended.R` computes both screens on the same draws and writes the corrected values. Both use complete random assignment, as the appendix describes and as the deposit's `declare_assignment(prob = 0.5)` produced. The printed code is on appendix pp. 38 and 39 and the table on pp. 39 and 40.)--",
+    r"--(, within simulation error of the printed rows, which is why the printed rows are attributed to the screen. Both maintained scripts are in the repository: `maintained/table_a18_discovery.R` reproduces the printed table from the printed code, and `maintained/table_a18_discovery_intended.R` computes both screens on the same draws and writes the corrected values. Both use complete random assignment, as the appendix describes and as the deposit's `declare_assignment(prob = 0.5)` produced. The printed code is on appendix pp. 38 and 39 and the table on pp. 39 and 40. The standard errors the table prints are not corrected here: they belong to the printed values, and the maintained table computes none for the corrected ones.)--",
     "\n\n",
     r"--(The article's conclusions about discovery stand. Page 851's two statements, lower bias from principled discovery and mean squared error that is not necessarily lower, hold under the corrected rows: the Test sample's bias is )--", new_test[1],
     r"--( against )--", new_full[1], r"--( for the Full sample, and its RMSE is )--", new_test[2], r"--( against )--", new_full[2],
@@ -769,6 +769,15 @@ entries <- tribble(
   "",
   ""
 ,
+  NA_character_,
+  62, "typography", "reading", "brief",
+  "Two more formulas in the printed code use a minus sign that R rejects",
+  "published p. 845, Table 3, and p. 859, appendix code",
+  r"--(ATE = mean(Y_Z_1 [[−]] Y_Z_0) ... bias = mean(estimate [[−]] estimand))--",
+  r"--(ATE = mean(Y_Z_1 [[-]] Y_Z_0) ... bias = mean(estimate [[-]] estimand))--",
+  r"--(Table 3 prints both formulas, and p. 859 prints the second again. Entry 26 corrects the minus between `a_A` and `a_M` in the same table for the same reason, and its note mentions the second formula on p. 859 without correcting it.)--",
+  ""
+,
   NA_character_) |>
   mutate(across(c(title, published, corrected, note, claim_ids, corrected_values),
                 as.character))
@@ -877,7 +886,7 @@ emit_entry <- function(n) {
 }
 
 sections <- list(
-  article = c(3, 5, 6, 13:27, 57),
+  article = c(3, 5, 6, 13:27, 57, 62),
   references = c(1, 2, 28:34, 59),
   appendix = c(4, 7:12, 35:56, 58, 60, 61)
 )
