@@ -178,8 +178,8 @@ stopifnot(identical(fixed_flat_100, new_flat_100),
 # Entries 4, 11 and 56 correct a printed table row, where only the cells that changed carry a
 # [[...]] mark. Their values are the same cell vectors the rows are built from, and the gate
 # checks them against the cells of the corrected row rather than against the marked spans.
-# Entry 8 carries NA: its corrected sentence types 29% for the power while the maintained
-# pipeline gives 0.30, so the printed token is not the value the claim computes.
+# Entry 8's sentence prints the table's power, 29%, while its corrected_values hold the rerun's
+# 0.30 on the claim's scale, so values_in_spans is FALSE and the note explains the gap.
 cv4 <- c(new_full, new_test[3:5])
 cv11 <- new_flat
 cv56 <- c(new_flat_100[c(2, 5)], new_info_100)
