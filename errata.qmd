@@ -169,8 +169,23 @@ stopifnot(identical(fixed_flat_100, new_flat_100),
 #
 # The corrected ranges keep the reference list's own style, which drops the leading
 # digits a range's last page shares with its first ("823--30", "122--6").
+# corrected_values runs parallel to claim_ids, one value per id in the same order, on the
+# claim's scale, carrying the corrected quantity as a number rather than as a sentence. Each
+# value is computed once, here, and the corrected sentence below is glued from the same
+# object, so the two cannot be written apart; the gate after the spine re-checks that each
+# value sits inside the [[...]] span it belongs to. An entry of a class that changes no
+# quantity, a note-form entry, and an entry with no claim_ids carry NA.
+# Entries 4, 11 and 56 correct a printed table row, where only the cells that changed carry a
+# [[...]] mark. Their values are the same cell vectors the rows are built from, and the gate
+# checks them against the cells of the corrected row rather than against the marked spans.
+# Entry 8 carries NA: its corrected sentence types 29% for the power while the maintained
+# pipeline gives 0.30, so the printed token is not the value the claim computes.
+cv4 <- c(new_full, new_test[3:5])
+cv11 <- new_flat
+cv56 <- c(new_flat_100[c(2, 5)], new_info_100)
+
 entries <- tribble(
-  ~entry, ~class, ~source, ~form, ~title, ~location, ~published, ~corrected, ~note, ~claim_ids,
+  ~entry, ~class, ~source, ~form, ~title, ~location, ~published, ~corrected, ~note, ~claim_ids, ~corrected_values,
 
   1, "bibliographic", "reference_audit", "brief",
   "The Green and Lin reference ends its page range one page early",
@@ -180,6 +195,7 @@ entries <- tribble(
   paste("Crossref, doi 10.1017/S1049096516000810, gives the article's pages as 495 to",
         "500."),
   "",
+  NA_character_,
 
   2, "bibliographic", "reference_audit", "brief",
   "The Nosek et al. reference prints a first page in place of a page range",
@@ -189,6 +205,7 @@ entries <- tribble(
   paste("Crossref, doi 10.1126/science.aab2374, gives the article's pages as 1422 to",
         "1425. The entries around it on the page print full ranges."),
   "",
+  NA_character_,
 
   3, "description", "reading", "brief",
   "The Figure 1 caption swaps the line styles and markers of the two designs",
@@ -197,6 +214,7 @@ entries <- tribble(
   r"--(Bias (left), root mean-squared-error (center), and power (right) are displayed for two assignment strategies, a [[three-arm design (black solid lines; circles) and a 2 × 2 treatment arm factorial design (gray dashed lines; triangles and squares)]] according to varying interaction effect sizes specified in the potential outcomes function (x axis).)--",
   r"--(The legend above the caption draws the three-arm design with a black solid line and circles. It draws the 2 × 2 factorial design with a gray dashed line, with triangles for the main-effect series and squares for the interaction-effect series. The caption gives each design the other's line style and markers, and names triangles alone for the factorial design.)--",
   "",
+  NA_character_,
 
   4, "quantity", "reading", "full",
   "The discovery code screens on the t statistic where it means the p-value, which moves both rows of the table",
@@ -224,6 +242,7 @@ entries <- tribble(
     r"--(, where the printed table has the Test sample more frequent, 0.32 against 0.29. The Full sample's bias also changes sign, from negative to positive, which is the exaggeration from conditioning on significance that p. 40 describes.)--"
   ),
   "a18|Full sample|bias;a18|Full sample|RMSE;a18|Full sample|frequency;a18|Full sample|false_pos;a18|Full sample|false_neg;a18|Test sample|frequency;a18|Test sample|false_pos;a18|Test sample|false_neg",
+  str_c(cv4, collapse = ";"),
 
   5, "description", "reading", "note",
   "The claim that regression performs as well as or better than the Boolean algorithms has no printed support",
@@ -233,6 +252,7 @@ entries <- tribble(
   paste0(r"--(The table on appendix p. 21 prints Correct 0.00 and Failure 1.00 for Least Squares in all four of its rows, which are error rates 0 and 0.2 at N of 3 and 50. The other two strategies print 0.10 and 0.32 for QMC and 0.10 and 0.05 for CCubes at N = 3 with no error, and 1.00 and 0.00 for both at N = 50 with no error. Page 22 has the second sentence and no table rows. A strategy that fails in every simulation cannot be read from the table as equivalent to the algorithms or as outperforming them, in either clause of the sentence on p. 848. The cause is in the code: the least squares strategy passes its predicted configurations to `QCA::simplify` inside a `try()`, `simplify` is not exported by the QCA package (checked under QCA 3.25), and every call fails, so every simulation returns "NO SOLUTION". The maintained replication reproduces the printed column for that reason, in )--",
          spell(nrow(ls_rows)), r"--( rows of `maintained/output/table_a11_qca_with_least_squares.csv`, all with a correct rate of 0 and a failure rate of 1. The note does not say what the least squares strategy would show if the call worked. The two claims have no support in what the article and appendix print.)--"),
   "a11|0|3|Least Squares|correct_rate;a11|0|3|Least Squares|failure_rate;a11|0.2|3|Least Squares|correct_rate;a11|0.2|3|Least Squares|failure_rate;a11|0|50|Least Squares|correct_rate;a11|0|50|Least Squares|failure_rate;a11|0.2|50|Least Squares|correct_rate;a11|0.2|50|Least Squares|failure_rate",
+  NA_character_,
 
   6, "description", "reading", "brief",
   "The exaggeration ratio and the conditional estimator are described at the 0.05 level and computed at 0.1",
@@ -241,6 +261,7 @@ entries <- tribble(
   r"--(given that the estimated effect is significant at the [[α = 0.1]] level. ... only if the CBO presence is significantly imbalanced among the 50 treatment and control clusters at the [[α = 0.1]] level; ... is “significantly” imbalanced among the 50 treatment and control clusters (at the [[α = .1]] level))--",
   r"--(The code uses 0.1 in both places: the exaggeration ratio selects `p.value < 0.1` and the conditional estimator is declared as `function(data, strategy, alpha = 0.1)`, on appendix pp. 46 and 47. The sentence on appendix p. 46 introducing the diagnosis says "setting α = 0.1". The printed symbol is α.)--",
   "",
+  NA_character_,
 
   7, "quantity", "reading", "brief",
   "The appendix gives the replication population as 50 clusters of 2,500 households where its code builds 300",
@@ -249,6 +270,7 @@ entries <- tribble(
   r"--(The data are hierarchical – there are 2500 households in each of [[300]] clusters. The resulting [[750,000]] row dataset is the population from which subjects will be sampled.)--",
   r"--(The code below the sentence builds the catchment-area level with `add_level(N = 300, ...)` and the household level with `add_level(N = 2500, ...)`, which is 750,000 rows. The 50 is the number of clusters in the original study, `N_catchment_areas <- 50`, which the sampling step on p. 43 draws from the 300.)--",
   "",
+  NA_character_,
 
   8, "quantity", "reading", "brief",
   "Three statements beneath the appendix's mortality table do not match the table",
@@ -260,6 +282,7 @@ entries <- tribble(
          mort_se, r"--(, which is not very close to the original paper's 0.026, so the comparison the sentence draws is looser than it reads. The correction leaves that comparison to the authors. The maintained power is )--", mort_pow,
          r"--(, within simulation error of the printed 0.29, and 0.1% matches neither.)--"),
   "a19|Mortality estimate|prose_mean_estimand;a19|Mortality estimate|prose_power",
+  NA_character_,
 
   9, "quantity", "reading", "note",
   "The appendix says the unequal-probability design is biased in a table that prints a bias of 0.00",
@@ -271,6 +294,7 @@ entries <- tribble(
          r"--( for `design_2`, each with a standard error of about )--", bias_se,
          r"--(. Neither is distinguishable from zero in 5,000 simulations, and the equal-probability design lies farther from zero than the unequal one. Whether the estimator is biased under unequal probabilities is a property of the design that the printed table cannot show, and the two sentences present it as something the diagnosis shows.)--"),
   "",
+  NA_character_,
 
   10, "description", "reading", "brief",
   "The appendix says respondents are more likely to vote than they say they will, where its code and the article say they overstate",
@@ -279,6 +303,7 @@ entries <- tribble(
   r"--(People report their support truthfully, but are [[less]] likely to turn out to vote than they reveal.)--",
   r"--(The code on the same page carries the comment "Subjects tend to overreport their probability of voting" and draws `likely_voter` from `pnorm(latent_voting + 0.75)`, and p. 846 of the article says the latent voters "overstate their true propensity to vote".)--",
   "",
+  NA_character_,
 
   11, "quantity", "reading", "full",
   "The Bayesian posterior parameters are one too small, which moves the flat-prior row of the table",
@@ -288,6 +313,7 @@ entries <- tribble(
   paste0(r"--(The columns are Mean Est, Mean Sd, Bias, Mean Shift, and SD Shift. A beta prior with parameters alpha_0 and beta_0 updates to a beta posterior with parameters alpha_0 plus the successes and beta_0 plus the failures, so the printed code's `- 1` makes the posterior one count too small on each side and, for the flat prior, turns the posterior mean into the sample proportion. The corrected row is computed from the sampling distribution of the number of successes in 10 draws, with the design's mean success probability. The same computation with the `- 1` reproduces the printed flat row and the printed informative row to the printed digits, which confirms that it describes the table. The informative row, )--",
          paste(new_info, collapse = " "), r"--(, does not change at two decimals. The table's n = 100 rows repeat its n = 10 rows in all five columns, which is a separate defect: the declaration writes the sample size as a literal inside `declare_sampling()`, where `redesign()` cannot reach it. Entry 56 corrects those rows.)--"),
   "a4|10|flat priors|mean_est;a4|10|flat priors|mean_sd;a4|10|flat priors|bias;a4|10|flat priors|mean_shift;a4|10|flat priors|sd_shift",
+  str_c(cv11, collapse = ";"),
 
   12, "description", "reading", "brief",
   "The nested analysis table does not show an effect of testing effort",
@@ -296,6 +322,7 @@ entries <- tribble(
   r"--(The table below [[does not show an effect of the effort devoted to testing or to building: its four rows are four simulations of the same design, and the proportions of simulations that arrive at the right model, 0.2780, 0.2858, 0.2782, and 0.2752, differ by no more than simulation error.]])--",
   r"--(The two effort parameters are used inside sampling rules that the design's handler calls, so `redesign()` cannot reach them, and the four rows are four runs of one design. The deposit's saved diagnosis has the same structure, with four rows that differ by no more than simulation error.)--",
   "a13|descriptive|testing_effort_hurts",
+  NA_character_,
 
   13, "description", "reading", "note",
   "The claim that the interaction strategy is strictly dominated fails at a correlation of 0.8 in the appendix's own table",
@@ -304,6 +331,7 @@ entries <- tribble(
   NA,
   r"--(The RMSE table on appendix pp. 48 and 49 gives RMSE, RMSE Balanced, and RMSE Imbalanced for each strategy. At a correlation of 0 the interaction strategy is the highest, 0.28, 0.28, and 0.27 against 0.27, 0.27, and 0.26 for each of the other three. At a correlation of 0.8 it is not: Ignore CBO prints 0.27, 0.23, and 0.49 and Interact CBO prints 0.24, 0.22, and 0.34, so interacting beats ignoring CBO in all three columns, and Include CBO is the lowest or tied for lowest throughout, at 0.19, 0.17, and 0.31. The article's later text agrees with the table, saying that when CBO presence is correlated with outcomes, strategies that include it "improve RMSE considerably". A correction would rewrite the argument that the sentence supports, the step to discounting the replicators' interaction result, so the sentence is flagged and left as printed.)--",
   "a21|descriptive|interaction_dominated",
+  NA_character_,
 
   14, "quantity", "reading", "note",
   "The exaggeration ratios are rounded to \"two\" and \"four\" in the text",
@@ -312,6 +340,7 @@ entries <- tribble(
   NA,
   r"--(The table on appendix p. 46 prints exaggeration ratios of 1.58 for mortality and 3.73 for weight-for-age. "A factor of two" and "twice as large" are read from 1.58, and "four" from 3.73. The appendix's own sentence says "almost 2" and "4", so the rounding looks deliberate. No correction is offered. A reader who wants the figures should take 1.6 and 3.7.)--",
   "a20|prose|mortality_exaggeration;a20|prose|weight_exaggeration",
+  NA_character_,
 
   15, "cross_reference", "reading", "brief",
   "The article's ten references to the Supplementary Materials use section numbers the appendix does not have",
@@ -320,6 +349,7 @@ entries <- tribble(
   r"--(Supplementary Materials Section [[3.1.1]], we declare a model in which latent voters are likely to vote ... Supplementary Materials Section [[3.1.2]], we declare a Bayesian descriptive inference design ... Supplementary Materials Section [[3.2.1]]. ... Supplementary Materials Section [[3.2.2]] we declare a QCA design ... Supplementary Materials Section [[3.2.3]], we specify the estimands and analysis strategies ... Supplementary Materials Section [[3.2.4]]) ... Supplementary Materials Section [[3.2.5]], we declare a design with a model in which three observable ... Supplementary Materials Section [[3.2.6]], we declare and diagnose such a design ... Supplementary Materials Section [[3.2.7]]. ... Supplementary Materials Section [[3.3]], we declare a design in which the model stipulates a treatment of interest)--",
   r"--(The article numbers the appendix's ten designs 3.1 to 3.10 in the order it discusses them. The appendix numbers them 3.1.1 (survey designs) and 3.1.2 (Bayesian descriptive inference) under 3.1, descriptive inference, then 3.2.1 (process tracing), 3.2.2 (qualitative comparative analysis), 3.2.3 (nested mixed methods), 3.2.4 (observational regression-based strategies), 3.2.5 (matching on observables), 3.2.6 (regression discontinuity), and 3.2.7 (experimental design) under 3.2, causal inference, and 3.3 (designs for discovery research). Each reference is matched to the design its sentence discusses. The article's 3.3 to 3.10 point at sections of the appendix that are other designs or do not exist.)--",
   "",
+  NA_character_,
 
   16, "wording", "reading", "brief",
   "\"In additional we assume\" should read \"In addition, we assume\"",
@@ -328,6 +358,7 @@ entries <- tribble(
   r"--(In [[addition,]] we assume functional relationships between them that allow for the possibility of confounding)--",
   "",
   "",
+  NA_character_,
 
   17, "label", "reading", "brief",
   "The model's example names a disturbance that the equations do not define",
@@ -336,6 +367,7 @@ entries <- tribble(
   r"--((for example, Y = bX + Z + εY; X = Z + εX, with Z, εX, [[εY]] distributed standard normal))--",
   r"--(The equations define the disturbances εY and εX, and no εZ appears in them.)--",
   "",
+  NA_character_,
 
   18, "wording", "reading", "brief",
   "\"a researcher in correct\" should read \"a researcher is correct\"",
@@ -344,6 +376,7 @@ entries <- tribble(
   r"--(be interested in the probability that a researcher [[is]] correct in concluding that an intervention provides value for money.)--",
   "",
   "",
+  NA_character_,
 
   19, "wording", "reading", "brief",
   "The acknowledgments omit a comma between two names, and the first carries the wrong diacritic",
@@ -352,6 +385,7 @@ entries <- tribble(
   r"--(In addition, we thank Peter Aronow, Julian Brückner, Adrian [[Dușa,]] Adam Glynn, Donald Green,)--",
   r"--(The corrected name has the comma-below s, ș, which the author asked for at proof with the note "please note the diacritical on the s". The published page prints a cedilla, ş, and no comma follows the name. The reference list prints the cedilla form in two entries, Duşa (2018) and Duşa and Thiem (2015). Those entries are not corrected here.)--",
   "",
+  NA_character_,
 
   20, "quantity", "reading", "brief",
   "The critical value for the p-value is printed as 0.005",
@@ -360,6 +394,7 @@ entries <- tribble(
   r"--(Equivalently, it is the probability that the p-value is lower than a critical value (e.g., [[0.05]]).)--",
   "",
   "",
+  NA_character_,
 
   21, "label", "reading", "brief",
   "The inverse-probability-weighting estimator is called BFE-IPW once and IPW-BFE elsewhere",
@@ -368,6 +403,7 @@ entries <- tribble(
   r"--(the third includes inverse-probability weighting to account for the heterogeneous assignment probabilities ([[IPW-BFE]]).)--",
   r"--(Table 2 and the rest of the article print "IPW-BFE", for example "the IPW-BFE answer strategy" and "the IPW-BFE estimator".)--",
   "",
+  NA_character_,
 
   22, "wording", "reading", "brief",
   "Footnote 6 says \"no design could account for\" where it means a design tool",
@@ -376,6 +412,7 @@ entries <- tribble(
   r"--(6 For example, no [[design tool could]] account for: the posited correlation between block size and potential outcomes; the sampling strategy; the exact randomization procedure; the formal definition of the estimand as the population average treatment effect; or the use of inverse-probability weighting.)--",
   "",
   "",
+  NA_character_,
 
   23, "wording", "reading", "brief",
   "\"the original replicators\" should name the original authors and the replicators",
@@ -384,6 +421,7 @@ entries <- tribble(
   r"--(In short, [[the original authors and the replicators]] make a set of contrasting claims about the true model of the world:)--",
   r"--(The sentence goes on to give the claims of "B&S", the original authors, and "D&M", the replicators, and the sentences before it call B&S "the original authors" and refer to Donato and Garcia Mosqueira as "the replicators".)--",
   "",
+  NA_character_,
 
   24, "typography", "reading", "brief",
   "A stray comma follows \"Kreidler et al.\" in a parenthetical citation",
@@ -392,6 +430,7 @@ entries <- tribble(
   r"--((Green and MacLeod 2016; Groemping 2016; Guo et al. 2013; Kreidler et al. 2013))--",
   r"--(The other citations in the parenthetical have no comma between the author and the year.)--",
   "",
+  NA_character_,
 
   25, "wording", "proof_trail", "brief",
   "A sentence on the article's last page is ungrammatical",
@@ -400,6 +439,7 @@ entries <- tribble(
   r"--(For example, to calculate the bias of the design[[, we can declare a diagnosand as follows:]])--",
   r"--(The corrected wording is Jasper Cooper's, requested in the first proof round and not applied in the published text.)--",
   "",
+  NA_character_,
 
   26, "typography", "proof_trail", "brief",
   "The printed code uses curly quotation marks and a minus sign that R rejects",
@@ -408,6 +448,7 @@ entries <- tribble(
   r"--(A <- declare_estimator(Y ~Z, estimand = [["ATE"]]) ... e <- a_A[[["estimate"]]] [[-]] a_M[[["estimand"]]] ... model = lm_robust, estimand = [["ATE"]]))--",
   r"--(R stops at the first curly quotation mark with `unexpected input`, so the code fails if typed as printed. The minus sign printed in the second line, and in the diagnosand formula `bias = mean(estimate − estimand)` on p. 859, is the Unicode minus, which R also rejects. The author asked for straight quotation marks in the final proof round, and the published tables and code print curly ones.)--",
   "",
+  NA_character_,
 
   27, "description", "proof_trail", "brief",
   "The appendix describes independent assignment where its code assigns exactly 50 of 100 units",
@@ -416,6 +457,7 @@ entries <- tribble(
   r"--(In this example [[exactly 50 of the 100 sampled units are assigned to treatment, by complete random assignment]].)--",
   r"--(The code beneath the sentence is `assignment <- declare_assignment(m = 50)`, and the sampling step above it is `declare_sampling(n = 100)`. Independent assignment with probability 0.5 would leave the number treated random.)--",
   "",
+  NA_character_,
 
   28, "bibliographic", "reading", "brief",
   "The Rennie reference prints the journal's name twice",
@@ -424,6 +466,7 @@ entries <- tribble(
   r"--(Rennie, Drummond. 2004. “Trial Registration.” [[JAMA]]: The Journal of the American Medical Association 292 (11): 1359–62.)--",
   r"--(Crossref, doi 10.1001/jama.292.11.1359, gives the journal as JAMA, volume 292, issue 11, with first page 1359. The journal's title is JAMA: The Journal of the American Medical Association, and the entry spells the first half out a second time.)--",
   "",
+  NA_character_,
 
   29, "bibliographic", "reading", "brief",
   "The Gelman and Carlin reference runs the title and subtitle together",
@@ -432,6 +475,7 @@ entries <- tribble(
   r"--(Gelman, Andrew, and John Carlin. 2014. “Beyond [[Power Calculations: Assessing]] Type S (Sign) and Type M (Magnitude) Errors.”)--",
   r"--(Crossref, doi 10.1177/1745691614551642, gives the title as "Beyond Power Calculations" and the subtitle as "Assessing Type S (Sign) and Type M (Magnitude) Errors", in Perspectives on Psychological Science 9 (6).)--",
   "",
+  NA_character_,
 
   30, "bibliographic", "reading", "brief",
   "The Dawid reference lacks a space after an initial",
@@ -440,6 +484,7 @@ entries <- tribble(
   r"--(Dawid, [[A. Philip]]. 2000. “Causal Inference without Counterfactuals.”)--",
   r"--(Crossref, doi 10.1080/01621459.2000.10474210, gives the author as A. P. Dawid, in the Journal of the American Statistical Association 95 (450): 407–24. The correction restores the space and keeps the name the entry gives.)--",
   "",
+  NA_character_,
 
   31, "bibliographic", "reading", "brief",
   "The reference for the eQMC article splits the name eQMC",
@@ -448,6 +493,7 @@ entries <- tribble(
   r"--(Duşa, Adrian, and Alrik Thiem. 2015. “Enhancing the Minimization of Boolean and Multivalue Output Functions with [[eQMC]].”)--",
   r"--(Crossref, doi 10.1080/0022250x.2014.897949, gives the title as ending "With eQMC".)--",
   "",
+  NA_character_,
 
   32, "bibliographic", "reading", "brief",
   "The Kreidler et al. reference lacks the colon before its page range",
@@ -456,6 +502,7 @@ entries <- tribble(
   r"--(Kreidler, Sarah M., Keith E. Muller, Gary K. Grunwald, Brandy M. Ringham, Zacchary T. Coker-Dukowitz, Uttara R. Sakhadeo, Anna E. Barón, and Deborah H. Glueck. 2013. “GLIMMPSE: Online Power Computation for Linear Models with and without a Baseline Covariate.” Journal of Statistical Software 54 [[(10): 1–26]].)--",
   r"--(Crossref, doi 10.18637/jss.v054.i10, gives volume 54 and issue 10 and carries no page range. The other journal entries in the list separate the issue from the pages with a colon.)--",
   "",
+  NA_character_,
 
   33, "bibliographic", "reading", "brief",
   "The Morris, White, and Crowther reference prints no volume or pages",
@@ -464,6 +511,7 @@ entries <- tribble(
   r"--(Morris, Tim P., Ian R. White, and Michael J. Crowther. 2019. “Using Simulation Studies to Evaluate Statistical Methods.” Statistics in Medicine [[38 (11): 2074–102.]])--",
   r"--(Crossref, doi 10.1002/sim.8086, gives volume 38, issue 11, and pages 2074 to 2102. The issue is dated 20 May 2019, and this article was published online on 31 May 2019 (Crossref, doi 10.1017/S0003055419000194), so the full citation existed when the article appeared.)--",
   "",
+  NA_character_,
 
   34, "typography", "proof_trail", "brief",
   "The research-note reference lowercases a word in a quoted title",
@@ -472,6 +520,7 @@ entries <- tribble(
   r"--(Björkman Nyqvist, Martina, and Jakob Svensson. 2016. “Comments on Donato and Mosqueira’s (2016) ‘[[Additional Analyses]]’ of Björkman and Svensson (2009).” Unpublished research note.)--",
   r"--(The entry is an unpublished note, and a Crossref search finds no record for it, so the correction is to capitalization alone. The rest of the title is in title case.)--",
   "",
+  NA_character_,
 
   35, "spelling", "reading", "brief",
   "The appendix spells \"admissibility\" as \"admissability\"",
@@ -480,6 +529,7 @@ entries <- tribble(
   r"--(2.3 [[Admissibility]] Criteria)--",
   r"--(The misspelling is in the contents on p. 1 and in the section heading on p. 6.)--",
   "",
+  NA_character_,
 
   36, "wording", "reading", "brief",
   "\"it still calculable\" is missing a verb",
@@ -488,6 +538,7 @@ entries <- tribble(
   r"--(The estimand cannot be read from the dgp directly here but [[it is still]] calculable.)--",
   "",
   "",
+  NA_character_,
 
   37, "spelling", "reading", "brief",
   "Two slips on the appendix's tool search page",
@@ -496,6 +547,7 @@ entries <- tribble(
   r"--(# The data are [[hierarchical]]: individuals within blocks ... all findings pertain to the tools we were able to [[locate by]] that time point using the search methods described below.)--",
   "",
   "",
+  NA_character_,
 
   38, "spelling", "reading", "brief",
   "\"principle methods\" should read \"principal methods\"",
@@ -504,6 +556,7 @@ entries <- tribble(
   r"--(We used two [[principal]] methods to search for candidates.)--",
   "",
   "",
+  NA_character_,
 
   39, "spelling", "reading", "brief",
   "\"incporporate\" should read \"incorporate\"",
@@ -512,6 +565,7 @@ entries <- tribble(
   r"--(it could not [[incorporate]] heterogeneous block sizes or assignment probabilities)--",
   "",
   "",
+  NA_character_,
 
   40, "spelling", "reading", "brief",
   "\"argmed\" should read \"armed\"",
@@ -520,6 +574,7 @@ entries <- tribble(
   r"--(it is more likely to observe the [[armed]] group and the national army’s takeover of natural resources when resources truly did cause the civil war)--",
   "",
   "",
+  NA_character_,
 
   41, "spelling", "reading", "brief",
   "\"indictates\" should read \"indicates\"",
@@ -528,6 +583,7 @@ entries <- tribble(
   r"--(where lower case a indicates the absence of A and upper case B [[indicates]] the presence of B.)--",
   "",
   "",
+  NA_character_,
 
   42, "wording", "reading", "brief",
   "\"a an answer\" should read \"an answer\"",
@@ -536,6 +592,7 @@ entries <- tribble(
   r"--(The second is the probability that our answer strategy fails to provide [[an]] answer at all (no solution to the minimization problem).)--",
   "",
   "",
+  NA_character_,
 
   43, "wording", "reading", "brief",
   "\"capable estimating\" is missing \"of\"",
@@ -544,6 +601,7 @@ entries <- tribble(
   r"--(the point that linear regression is [[capable of estimating]] more parameters than it has degrees of freedom)--",
   "",
   "",
+  NA_character_,
 
   44, "wording", "reading", "brief",
   "\"the the\" is doubled",
@@ -552,6 +610,7 @@ entries <- tribble(
   r"--(If [[the]] regression is deemed satisfactory, we engage in small-N model-testing)--",
   "",
   "",
+  NA_character_,
 
   45, "spelling", "reading", "brief",
   "\"relatonship\" should read \"relationship\"",
@@ -560,6 +619,7 @@ entries <- tribble(
   r"--(changes our probability of selecting the right theory of the X → Y [[relationship]].)--",
   "",
   "",
+  NA_character_,
 
   46, "spelling", "reading", "brief",
   "\"arive\" should read \"arrive\"",
@@ -568,6 +628,7 @@ entries <- tribble(
   r"--(the proportion of simulations of the design in which we [[arrive]] at the correct model.)--",
   "",
   "",
+  NA_character_,
 
   47, "wording", "reading", "brief",
   "\"are found are found\" is doubled",
@@ -576,6 +637,7 @@ entries <- tribble(
   r"--(Depending on whether significantly different subgroup are [[found]], the difference in subgroup effects becomes a second question of interest, resulting from discovery.)--",
   "",
   "",
+  NA_character_,
 
   48, "wording", "reading", "brief",
   "\"it it\" is doubled",
@@ -584,6 +646,7 @@ entries <- tribble(
   r"--(The principled discovery method exhibits conventional rates for falsely rejecting a true null (0.05) though [[it]] fails to reject the null quite often, due to weak power.)--",
   "",
   "",
+  NA_character_,
 
   49, "spelling", "reading", "brief",
   "\"likey\" should read \"likely\"",
@@ -592,6 +655,7 @@ entries <- tribble(
   r"--(the principled strategy is somewhat less [[likely]] to produce a result at all)--",
   "",
   "",
+  NA_character_,
 
   50, "wording", "reading", "brief",
   "\"a mixed of types\" should read \"a mixture of types\"",
@@ -600,6 +664,7 @@ entries <- tribble(
   r"--(In the control group, the observed values are [[a mixture]] of types A and D, and in the treatment group, the values are a mixture of types B and D.)--",
   "",
   "",
+  NA_character_,
 
   51, "wording", "reading", "brief",
   "\"less-health infants\" should read \"less-healthy infants\"",
@@ -608,6 +673,7 @@ entries <- tribble(
   r"--(the assumption that [[less-healthy]] infants were the ones who are most likely to be of type B (“Beneficial”))--",
   "",
   "",
+  NA_character_,
 
   52, "spelling", "reading", "brief",
   "Two misspellings in one sentence on the exaggeration ratio",
@@ -616,6 +682,7 @@ entries <- tribble(
   r"--(We here examine the [[exaggeration]] ratio, and in particular compare it to the exaggeration [[ratio]] one might expect from the replication exercise conducted by Raffler, Posner, and Parkerson (2019).)--",
   "",
   "",
+  NA_character_,
 
   53, "wording", "reading", "brief",
   "\"Gelman and Carlin (2014) has highlighted\" disagrees in number",
@@ -624,6 +691,7 @@ entries <- tribble(
   r"--([[Gelman and Carlin (2014) have highlighted]] how low power can generate bias (even in experiments))--",
   "",
   "",
+  NA_character_,
 
   54, "typography", "reading", "brief",
   "Stray backslashes print in the appendix's description of the mortality potential outcomes",
@@ -632,6 +700,7 @@ entries <- tribble(
   r"--(The second potential outcome is the [[weight_for_age]] of surviving infants. ... In logits, this is moving from plogis(1.81) = [[86%]] to plogis(1.81 + 0.5) = [[91%]].)--",
   r"--(The same page prints "approximately 86%" without a backslash.)--",
   "",
+  NA_character_,
 
   55, "spelling", "reading", "brief",
   "The appendix heading for Section 4 drops the diaeresis from an author's name",
@@ -640,6 +709,7 @@ entries <- tribble(
   r"--(4 [[Björkman]] and Svensson (2009) Design Replication)--",
   r"--(The heading prints "Bjorkman" in the contents on p. 1 and above the text on p. 41, and the sentence below it on p. 41 prints "Björkman and Svensson (2009)".)--",
   "",
+  NA_character_,
 
   56, "quantity", "reading", "full",
   "The n = 100 rows of the Bayesian table repeat its n = 10 rows",
@@ -650,6 +720,7 @@ entries <- tribble(
         "100 informative priors", paste(mark_cells(pub_info, new_info_100, "new"), collapse = " ")),
   r"--(The columns are Mean Est, Mean Sd, Bias, Mean Shift, and SD Shift. The printed rows repeat the n = 10 rows in all five columns. The code on appendix p. 10 writes the sampling step as `declare_sampling(n = 10)`, so `redesign(bayesian_design, n = c(10, 100))` on p. 11 has no sample size to change and both designs draw ten units. The corrected rows are read from the maintained replication, which names the sample size and keeps the printed posterior parameters, so this entry corrects this defect alone. The correction of entry 11 changes neither row at two decimals.)--",
   "a4|100|flat priors|mean_sd;a4|100|flat priors|sd_shift;a4|100|informative priors|mean_est;a4|100|informative priors|mean_sd;a4|100|informative priors|bias;a4|100|informative priors|mean_shift;a4|100|informative priors|sd_shift",
+  str_c(cv56, collapse = ";"),
 
   57, "quantity", "reading", "note",
   "The Bayesian design does not give the 40% and 33% stated for it",
@@ -661,6 +732,7 @@ entries <- tribble(
          sd_fall(0, 10), r"--(% and )--", sd_fall(0, 100), r"--(%, and the informative prior's bias is about )--",
          bias_ratio(10), r"--( and )--", bias_ratio(100), r"--( times the flat prior's. The note prints no replacement because the comparison behind 40% and 33% cannot be identified.)--"),
   "a4|prose|sd_reduction;a4|prose|bias_increase",
+  NA_character_,
 
   58, "bibliographic", "reading", "brief",
   "The appendix's reference for the eQMC article prints the name as \"E Qmc\"",
@@ -669,12 +741,78 @@ entries <- tribble(
   r"--(Duşa, Adrian, and Alrik Thiem. 2015. “Enhancing the Minimization of Boolean and Multivalue Output Functions with [[eQMC]].”)--",
   r"--(Crossref, doi 10.1080/0022250x.2014.897949, gives the title as ending "With eQMC". Entry 31 corrects the same title in the article's reference list.)--",
   ""
-) |>
-  mutate(across(c(title, published, corrected, note, claim_ids), as.character))
+,
+  NA_character_) |>
+  mutate(across(c(title, published, corrected, note, claim_ids, corrected_values),
+                as.character))
 
 stopifnot(nrow(entries) == max(entries$entry), !anyDuplicated(entries$entry),
           all(is.na(entries$corrected) == (entries$form == "note")),
           identical(entries$entry[entries$form == "note"], c(5, 9, 13, 14, 57)))
+
+# Gate: corrected_values agrees with the sentence it was glued into ----
+# The column and the sentence are written from one object, so they begin in agreement and
+# this gate exists for the edit that separates them: a value moved from one marked span to
+# another, a span reworded to carry a second number, a claim id appended without its value.
+# Each value has to be inside the span it belongs to, matched by position where the counts
+# line up, and inside SOME span where an entry marks a label as well as a number and its
+# spans outnumber its values. A count the sentence spells out is accepted in its spelled form.
+marked_spans <- function(x) str_match_all(x, "\\[\\[(.*?)\\]\\]")[[1]][, 2]
+
+in_span <- function(v, s) {
+  s <- str_remove_all(s, ",")
+  str_detect(s, fixed(v)) ||
+    (str_detect(v, "^[0-9]+$") && as.integer(v) %in% seq_len(25) &&
+       str_detect(s, fixed(spell(as.integer(v)))))
+}
+
+row_entries <- c(4, 11, 56)
+cells_of <- function(x) str_split(str_remove_all(x, "\\[\\[|\\]\\]"), "\\s+")[[1]]
+row_ok <- entries |>
+  filter(entry %in% row_entries) |>
+  mutate(values = str_split(corrected_values, ";"), cells = map(corrected, cells_of)) |>
+  mutate(ok = map2_lgl(values, cells, \(v, c) all(v %in% c)))
+if (!all(row_ok$ok)) {
+  print(row_ok |> filter(!ok) |> select(entry, corrected_values))
+  stop("A table-row entry's corrected_values are not cells of its corrected row.")
+}
+
+quantified <- entries |>
+  filter(!is.na(corrected_values), !entry %in% row_entries) |>
+  mutate(ids = str_split(claim_ids, ";"), values = str_split(corrected_values, ";"),
+         spans = map(corrected, marked_spans))
+
+stopifnot(all(lengths(quantified$ids) == lengths(quantified$values)))
+
+value_placed <- pmap_lgl(quantified, function(...) {
+  e <- list(...)
+  if (length(e$values) == length(e$spans)) {
+    all(map2_lgl(e$values, e$spans, in_span))
+  } else {
+    all(map_lgl(e$values, \(v) any(map_lgl(e$spans, \(s) in_span(v, s)))))
+  }
+})
+
+if (!all(value_placed)) {
+  print(quantified |> filter(!value_placed) |> select(entry, title, corrected_values, corrected))
+  stop("An entry's corrected_values are not in the spans of its corrected sentence.")
+}
+
+# An entry that changes a quantity has to say which one, and an entry that changes none may
+# not carry a value. The class is the declaration and this is where it binds. A note-form
+# entry corrects nothing and carries NA even where its class is quantity, and an entry with
+# no claim_ids has no claim to carry a value for.
+has_ids <- !is.na(entries$claim_ids) & entries$claim_ids != ""
+# Entries whose claim id names something no corrected token states as a number carry NA by
+# name, and the list is the only exemption.
+no_numeric_claim <- 8
+stopifnot(
+  all(!is.na(entries$corrected_values[entries$class == "quantity" & entries$form != "note" &
+                                        has_ids & !entries$entry %in% no_numeric_claim])),
+  all(is.na(entries$corrected_values[entries$class != "quantity"])),
+  all(is.na(entries$corrected_values[entries$form == "note"])),
+  all(is.na(entries$corrected_values) | has_ids)
+)
 
 # The spine's markup, resolved for this document. Another renderer resolves it differently.
 # Printed text is escaped so that asterisks, underscores, brackets, backslashes, and tildes
