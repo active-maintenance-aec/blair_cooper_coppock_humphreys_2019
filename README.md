@@ -371,7 +371,7 @@ declaration needs no change and the current package reaches the
 parameter on its own.
 
 Those two corrections are to the deposited code. The article and its
-appendix carry 51 printed errors that the errata note corrects and 4
+appendix carry 53 printed errors that the errata note corrects and 5
 printed claims it flags without correcting, set out in
 `blair_cooper_coppock_humphreys_2019_errata.pdf` at the root of this
 repository. Most are slips of wording and spelling, and the rest are

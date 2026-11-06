@@ -126,6 +126,29 @@ stopifnot(identical(beta_cells(beta_row(1, -1)), pub_flat),
           identical(new_flat, c("0.47", "0.13", "0.01", "-0.03", "-0.16")),
           abs(a4$mean_est[a4$sample_n == 10 & a4$estimator == "flat priors"] -
                 beta_row(1, -1)[1]) < 0.01)
+
+# Entries 56 and 57: the n = 100 rows and the percentages in the text. Entry 56 reads the
+# maintained run, which keeps the printed "- 1"; the check ties that run to the same
+# computation as entry 11.
+a4_cells <- function(prior) {
+  row <- a4 |>
+    filter(sample_n == 100, estimator == prior) |>
+    select(mean_est, mean_sd, bias, mean_shift, sd_shift)
+  beta_cells(as.numeric(row))
+}
+new_flat_100 <- a4_cells("flat priors")
+new_info_100 <- a4_cells("informative priors")
+fixed_flat_100 <- beta_cells(beta_row(1, 0, 100))
+fixed_info_100 <- beta_cells(beta_row(10, 0, 100))
+sd_fall <- function(adj, n) {
+  sprintf("%.0f", 100 * (1 - beta_row(10, adj, n)[2] / beta_row(1, adj, n)[2]))
+}
+bias_ratio <- function(n) sprintf("%.1f", beta_row(10, 0, n)[3] / beta_row(1, 0, n)[3])
+stopifnot(identical(fixed_flat_100, new_flat_100),
+          identical(fixed_info_100, new_info_100),
+          all(abs(as.numeric(new_flat_100) - as.numeric(beta_cells(beta_row(1, -1, 100)))) < 0.011),
+          all(abs(as.numeric(new_info_100) - as.numeric(beta_cells(beta_row(10, -1, 100)))) < 0.011),
+          abs(beta_row(1, -1)[3]) < 1e-12)
 ```
 
 ```{r entries}
@@ -263,7 +286,7 @@ entries <- tribble(
   paste0(r"--(alpha <- n_successes + [[alpha_0 - 1]] ... beta <- n_trials - n_successes + [[beta_0 - 1]] ... 10 flat priors )--", paste(mark_cells(pub_flat, new_flat, "pub"), collapse = " ")),
   paste0(r"--(alpha <- n_successes + [[alpha_0]] ... beta <- n_trials - n_successes + [[beta_0]] ... 10 flat priors )--", paste(mark_cells(pub_flat, new_flat, "new"), collapse = " ")),
   paste0(r"--(The columns are Mean Est, Mean Sd, Bias, Mean Shift, and SD Shift. A beta prior with parameters alpha_0 and beta_0 updates to a beta posterior with parameters alpha_0 plus the successes and beta_0 plus the failures, so the printed code's `- 1` makes the posterior one count too small on each side and, for the flat prior, turns the posterior mean into the sample proportion. The corrected row is computed from the sampling distribution of the number of successes in 10 draws, with the design's mean success probability. The same computation with the `- 1` reproduces the printed flat row and the printed informative row to the printed digits, which confirms that it describes the table. The informative row, )--",
-         paste(new_info, collapse = " "), r"--(, does not change at two decimals. The table's n = 100 rows repeat its n = 10 rows in all five columns, which is a separate defect: the declaration writes the sample size as a literal inside `declare_sampling()`, where `redesign()` cannot reach it. This entry does not correct those rows.)--"),
+         paste(new_info, collapse = " "), r"--(, does not change at two decimals. The table's n = 100 rows repeat its n = 10 rows in all five columns, which is a separate defect: the declaration writes the sample size as a literal inside `declare_sampling()`, where `redesign()` cannot reach it. Entry 56 corrects those rows.)--"),
   "a4|10|flat priors|mean_est;a4|10|flat priors|mean_sd;a4|10|flat priors|bias;a4|10|flat priors|mean_shift;a4|10|flat priors|sd_shift",
 
   12, "description", "reading", "brief",
@@ -616,13 +639,42 @@ entries <- tribble(
   r"--(4 [[Bjorkman]] and Svensson (2009) Design Replication)--",
   r"--(4 [[Björkman]] and Svensson (2009) Design Replication)--",
   r"--(The heading prints "Bjorkman" in the contents on p. 1 and above the text on p. 41, and the sentence below it on p. 41 prints "Björkman and Svensson (2009)".)--",
+  "",
+
+  56, "quantity", "reading", "full",
+  "The n = 100 rows of the Bayesian table repeat its n = 10 rows",
+  "published appendix p. 11, Section 3.1.2.2",
+  paste("100 flat priors", paste(mark_cells(pub_flat, new_flat_100, "pub"), collapse = " "),
+        "100 informative priors", paste(mark_cells(pub_info, new_info_100, "pub"), collapse = " ")),
+  paste("100 flat priors", paste(mark_cells(pub_flat, new_flat_100, "new"), collapse = " "),
+        "100 informative priors", paste(mark_cells(pub_info, new_info_100, "new"), collapse = " ")),
+  r"--(The columns are Mean Est, Mean Sd, Bias, Mean Shift, and SD Shift. The printed rows repeat the n = 10 rows in all five columns. The code on appendix p. 10 writes the sampling step as `declare_sampling(n = 10)`, so `redesign(bayesian_design, n = c(10, 100))` on p. 11 has no sample size to change and both designs draw ten units. The corrected rows are read from the maintained replication, which names the sample size and keeps the printed posterior parameters, so this entry corrects this defect alone. The correction of entry 11 changes neither row at two decimals.)--",
+  "a4|100|flat priors|mean_sd;a4|100|flat priors|sd_shift;a4|100|informative priors|mean_est;a4|100|informative priors|mean_sd;a4|100|informative priors|bias;a4|100|informative priors|mean_shift;a4|100|informative priors|sd_shift",
+
+  57, "quantity", "reading", "note",
+  "The Bayesian design does not give the 40% and 33% stated for it",
+  "published p. 846",
+  r"--(In terms of the bias-variance tradeoff, the informative priors decrease the posterior standard deviation by [[40%]] relative to the uniform priors, but increase the bias by [[33%]].)--",
+  NA,
+  paste0(r"--(The direction of both comparisons holds, and the sizes do not. The design of appendix Section 3.1.2 gives a fall in the posterior standard deviation of )--",
+         sd_fall(-1, 10), r"--(% with 10 units and )--", sd_fall(-1, 100), r"--(% with 100. The flat prior's bias in that design is zero, because the printed `- 1` of entry 11 makes its posterior mean the sample proportion, so no percentage increase over it exists. With the correction of entry 11, the fall is )--",
+         sd_fall(0, 10), r"--(% and )--", sd_fall(0, 100), r"--(%, and the informative prior's bias is about )--",
+         bias_ratio(10), r"--( and )--", bias_ratio(100), r"--( times the flat prior's. The note prints no replacement because the comparison behind 40% and 33% cannot be identified.)--"),
+  "a4|prose|sd_reduction;a4|prose|bias_increase",
+
+  58, "bibliographic", "reading", "brief",
+  "The appendix's reference for the eQMC article prints the name as \"E Qmc\"",
+  "published appendix p. 49",
+  r"--(Duşa, Adrian, and Alrik Thiem. 2015. “Enhancing the Minimization of Boolean and Multivalue Output Functions with [[E Qmc]].”)--",
+  r"--(Duşa, Adrian, and Alrik Thiem. 2015. “Enhancing the Minimization of Boolean and Multivalue Output Functions with [[eQMC]].”)--",
+  r"--(Crossref, doi 10.1080/0022250x.2014.897949, gives the title as ending "With eQMC". Entry 31 corrects the same title in the article's reference list.)--",
   ""
 ) |>
   mutate(across(c(title, published, corrected, note, claim_ids), as.character))
 
 stopifnot(nrow(entries) == max(entries$entry), !anyDuplicated(entries$entry),
           all(is.na(entries$corrected) == (entries$form == "note")),
-          identical(entries$entry[entries$form == "note"], c(5, 9, 13, 14)))
+          identical(entries$entry[entries$form == "note"], c(5, 9, 13, 14, 57)))
 
 # The spine's markup, resolved for this document. Another renderer resolves it differently.
 # Printed text is escaped so that asterisks, underscores, brackets, backslashes, and tildes
@@ -650,20 +702,20 @@ emit_entry <- function(n) {
 }
 
 sections <- list(
-  article = c(3, 5, 6, 13:27),
+  article = c(3, 5, 6, 13:27, 57),
   references = c(1, 2, 28:34),
-  appendix = c(4, 7:12, 35:55)
+  appendix = c(4, 7:12, 35:56, 58)
 )
 stopifnot(setequal(unlist(sections), entries$entry), !anyDuplicated(unlist(sections)))
 n_corrections <- sum(entries$form != "note")
 n_notes <- sum(entries$form == "note")
 ```
 
-This note lists `r n_corrections` corrections, and `r spell(n_notes)` items it flags without correcting, in "Declaring and Diagnosing Research Designs," published in *American Political Science Review* 113(3):838--859, doi [10.1017/S0003055419000194](https://doi.org/10.1017/S0003055419000194), and in its online appendix. Most are slips of wording, spelling, and typography, or details of the reference list. The rest correct a printed table, a figure caption, code printed in the article or appendix, a cross-reference, or a quantity stated in the text. Two entries correct a printed table (4 and 11), and three flag claims in the article's main text (5, 13, and 14).
+This note lists `r n_corrections` corrections, and `r spell(n_notes)` items it flags without correcting, in "Declaring and Diagnosing Research Designs," published in *American Political Science Review* 113(3):838--859, doi [10.1017/S0003055419000194](https://doi.org/10.1017/S0003055419000194), and in its online appendix. Most are slips of wording, spelling, and typography, or details of the reference list. The rest correct a printed table, a figure caption, code printed in the article or appendix, a cross-reference, or a quantity stated in the text. Three entries correct a printed table (4, 11, and 56), and four flag claims in the article's main text (5, 13, 14, and 57).
 
-**The article's conclusions about discovery stand, and two other claims in its main text are not supported by the appendix's own tables.** Entry 4 corrects both rows of the discovery table of appendix Section 3.3, which the deposited code screened on a t statistic where its text means the p-value. Under the corrected rows the statements on page 851 hold: principled discovery has lower bias and not necessarily lower error. Entry 5 flags the claim on page 848 that regression performs as well as or better than the Boolean algorithms in QCA, for which the appendix's table prints no support, and entry 13 flags the claim on page 855 that the interaction strategy is strictly dominated, which the appendix's table contradicts at a correlation of 0.8. Neither claim is repaired here, because a repair would rewrite the argument it supports. Entry 14 flags the rounding of two exaggeration ratios in the text.
+**The article's conclusions about discovery stand, and two other claims in its main text are not supported by the appendix's own tables.** Entry 4 corrects both rows of the discovery table of appendix Section 3.3, which the deposited code screened on a t statistic where its text means the p-value. Under the corrected rows the statements on page 851 hold: principled discovery has lower bias and not necessarily lower error. Entry 5 flags the claim on page 848 that regression performs as well as or better than the Boolean algorithms in QCA, for which the appendix's table prints no support, and entry 13 flags the claim on page 855 that the interaction strategy is strictly dominated, which the appendix's table contradicts at a correlation of 0.8. Neither claim is repaired here, because a repair would rewrite the argument it supports. Entry 14 flags the rounding of two exaggeration ratios in the text, and entry 57 flags two percentages on page 846 that the design does not give.
 
-Entries 1, 2, and 28 to 34 are details of the reference list found by an audit that sends every printed reference entry whole to Crossref and checks the authoritative record back into it. The others were found by reading the article and its appendix word by word and by comparing the published text with its proofs, which alone produced entries 25, 26, 27, and 34. Each quotation was checked against an image of the published page, and each reference against the Crossref record named in its note. The corrected values in entries 4, 8, 9, and 11 are read from the maintained replication's output, or computed from the design, at the time this document is rendered. The code supporting the maintained analysis is at [github.com/active-maintenance-aec/blair_cooper_coppock_humphreys_2019](https://github.com/active-maintenance-aec/blair_cooper_coppock_humphreys_2019).
+Entries 1, 2, and 28 to 34 are details of the reference list found by an audit that sends every printed reference entry whole to Crossref and checks the authoritative record back into it. The others were found by reading the article and its appendix word by word and by comparing the published text with its proofs, which alone produced entries 25, 26, 27, and 34. Each quotation was checked against an image of the published page, and each reference against the Crossref record named in its note. The corrected values in entries 4, 8, 9, 11, and 56 are read from the maintained replication's output, or computed from the design, at the time this document is rendered. The code supporting the maintained analysis is at [github.com/active-maintenance-aec/blair_cooper_coppock_humphreys_2019](https://github.com/active-maintenance-aec/blair_cooper_coppock_humphreys_2019).
 
 # The article
 
