@@ -742,6 +742,33 @@ entries <- tribble(
   r"--(Crossref, doi 10.1080/0022250x.2014.897949, gives the title as ending "With eQMC". Entry 31 corrects the same title in the article's reference list.)--",
   ""
 ,
+  NA_character_,
+  59, "bibliographic", "reading", "brief",
+  "The Sekhon and Titiunik reference drops the accent in \"Rocío\"",
+  "published p. 858",
+  r"--(Sekhon, Jasjeet S., and [[Rocıo]] Titiunik. 2016. “Understanding Regression Discontinuity Designs as Observational Studies.”)--",
+  r"--(Sekhon, Jasjeet S., and [[Rocío]] Titiunik. 2016. “Understanding Regression Discontinuity Designs as Observational Studies.”)--",
+  r"--(The page prints a dotless i with no accent.)--",
+  ""
+,
+  NA_character_,
+  60, "bibliographic", "reading", "brief",
+  "The appendix's Gelman and Carlin reference runs the title and subtitle together",
+  "published appendix p. 49",
+  r"--(Gelman, Andrew, and John Carlin. 2014. “Beyond [[Power Calculations Assessing]] Type S (Sign) and Type M (Magnitude) Errors.”)--",
+  r"--(Gelman, Andrew, and John Carlin. 2014. “Beyond [[Power Calculations: Assessing]] Type S (Sign) and Type M (Magnitude) Errors.”)--",
+  r"--(Entry 29 corrects the same title in the article's reference list.)--",
+  ""
+,
+  NA_character_,
+  61, "wording", "reading", "brief",
+  "\"right-hand side\" is printed as one word",
+  "published appendix p. 17",
+  r"--(The [[righthandside]] of the regression includes indicators for membership in all feasible configurations)--",
+  r"--(The [[right-hand side]] of the regression includes indicators for membership in all feasible configurations)--",
+  "",
+  ""
+,
   NA_character_) |>
   mutate(across(c(title, published, corrected, note, claim_ids, corrected_values),
                 as.character))
@@ -851,8 +878,8 @@ emit_entry <- function(n) {
 
 sections <- list(
   article = c(3, 5, 6, 13:27, 57),
-  references = c(1, 2, 28:34),
-  appendix = c(4, 7:12, 35:56, 58)
+  references = c(1, 2, 28:34, 59),
+  appendix = c(4, 7:12, 35:56, 58, 60, 61)
 )
 stopifnot(setequal(unlist(sections), entries$entry), !anyDuplicated(unlist(sections)))
 n_corrections <- sum(entries$form != "note")
