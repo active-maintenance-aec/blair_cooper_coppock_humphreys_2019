@@ -370,15 +370,25 @@ same shape and is treated differently below, because there the
 declaration needs no change and the current package reaches the
 parameter on its own.
 
-Those two corrections are to the deposited code. The article itself
-carries two errors, set out in
+Those two corrections are to the deposited code. The article and its
+appendix carry 51 printed errors that the errata note corrects and 4
+printed claims it flags without correcting, set out in
 `blair_cooper_coppock_humphreys_2019_errata.pdf` at the root of this
-repository: two entries of the reference list print a page range wrong.
-Green and Lin (2016) ends at 499 where the article runs to 500, and
-Nosek et al. (2015) prints its first page alone. Both were found by an
-audit that sends every printed reference entry whole to Crossref and
-checks the authoritative record back into it. Neither touches the text
-or a number.
+repository. Most are slips of wording and spelling, and the rest are
+cross-references, captions, code, and details of the reference list. Two
+correct a printed table: the discovery table, whose deposited code
+screens on a t statistic where its text means the p-value (the
+maintained `table_a18_discovery.R` reproduces the printed table from
+that code, and `table_a18_discovery_intended.R` gives the corrected
+rows), and one row of the Bayesian table. The article’s conclusions
+about discovery stand under the corrected rows. Two claims in the
+article’s main text, that regression matches the Boolean algorithms in
+QCA and that the interaction strategy is strictly dominated, are not
+supported by the appendix’s own tables, and a third rounds two
+exaggeration ratios; the note flags those claims and leaves them as
+printed. The reference-list entries were found by an audit that sends
+every printed reference entry whole to Crossref and checks the
+authoritative record back into it.
 
 ------------------------------------------------------------------------
 
