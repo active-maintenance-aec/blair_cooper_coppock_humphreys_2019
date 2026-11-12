@@ -17,6 +17,12 @@
   ],
   "related_identifiers": [
     {
+      "identifier": "https://github.com/active-maintenance-aec/blair_cooper_coppock_humphreys_2019",
+      "relation": "isSupplementTo",
+      "scheme": "url",
+      "resource_type": "software"
+    },
+    {
       "identifier": "10.1017/S0003055419000194",
       "relation": "isSupplementTo",
       "scheme": "doi"
