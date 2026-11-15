@@ -87,14 +87,13 @@ QCA appendix table has already run. That second constraint is asserted
 in the script rather than left to the order of the driver, and the
 reason is under What Moved Underneath the Code below.
 
-Required packages: DeclareDesign, DesignLibrary, estimatr, QCA,
-Matching, tidyverse, future, readxl, broom, knitr, kableExtra, here.
-Paths resolve through `here`, so nothing depends on the working
-directory. A successful run overwrites `maintained/output/`, which is
-committed: **`git diff` on that folder is the reproduction check**, and
-the CSV output should come back byte-identical. The figure PDFs always
-show as changed, because a PDF records the time it was written; compare
-their PNG twins instead.
+Required packages: DeclareDesign, estimatr, QCA, Matching, tidyverse,
+future, readxl, broom, knitr, kableExtra, here. Paths resolve through
+`here`, so nothing depends on the working directory. A successful run
+overwrites `maintained/output/`, which is committed: **`git diff` on
+that folder is the reproduction check**, and the CSV output should come
+back byte-identical. The figure PDFs always show as changed, because a
+PDF records the time it was written; compare their PNG twins instead.
 
 ## Paper Overview
 
@@ -150,13 +149,17 @@ and the package’s interface changed at version 1.0.
 The causes quoted in this section were recorded under DeclareDesign
 1.1.1. Under 2.0.0, the version the table above now reports, the deposit
 stops somewhere else: `declare_potential_outcomes()` and
-`declare_reveal()` are defunct and are the first error in nine scripts,
+`declare_reveal()` are defunct and are the first error in ten scripts,
 the readr rename of `write_rds()`’s `file` argument is the first error
-in two, and four others stop at a missing figure file (`3_5_nested.R`),
+in two, and three others stop at a missing figure file (`3_5_nested.R`),
 at `redesign()`’s check that the parameter is declared
 (`3_2_Bayesian_descriptive_inference.R`), and at an error inside a
-simulation (`3_3_process_tracing.R` and `3_9_experimental.R`). The count
-that completes is still none, and the prose below describes the 1.1.1
+simulation (`3_3_process_tracing.R`). The tenth defunct call is in
+`3_9_experimental.R`, inside the CRAN release of `DesignLibrary`
+(0.1.10), whose designers still declare potential outcomes the old way;
+under the unreleased `DesignLibrary` 2.0.0 the same script gets past the
+designers and stops inside a simulation instead. The count that
+completes is still none, and the prose below describes the 1.1.1
 failures.
 
 The failures are not a matter of a deprecated name still working with a
@@ -315,8 +318,8 @@ Every published value the deposit’s own saved results do not reproduce
 | 3_7_matching.R | Stripped | no | Error in `declare_potential_outcomes()`: |
 | 3_8_regression_discontinuity.R | As shipped | no | Error in `declare_potential_outcomes()`: |
 | 3_8_regression_discontinuity.R | Stripped | no | Error in `declare_potential_outcomes()`: |
-| 3_9_experimental.R | As shipped | no | Error in `purrr::map()`: |
-| 3_9_experimental.R | Stripped | no | Error in `purrr::map()`: |
+| 3_9_experimental.R | As shipped | no | Error in `declare_potential_outcomes()`: |
+| 3_9_experimental.R | Stripped | no | Error in `declare_potential_outcomes()`: |
 | 4_B_and_S_replication.R | As shipped | no | Error in `declare_potential_outcomes()`: |
 | 4_B_and_S_replication.R | Stripped | no | Error in `declare_potential_outcomes()`: |
 | appendix_code.R | As shipped | no | Error in `declare_potential_outcomes()`: |
@@ -373,7 +376,7 @@ declaration needs no change and the current package reaches the
 parameter on its own.
 
 Those two corrections are to the deposited code. The article and its
-appendix carry 53 printed errors that the errata note corrects and 5
+appendix carry 57 printed errors that the errata note corrects and 5
 printed claims it flags without correcting, set out in
 `blair_cooper_coppock_humphreys_2019_errata.pdf` at the root of this
 repository. Most are slips of wording and spelling, and the rest are
@@ -489,9 +492,12 @@ writes over fourteen bindings in `base` and `stats`, among them
 `base::rbind.data.frame()`, which afterwards errors on any list argument
 that is not a data frame. `DesignLibrary::multi_arm_designer()`, which
 declares the three-arm design behind Figure 1, assembles its estimates
-with exactly that call. Figure 1 therefore cannot be diagnosed in a
-session where QCA has been loaded, and the failure names a base function
-far from the package that caused it.
+with exactly that call. Figure 1 therefore could not be diagnosed in a
+session where QCA had been loaded, and the failure named a base function
+far from the package that caused it. The maintained figure now declares
+its two designs itself (the CRAN `DesignLibrary` cannot build them under
+DeclareDesign 2.0.0) and assembles the three-arm estimates with
+`bind_rows()`, but it keeps the ordering and the assertion below.
 
 Reaching QCA through its namespace does not avoid this: a load hook runs
 on load, so the first `QCA::` call installs the replacements just as
@@ -707,9 +713,9 @@ be wrong.
 | Script | Role | Lines |
 |:---|:---|---:|
 | bs_design.R | The Bjorkman and Svensson declaration, sourced by three scripts | 111 |
-| figure_1_experimental_designs.R | Article figure | 132 |
+| figure_1_experimental_designs.R | Article figure | 206 |
 | figure_2_bs_sampling_distributions.R | Article figure | 46 |
-| helpers.R | Packages, paths and the shared diagnosand writer | 80 |
+| helpers.R | Packages, paths and the shared diagnosand writer | 81 |
 | in_text_claims.R | Prints every published claim beside its computed counterpart | 1238 |
 | table_2_tool_census.R | Article table | 88 |
 | table_3_declaration.R | Article table | 67 |
@@ -830,8 +836,8 @@ every run, so none is quoted.
 | future        | 1.70.0     |
 | readxl        | 1.5.0      |
 | broom         | 1.0.13     |
-| knitr         | 1.51       |
-| kableExtra    | 1.4.0      |
+| knitr         | 1.52       |
+| kableExtra    | 1.4.1      |
 | here          | 1.0.2      |
 
 Key package versions

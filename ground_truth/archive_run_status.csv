@@ -10,7 +10,7 @@ as_shipped,3_5_nested.R,0,"Error in knitr::include_graphics(""figure/Nested_anal
 as_shipped,3_6_model_based_estimands.R,0,Error in `declare_potential_outcomes()`:,
 as_shipped,3_7_matching.R,0,Error in `declare_potential_outcomes()`:,
 as_shipped,3_8_regression_discontinuity.R,0,Error in `declare_potential_outcomes()`:,
-as_shipped,3_9_experimental.R,0,Error in `purrr::map()`:,
+as_shipped,3_9_experimental.R,0,Error in `declare_potential_outcomes()`:,
 as_shipped,4_B_and_S_replication.R,0,Error in `declare_potential_outcomes()`:,
 as_shipped,appendix_code.R,0,Error in `declare_potential_outcomes()`:,
 as_shipped,table_3_declaration.R,0,Error in `declare_potential_outcomes()`:,
@@ -25,7 +25,7 @@ stripped,3_5_nested.R,0,"Error in knitr::include_graphics(""figure/Nested_analys
 stripped,3_6_model_based_estimands.R,0,Error in `declare_potential_outcomes()`:,NA
 stripped,3_7_matching.R,0,Error in `declare_potential_outcomes()`:,NA
 stripped,3_8_regression_discontinuity.R,0,Error in `declare_potential_outcomes()`:,NA
-stripped,3_9_experimental.R,0,Error in `purrr::map()`:,NA
+stripped,3_9_experimental.R,0,Error in `declare_potential_outcomes()`:,NA
 stripped,4_B_and_S_replication.R,0,Error in `declare_potential_outcomes()`:,NA
 stripped,appendix_code.R,0,Error in `declare_potential_outcomes()`:,NA
 stripped,table_3_declaration.R,0,Error in `declare_potential_outcomes()`:,NA

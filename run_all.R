@@ -10,8 +10,8 @@
 #
 # Order note: figure_1_experimental_designs.R must run before the QCA appendix
 # table. QCA loads the declared package, which replaces base::rbind.data.frame()
-# for the rest of the session with a version the design library's three-arm
-# estimator cannot use. The figure script asserts the condition rather than
+# for the rest of the session with a version the deposit's three-arm estimator
+# cannot use. The figure script asserts the condition rather than
 # trusting this ordering.
 
 library(here)
