@@ -9,16 +9,15 @@
 # QCA is a different matter and namespacing is not enough. Loading it loads the
 # declared package, whose load hook writes over fourteen bindings in base and
 # stats, among them rbind.data.frame(), which then errors on any list argument
-# that is not a data frame. The deposit's three-arm estimator,
-# DesignLibrary::multi_arm_designer(), builds its result with exactly that call.
-# The maintained declaration of that design does not, but Figure 1 still runs
-# before QCA is loaded and asserts it. Reaching QCA through its namespace
+# that is not a data frame. DesignLibrary::multi_arm_designer()'s estimator
+# builds its result with exactly that call. Reaching QCA through its namespace
 # still loads it, so the replacement happens on the first QCA:: call and lasts
 # for the rest of the session. What protects the figure is running it first, and
 # the assertion in figure_1_experimental_designs.R is what makes that visible
 # rather than accidental.
 library(here)
 library(DeclareDesign)
+library(DesignLibrary)
 library(estimatr)
 library(broom)
 library(knitr)

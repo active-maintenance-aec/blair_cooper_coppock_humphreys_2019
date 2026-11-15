@@ -1177,12 +1177,12 @@ claim("text|small_p_value", "0.005, a threshold the article attributes to others
 # an assignment strategy in which subjects are assigned to a control condition, treatment 1, or
 # treatment 2, each with probability 1/3
 # Article prints: 1/3
-claim("text|factorial_prob_three_arm", declared_in("figure_1_experimental_designs.R", "m_arms <- 3L"))
+claim("text|factorial_prob_three_arm", declared_in("figure_1_experimental_designs.R", "m_arms = 3"))
 
 # an alternative strategy in which we assign subjects to each of four possible combinations of
 # factors with probability 1/4
 # Article prints: 1/4
-claim("text|factorial_prob_2x2", declared_in("figure_1_experimental_designs.R", "B = block_ra(blocks = A, prob = 0.5)"))
+claim("text|factorial_prob_2x2", declared_in("figure_1_experimental_designs.R", "two_by_two_designer"))
 
 # we let the interaction between treatments vary over the range -0.2 to +0.2
 # Article prints: -0.2 to +0.2
