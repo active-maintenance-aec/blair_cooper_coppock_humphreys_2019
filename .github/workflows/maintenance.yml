@@ -17,4 +17,4 @@ jobs:
     uses: active-maintenance-aec/maintenance/.github/workflows/check.yml@main
     with:
       phase: 4
-      maintained_skip: "maintained/table_a7_qca.R maintained/table_a12_nested_analysis.R maintained/table_a15_model_based_estimands.R maintained/table_a18_discovery.R maintained/table_a20_bs_exaggeration.R maintained/table_a21_bs_covariate_adjustment.R"
+      maintained_skip: "maintained/figure_1_experimental_designs.R maintained/table_a2_working_example_census.R maintained/table_a5_process_tracing.R maintained/table_a7_qca.R maintained/table_a12_nested_analysis.R maintained/table_a15_model_based_estimands.R maintained/table_a16_matching.R maintained/table_a18_discovery.R maintained/table_a19_bs_diagnosis.R maintained/table_a20_bs_exaggeration.R maintained/table_a21_bs_covariate_adjustment.R"
