@@ -24,9 +24,13 @@ maintained_skip <- strsplit(trimws(Sys.getenv("MAINTAINED_SKIP")), "[[:space:]]+
 run_script <- function(...) {
   path <- file.path(...)
   if (path %in% maintained_skip) {
-    print(paste("MAINTAINED_SKIP: skipped", path))
+    message("MAINTAINED_SKIP: skipped ", path)
     return(invisible())
   }
+  # The time and path go to the log before the script runs, so a run killed for memory
+  # still says which script it was in. message() writes to stderr, which is unbuffered;
+  # print() output can still sit in a buffer when the process is killed.
+  message("run_all: starting ", path, " ", format(Sys.time(), "%H:%M:%S"))
   source(here::here(...))
 }
 
